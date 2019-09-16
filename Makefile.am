@@ -10,7 +10,7 @@ plugin_LTLIBRARIES =
 
 CLEANFILES = *.bak *~
 
-dbusservicedir = $(sysconfdir)/dbus-1/system.d
+dbusservicedir = $(datadir)/dbus-1/system.d
 dbusservice_DATA = nm-openconnect-service.conf
 
 nmvpnservicedir = $(NM_VPN_SERVICE_DIR)
