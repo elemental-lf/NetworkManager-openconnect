@@ -1755,9 +1755,6 @@ int main (int argc, char **argv)
 		}
 	}
 
-	if (!allow_interaction)
-		return 0;
-
 	if (optind != argc) {
 		fprintf(stderr, "Superfluous command line options\n");
 		return 1;
@@ -1788,34 +1785,34 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
+	if (allow_interaction) {
 #if OPENCONNECT_CHECK_VER(3,4)
-	openconnect_set_token_callbacks (_ui_data->vpninfo, _ui_data, NULL, update_token);
+		openconnect_set_token_callbacks (_ui_data->vpninfo, _ui_data, NULL, update_token);
 #endif
 
-	build_main_dialog(_ui_data);
+		build_main_dialog(_ui_data);
 
-	openconnect_init_ssl();
+		openconnect_init_ssl();
 
-	/* These can't be done until token password handled */
-	gtk_widget_set_sensitive (_ui_data->combo, FALSE);
-	gtk_widget_set_sensitive (_ui_data->connect_button, FALSE);
+		/* These can't be done until token password handled */
+		gtk_widget_set_sensitive (_ui_data->combo, FALSE);
+		gtk_widget_set_sensitive (_ui_data->connect_button, FALSE);
 
-	init_thread = g_thread_new("init_connection", (GThreadFunc)init_connection, _ui_data);
-	g_thread_unref(init_thread);
+		init_thread = g_thread_new("init_connection", (GThreadFunc)init_connection, _ui_data);
+		g_thread_unref(init_thread);
 
-	gtk_window_present(GTK_WINDOW(_ui_data->dialog));
-	gtk_main();
-
-	if (!g_hash_table_size (_ui_data->secrets))
-		return 0;
+		gtk_window_present(GTK_WINDOW(_ui_data->dialog));
+		gtk_main();
+	}
 
 	/* Dump all secrets to stdout */
-	g_hash_table_iter_init (&iter, _ui_data->secrets);
-	while (g_hash_table_iter_next (&iter, (gpointer *)&key,
-				       (gpointer *)&value))
-		printf("%s\n%s\n", key, value);
-	printf("\n\n");
-	fflush(stdout);
+	if (g_hash_table_size (_ui_data->secrets) > 0) {
+		g_hash_table_iter_init (&iter, _ui_data->secrets);
+		while (g_hash_table_iter_next (&iter, (gpointer *)&key, (gpointer *)&value))
+			printf("%s\n%s\n", key, value);
+		printf("\n\n");
+		fflush(stdout);
+	}
 
 	wait_for_quit ();
 
