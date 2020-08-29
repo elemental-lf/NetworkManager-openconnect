@@ -229,6 +229,11 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 	if (buf)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROXY, buf);
 
+	/* UserAgent */
+	buf = g_key_file_get_string (keyfile, "openconnect", "UserAgent", NULL);
+	if (buf)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_USERAGENT, buf);
+
 	/* Cisco Secure Desktop */
 	bval = g_key_file_get_boolean (keyfile, "openconnect", "CSDEnable", NULL);
 	if (bval)
