@@ -250,7 +250,7 @@ nm_openconnect_secrets_validate (NMSettingVpn *s_vpn, GError **error)
 }
 
 static char *
-create_persistent_tundev(void)
+create_persistent_tundev(const char *suggested_name, GError **error)
 {
 	struct passwd *pw;
 	struct ifreq ifr;
@@ -258,8 +258,11 @@ create_persistent_tundev(void)
 	int i;
 
 	pw = getpwnam(NM_OPENCONNECT_USER);
-	if (!pw)
+	if (!pw) {
+		/* TODO: Is this an error case or a normal possibility
+		 * where we just don't set a persistent tundev? */
 		return NULL;
+	}
 
 	gl.tun_owner = pw->pw_uid;
 	gl.tun_group = pw->pw_gid;
@@ -267,33 +270,67 @@ create_persistent_tundev(void)
 	fd = open("/dev/net/tun", O_RDWR);
 	if (fd < 0) {
 		perror("open /dev/net/tun");
-		exit(EXIT_FAILURE);
+		g_set_error (error,
+		             NM_VPN_PLUGIN_ERROR,
+		             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
+		             "%s",
+		             _("Could not open /dev/net/tun"));
+		return NULL;
 	}
 
 	memset(&ifr, 0, sizeof(ifr));
 	ifr.ifr_flags = IFF_TUN | IFF_NO_PI;
 
-	for (i = 0; i < 256; i++) {
-		sprintf(ifr.ifr_name, "vpn%d", i);
+	if (suggested_name) {
+		/* Not NUL-terminated if strlen(suggested_name) >= IFNAMSIZE  */
+		strncpy(ifr.ifr_name, suggested_name, IFNAMSIZ);
+		if (ioctl(fd, TUNSETIFF, (void *)&ifr)) {
+			g_set_error (error,
+			             NM_VPN_PLUGIN_ERROR,
+			             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
+			             _("Could not create tunnel interface named '%.*s'"),
+			             IFNAMSIZ, ifr.ifr_name);
+			return NULL;
+		}
+	} else {
+		for (i = 0; i < 256; i++) {
+			sprintf(ifr.ifr_name, "vpn%d", i);
 
-		if (!ioctl(fd, TUNSETIFF, (void *)&ifr))
-			break;
+			if (!ioctl(fd, TUNSETIFF, (void *)&ifr))
+				break;
+		}
+		if (i == 256) {
+			g_set_error (error,
+			             NM_VPN_PLUGIN_ERROR,
+			             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
+			             "%s",
+			             _("Could not create tunnel interface named 'vpnX', for X in 0..255"));
+			return NULL;
+		}
 	}
-	if (i == 256)
-		exit(EXIT_FAILURE);
 
 	if (ioctl(fd, TUNSETOWNER, gl.tun_owner) < 0) {
 		perror("TUNSETOWNER");
-		exit(EXIT_FAILURE);
+		g_set_error (error,
+		             NM_VPN_PLUGIN_ERROR,
+		             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
+		             _("Could not set tunnel interface owner to '%s'"),
+		             gl.tun_owner);
+		return NULL;
 	}
 
 	if (ioctl(fd, TUNSETPERSIST, 1)) {
 		perror("TUNSETPERSIST");
-		exit(EXIT_FAILURE);
+		g_set_error (error,
+		             NM_VPN_PLUGIN_ERROR,
+		             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
+		             "%s",
+		             _("Could not set tunnel interface persistence"));
+		return NULL;
 	}
 	close(fd);
 	_LOGW ("Created tundev %s\n", ifr.ifr_name);
-	return g_strdup(ifr.ifr_name);
+	return g_strndup(ifr.ifr_name, IFNAMSIZ);
 }
 
 static void
@@ -385,6 +422,7 @@ openconnect_watch_cb (GPid pid, gint status, gpointer user_data)
 
 static gint
 nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
+                                         NMSettingConnection *s_con,
                                          NMSettingVpn *s_vpn,
                                          GError **error)
 {
@@ -398,6 +436,7 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	const char *props_vpn_gw, *props_cookie, *props_cacert, *props_mtu, *props_gwcert, *props_proxy;
 	const char *props_csd_enable, *props_csd_wrapper, *props_resolve;
 	const char *protocol;
+	const char *props_tun_name;
 
 	/* Find openconnect */
 	openconnect_binary = openconnect_binary_paths;
@@ -483,10 +522,15 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	g_ptr_array_add (openconnect_argv, (gpointer) "--script");
 	g_ptr_array_add (openconnect_argv, (gpointer) NM_OPENCONNECT_HELPER_PATH);
 
-	priv->tun_name = create_persistent_tundev ();
-	if (priv->tun_name) {
+	props_tun_name = nm_setting_connection_get_interface_name(s_con);
+	priv->tun_name = create_persistent_tundev (props_tun_name, error);
+	if (!priv->tun_name && *error)
+		return -1;
+	else if (priv->tun_name) {
 		g_ptr_array_add (openconnect_argv, (gpointer) "--interface");
 		g_ptr_array_add (openconnect_argv, (gpointer) priv->tun_name);
+	} else {
+		/* TODO: Is this a valid case? See create_persistent_tundev. */
 	}
 
 	props_csd_enable = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE);
@@ -560,9 +604,15 @@ real_connect (NMVpnServicePlugin   *plugin,
               NMConnection  *connection,
               GError       **error)
 {
+	NMSettingConnection *s_con;
 	NMSettingVpn *s_vpn;
 	gint openconnect_fd = -1;
+	const char *suggested_ifname;
 
+	s_con = nm_connection_get_setting_connection(connection);
+	g_assert (s_con);
+	if (!s_con)
+		goto out;
 	s_vpn = nm_connection_get_setting_vpn (connection);
 	g_assert (s_vpn);
 	if (!nm_openconnect_properties_validate (s_vpn, error))
@@ -573,7 +623,7 @@ real_connect (NMVpnServicePlugin   *plugin,
 	if (_LOGD_enabled ())
 		nm_connection_dump (connection);
 
-	openconnect_fd = nm_openconnect_start_openconnect_binary (NM_OPENCONNECT_PLUGIN (plugin), s_vpn, error);
+	openconnect_fd = nm_openconnect_start_openconnect_binary (NM_OPENCONNECT_PLUGIN (plugin), s_con, s_vpn, error);
 	if (!openconnect_fd)
 		return TRUE;
 
@@ -603,7 +653,7 @@ real_need_secrets (NMVpnServicePlugin *plugin,
 	}
 
 	/* We just need the WebVPN cookie, and the final IP address of the gateway
-	   (after HTTP redirects, which do happen). All the certificate/SecurID 
+	   (after HTTP redirects, which do happen). All the certificate/SecurID
 	   nonsense can be handled for us, in the user's context, by auth-dialog */
 	if (!nm_setting_vpn_get_secret (s_vpn, NM_OPENCONNECT_KEY_GATEWAY)) {
 		*setting_name = NM_SETTING_VPN_SETTING_NAME;
