@@ -88,6 +88,7 @@ static const ValidProperty valid_properties[] = {
 	{ NM_OPENCONNECT_KEY_MTU,         G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID, G_TYPE_BOOLEAN, 0, 0 },
 	{ NM_OPENCONNECT_KEY_PREVENT_INVALID_CERT, G_TYPE_BOOLEAN, 0, 0 },
+	{ NM_OPENCONNECT_KEY_DISABLE_UDP, G_TYPE_BOOLEAN, 0, 0 },
 	{ NM_OPENCONNECT_KEY_PROTOCOL,    G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_PROXY,       G_TYPE_STRING, 0, 0 },
 	{ NM_OPENCONNECT_KEY_CSD_ENABLE,  G_TYPE_BOOLEAN, 0, 0 },
@@ -397,6 +398,7 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	char csd_user_arg[60];
 	const char *props_vpn_gw, *props_cookie, *props_cacert, *props_mtu, *props_gwcert, *props_proxy;
 	const char *props_csd_enable, *props_csd_wrapper, *props_resolve;
+	const char *props_disable_udp;
 	const char *protocol;
 
 	/* Find openconnect */
@@ -487,6 +489,13 @@ nm_openconnect_start_openconnect_binary (NMOpenconnectPlugin *plugin,
 	if (priv->tun_name) {
 		g_ptr_array_add (openconnect_argv, (gpointer) "--interface");
 		g_ptr_array_add (openconnect_argv, (gpointer) priv->tun_name);
+	}
+
+	props_disable_udp = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_DISABLE_UDP);
+	if (props_disable_udp && !strcmp (props_disable_udp, "yes")) {
+		/* May be renamed to --no-udp in the future, but with --no-dtls kept for backwards-
+		 * compatibility (see https://gitlab.com/openconnect/openconnect/-/merge_requests/151) */
+		g_ptr_array_add (openconnect_argv, (gpointer) "--no-dtls");
 	}
 
 	props_csd_enable = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CSD_ENABLE);
