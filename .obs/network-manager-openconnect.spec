@@ -119,7 +119,7 @@ fi
 %files gnome
 %{_libexecdir}/nm-openconnect-auth-dialog
 %{_libdir}/NetworkManager/libnm-vpn-plugin-openconnect-editor.so
-%{_datadir}/appdata/network-manager-openconnect.metainfo.xml
+%{_datadir}/metainfo/network-manager-openconnect.metainfo.xml
 
 %if %with gtk4
 %{_libdir}/NetworkManager/libnm-gtk4-vpn-plugin-openconnect-editor.so
