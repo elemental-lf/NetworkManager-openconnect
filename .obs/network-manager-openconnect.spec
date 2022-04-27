@@ -85,8 +85,6 @@ make install DESTDIR=%{buildroot}
 rm -f %{buildroot}%{_libdir}/NetworkManager/lib*.la
 rm -rf %{buildroot}%{_datadir}/locale
 
-mv %{buildroot}%{_sysconfdir}/dbus-1 %{buildroot}%{_datadir}/
-
 %pre
 %{_sbindir}/groupadd -r nm-openconnect &>/dev/null || :
 %{_sbindir}/useradd  -r -s /sbin/nologin -d / -M \
