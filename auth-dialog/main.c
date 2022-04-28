@@ -1964,6 +1964,12 @@ int main (int argc, char **argv)
 	GThread *init_thread;
 	gchar *key, *value;
 	int opt;
+	int param_fd = dup(1);
+	FILE *paramf = fdopen(param_fd, "w");
+
+	/* We don't want stdout from child processes / logging to confuse NM
+	 * so redirect it to stderr instead. */
+	dup2(2, 1);
 
 	while ((opt = getopt_long(argc, argv, "ru:n:s:i", long_options, NULL))) {
 		if (opt < 0)
@@ -2050,9 +2056,9 @@ int main (int argc, char **argv)
 	if (g_hash_table_size (_ui_data->secrets) > 0) {
 		g_hash_table_iter_init (&iter, _ui_data->secrets);
 		while (g_hash_table_iter_next (&iter, (gpointer *)&key, (gpointer *)&value))
-			printf("%s\n%s\n", key, value);
-		printf("\n\n");
-		fflush(stdout);
+			fprintf(paramf, "%s\n%s\n", key, value);
+		fprintf(paramf, "\n\n");
+		fflush(paramf);
 	}
 
 	wait_for_quit ();
