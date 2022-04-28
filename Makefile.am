@@ -132,6 +132,7 @@ properties_libnm_vpn_plugin_openconnect_la_CFLAGS = \
 	$(LIBNM_CFLAGS)
 
 properties_libnm_vpn_plugin_openconnect_la_LIBADD = \
+	$(GLIB_LIBS) \
 	$(LIBNM_LIBS) \
 	$(OPENCONNECT_LIBS) \
 	$(DL_LIBS) \
