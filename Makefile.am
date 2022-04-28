@@ -114,6 +114,7 @@ editor_sources = \
 
 properties_cppflags = \
 	$(GLIB_CFLAGS) \
+	$(GMODULE_CFLAGS) \
 	$(OPENCONNECT_CFLAGS) \
 	-I$(top_srcdir)/shared \
 	-DLOCALEDIR=\"$(datadir)/locale\"
@@ -133,6 +134,7 @@ properties_libnm_vpn_plugin_openconnect_la_CFLAGS = \
 
 properties_libnm_vpn_plugin_openconnect_la_LIBADD = \
 	$(GLIB_LIBS) \
+	$(GMODULE_LIBS) \
 	$(LIBNM_LIBS) \
 	$(OPENCONNECT_LIBS) \
 	$(DL_LIBS) \
