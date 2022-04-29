@@ -1889,6 +1889,15 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 							   nm_process_auth_form, write_progress,
 							   ui_data);
 
+#if OPENCONNECT_CHECK_VER(5,8)
+	/* The useragent provided to openconnect_vpninfo_new() gets the
+	 * OpenConnect version appended to it. But some servers need the
+	 * useragent to *precisely* match a known string; support for
+	 * that was added in OpenConnect 9.00 (API 5.8) with the
+	 * openconnect_set_useragent() function. */
+	if (vpn_useragent)
+		openconnect_set_useragent(ui_data->vpninfo, vpn_useragent);
+#endif
 #if OPENCONNECT_CHECK_VER(5,7)
 	openconnect_set_webview_callback(ui_data->vpninfo, open_webview);
 #endif
