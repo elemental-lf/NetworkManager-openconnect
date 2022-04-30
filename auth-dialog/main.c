@@ -1884,6 +1884,10 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	g_unix_set_fd_nonblocking(ui_data->cancel_pipes[0], TRUE, NULL);
 	g_unix_set_fd_nonblocking(ui_data->cancel_pipes[1], TRUE, NULL);
 
+	/* If it's an empty string, forget it. */
+	if (vpn_useragent && !*vpn_useragent)
+		vpn_useragent = NULL;
+
 	ui_data->vpninfo = (void *)openconnect_vpninfo_new(vpn_useragent ?: "OpenConnect VPN Agent (NetworkManager)",
 							   validate_peer_cert, write_new_config,
 							   nm_process_auth_form, write_progress,
