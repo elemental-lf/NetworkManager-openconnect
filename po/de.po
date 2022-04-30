@@ -8611,7 +8611,7 @@ msgid ""
 "To configure local networking, openconnect must be running as root\n"
 "See %s for more information\n"
 msgstr ""
-"Um das lokale Netzwerk zu konfigurieren, muss Openconnect mit "
+"Um das lokale Netzwerk zu konfigurieren, muss OpenConnect mit "
 "Systemverwalterrechten ausgeführt werden.\n"
 "Weitere Informationen: %s\n"
 

@@ -2472,7 +2472,7 @@ msgstr "'%s' gako pribatuaren fitxategia erabiltzen\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3186bb699e:/openssl.c#l757
 #: ../openconnect-strings.txt:1373
 msgid "This version of OpenConnect was built without TPM support\n"
-msgstr "Openconnect-en bertsio hau 'TPM' euskarririk gabe konpilatuta\n"
+msgstr "OpenConnect-en bertsio hau 'TPM' euskarririk gabe konpilatuta\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3186bb699e:/gnutls.c#l1409
 #: ../openconnect-strings.txt:1376

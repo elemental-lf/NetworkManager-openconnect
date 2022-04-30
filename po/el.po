@@ -2465,7 +2465,7 @@ msgstr "Χρήση αρχείου ιδιωτικού κλειδιού %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3186bb699e:/openssl.c#l757
 #: ../openconnect-strings.txt:1373
 msgid "This version of OpenConnect was built without TPM support\n"
-msgstr "Αυτή η έκδοση του openconnect δομήθηκε χωρίς υποστήριξη TPM\n"
+msgstr "Αυτή η έκδοση του OpenConnect δομήθηκε χωρίς υποστήριξη TPM\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3186bb699e:/gnutls.c#l1409
 #: ../openconnect-strings.txt:1376
