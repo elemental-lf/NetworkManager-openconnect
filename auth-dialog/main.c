@@ -754,6 +754,7 @@ static gboolean open_webview_idle(gpointer data)
 		storage = g_string_append(storage, "/openconnect_saml_cookies");
 	if (storage) {
 		webkit_cookie_manager_set_persistent_storage(cm, storage->str, WEBKIT_COOKIE_PERSISTENT_STORAGE_TEXT);
+		webkit_cookie_manager_set_accept_policy(cm, WEBKIT_COOKIE_POLICY_ACCEPT_ALWAYS);
 		g_string_free(storage, TRUE);
 	}
 
