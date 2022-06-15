@@ -43,6 +43,7 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
                          gpointer user_data)
 {
 	GtkWidget *widget;
+	const char *value;
 	GtkSizeGroup *group;
 
 	g_return_if_fail (builder != NULL);
@@ -54,13 +55,53 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
 
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT);
+		if (value && strlen (value))
+			nma_cert_chooser_set_cert_uri (NMA_CERT_CHOOSER (widget), value);
+	}
+
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "mca_cert_chooser"));
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
 
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_MCACERT);
+		if (value && strlen (value))
+			nma_cert_chooser_set_cert (NMA_CERT_CHOOSER (widget), value,
+									   g_str_has_prefix(value, "pkcs11:") ?
+									   NM_SETTING_802_1X_CK_SCHEME_PKCS11 :
+									   NM_SETTING_802_1X_CK_SCHEME_PATH);
+
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_MCAKEY);
+		if (value && strlen (value))
+			nma_cert_chooser_set_key (NMA_CERT_CHOOSER (widget), value,
+									  g_str_has_prefix(value, "pkcs11:") ?
+									  NM_SETTING_802_1X_CK_SCHEME_PKCS11 :
+									  NM_SETTING_802_1X_CK_SCHEME_PATH);
+	}
+
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "user_cert_chooser"));
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
+
+	if (s_vpn) {
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_USERCERT);
+		if (value && strlen (value))
+			nma_cert_chooser_set_cert (NMA_CERT_CHOOSER (widget), value,
+									   g_str_has_prefix(value, "pkcs11:") ?
+									   NM_SETTING_802_1X_CK_SCHEME_PKCS11 :
+									   NM_SETTING_802_1X_CK_SCHEME_PATH);
+
+		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_PRIVKEY);
+		if (value && strlen (value)) {
+			nma_cert_chooser_set_key (NMA_CERT_CHOOSER (widget), value,
+									  g_str_has_prefix(value, "pkcs11:") ?
+									  NM_SETTING_802_1X_CK_SCHEME_PKCS11 :
+									  NM_SETTING_802_1X_CK_SCHEME_PATH);
+
+		}
+	}
 }
 
 gboolean
