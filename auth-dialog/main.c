@@ -217,6 +217,8 @@ static auth_ui_data *_ui_data;
 
 static void connect_host(auth_ui_data *ui_data);
 
+static void write_progress(void *cbdata, int level, const char *fmt, ...);
+
 static void container_child_remove(GtkWidget *widget, gpointer data)
 {
 	GtkContainer *container = GTK_CONTAINER(data);
@@ -794,6 +796,27 @@ static int open_webview(struct openconnect_info *vpninfo, const char *login_uri,
 }
 
 #endif // OPENCONNECT_CHECK_VER(5,7)
+
+#if OPENCONNECT_CHECK_VER(5,8) && GTK_CHECK_VERSION(3,22,0)
+
+static int open_uri(struct openconnect_info *vpninfo, const char *login_uri, void *privdata)
+{
+	GError *err = NULL;
+
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+	gtk_show_uri_on_window(NULL, login_uri, GDK_CURRENT_TIME, &err);
+	G_GNUC_END_IGNORE_DEPRECATIONS
+	if (err) {
+		write_progress(NULL, PRG_ERR, "Failed to invoke GTK.show_uri_on_window.");
+		write_progress(NULL, PRG_ERR, "%s.", err->message);
+		g_error_free(err);
+		return 1;
+	}
+
+	return 0;
+}
+
+#endif // OPENCONNECT_CHECK_VER(5,8) && GTK_CHECK_VERSION(3,22,0)
 
 static int nm_process_auth_form (void *cbdata, struct oc_auth_form *form)
 {
@@ -1900,6 +1923,10 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	 * openconnect_set_useragent() function. */
 	if (vpn_useragent)
 		openconnect_set_useragent(ui_data->vpninfo, vpn_useragent);
+
+#if GTK_CHECK_VERSION(3,22,0)
+	openconnect_set_external_browser_callback(ui_data->vpninfo, open_uri);
+#endif
 #endif
 #if OPENCONNECT_CHECK_VER(5,7)
 	openconnect_set_webview_callback(ui_data->vpninfo, open_webview);
