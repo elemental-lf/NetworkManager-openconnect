@@ -4,13 +4,13 @@
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2009, 2010, 2014, 2015.
 # Edurne Labaka <elabaka@uzei.com>, 2015.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2022.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2022, 2023.
 #
 msgid ""
 msgstr "Project-Id-Version: network-manager-openconnect master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-openconnect/issues\n"
 "POT-Creation-Date: 2022-07-13 16:01+0000\n"
-"PO-Revision-Date: 2022-12-08 18:58+0100\n"
+"PO-Revision-Date: 2023-01-02 18:58+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -133,7 +133,7 @@ msgstr "_Proxy-a"
 
 #: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Allow security scanner _trojan (CSD)"
-msgstr ""
+msgstr "Onartu segurtasuna eskaneatzeko _troianoa (CSD)"
 
 #: ../properties/nm-openconnect-dialog.ui.h:7
 msgid "Trojan (CSD) _Wrapper Script"
@@ -393,7 +393,7 @@ msgstr "'%s' bilaketa-domeinua eskuratu da\n"
 #: ../openconnect-strings.txt:27
 #, c-format
 msgid "Unknown Array config element '%s'\n"
-msgstr ""
+msgstr "Array konfigurazio-elementu ezezaguna: '%s'\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/array.c#l517
 #: ../openconnect-strings.txt:30
@@ -498,7 +498,7 @@ msgstr "Pakete laburra jaso da (%d byte)\n"
 #: ../openconnect-strings.txt:97
 #, c-format
 msgid "Unrecognised data packet, len %d\n"
-msgstr ""
+msgstr "Ezagutzen ez de datu-paketea, %d luzera\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/array.c#l877
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/array.c#l1237
@@ -518,7 +518,7 @@ msgstr "%d byte-ko datu-paketea jaso da\n"
 #: ../openconnect-strings.txt:108
 #, c-format
 msgid "Moved down %d bytes after previous packet\n"
-msgstr ""
+msgstr "Mugitu beherantz %d byte aurreko paketearen ondoren\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/array.c#l942
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/cstp.c#l1105
@@ -706,7 +706,7 @@ msgstr "SAML autentifikazioa behar da; portal-prelogonuserauthcookie erabiltzen 
 msgid ""
 "Destination form field %s was specified; assuming SAML %s authentication is "
 "complete.\n"
-msgstr ""
+msgstr "%s inprimaki-eremuko helburua zehaztu da; SAML %s autentifikazioa osatu dela onartzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-globalprotect.c#l152
 #: ../openconnect-strings.txt:236
@@ -719,7 +719,7 @@ msgstr "SAML %s autentifikazioa behar da %s bidez\n"
 msgid ""
 "When SAML authentication is complete, specify destination form field by "
 "appending :field_name to login URL.\n"
-msgstr ""
+msgstr "SAML autentifikazioa osatuta dagoenean, zehaztu inprimaki-eremuko helburua :field_name gehituta saioa hasteko URLari.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-globalprotect.c#l173
 #: ../openconnect-strings.txt:244
@@ -919,13 +919,13 @@ msgstr "TNCC erantzunaren bigarren lerroa: '%s'\n"
 #: ../openconnect-strings.txt:352
 #, c-format
 msgid "Got new DSPREAUTH cookie from TNCC: %s\n"
-msgstr ""
+msgstr "DSPREAUTH cookie berria eskuratu da TNCCtik: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-juniper.c#l308
 #: ../openconnect-strings.txt:355
 #, c-format
 msgid "Got reauth interval from TNCC: %d seconds\n"
-msgstr ""
+msgstr "Berriro autentifikatzeko tartea eskuratu da TNCCtik: %d segundo\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-juniper.c#l321
 #: ../openconnect-strings.txt:358
@@ -936,7 +936,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-juniper.c#l327
 #: ../openconnect-strings.txt:361
 msgid "Too many non-empty lines from TNCC after DSPREAUTH cookie\n"
-msgstr ""
+msgstr "Hutsik ez dauden lerro gehiegi TNCCtik DSPREAUTH cookie-aren ondoren\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-juniper.c#l499
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/f5.c#l155
@@ -947,12 +947,12 @@ msgstr "Huts egin du HTML dokumentua analizatzeak\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-juniper.c#l516
 #: ../openconnect-strings.txt:368
 msgid "Failed to find or parse web form in login page\n"
-msgstr ""
+msgstr "Huts egin du web-inprimakia aurkitzeak edo analizatzeak saioa hasteko orrian\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-juniper.c#l526
 #: ../openconnect-strings.txt:371
 msgid "Encountered form with no 'name' or 'id'\n"
-msgstr ""
+msgstr "Ez 'name' ez 'id' elementurik ez duen inprimakia aurkitu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth-juniper.c#l555
 #: ../openconnect-strings.txt:374
@@ -1031,13 +1031,13 @@ msgstr "Espero ez zen <client-cert-request> jasota.\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l643
 #: ../openconnect-strings.txt:419
 msgid "Received <multiple-client-cert-request> when not expected.\n"
-msgstr ""
+msgstr "<multiple-client-cert-request> jaso da baina ez zen espero.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l680
 #: ../openconnect-strings.txt:422
 #, c-format
 msgid "Server reported certificate error: %s.\n"
-msgstr ""
+msgstr "Zerbitzariak ziurtagiri-errorea jakinarazi du: %s.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l687
 #: ../openconnect-strings.txt:425
@@ -1053,12 +1053,12 @@ msgstr "Pasahitza eskatu da baina '--no-passwd' ezarri da\n"
 #: ../openconnect-strings.txt:431
 msgid ""
 "Client certificate missing or incorrect (Certificate Validation Failure)"
-msgstr ""
+msgstr "Bezero-ziurtagiria falta da edo okerra da (ziurtagiria balioztatzearen akatsa)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1042
 #: ../openconnect-strings.txt:435
 msgid "Not downloading XML profile because SHA1 already matches\n"
-msgstr ""
+msgstr "Ez da XML profila deskargatu SHA1 jadanik bat datorrelako\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1048
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/cstp.c#l348
@@ -1096,27 +1096,27 @@ msgstr ""
 #: ../openconnect-strings.txt:459
 #, c-format
 msgid "Failed to set gid %ld: %s\n"
-msgstr ""
+msgstr "Huts egin du gid %ld ezartzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1128
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l143
 #: ../openconnect-strings.txt:463
 #, c-format
 msgid "Failed to set groups to %ld: %s\n"
-msgstr ""
+msgstr "Huts egin du taldeak %ld(e)ra ezartzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1135
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l149
 #: ../openconnect-strings.txt:467
 #, c-format
 msgid "Failed to set uid %ld: %s\n"
-msgstr ""
+msgstr "Huts egin du %ld uid-a ezartzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1142
 #: ../openconnect-strings.txt:470
 #, c-format
 msgid "Invalid user uid=%ld: %s\n"
-msgstr ""
+msgstr "Erabiltzaile uid=%ld baliogabea: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1149
 #: ../openconnect-strings.txt:473
@@ -1145,7 +1145,7 @@ msgstr "Errorea: zerbitzariak 'Cisco Secure Desktop' troianoa deskargatzeko eta 
 #: ../openconnect-strings.txt:487
 #, c-format
 msgid "Temporary directory '%s' is not writable: %s\n"
-msgstr ""
+msgstr "Aldi baterako '%s' direktorioa ez da idazgarria: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1215
 #: ../openconnect-strings.txt:490
@@ -1169,7 +1169,7 @@ msgstr ""
 #: ../openconnect-strings.txt:499
 #, c-format
 msgid "CSD script '%s' exited abnormally\n"
-msgstr ""
+msgstr "'%s' CSD script-a gaizki amaitu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1251
 #: ../openconnect-strings.txt:502
@@ -1182,13 +1182,14 @@ msgstr ""
 msgid ""
 "Authentication may fail. If your script is not returning zero, fix it.\n"
 "Future versions of openconnect will abort on this error.\n"
-msgstr ""
+msgstr "Autentifikazioak huts egin dezake. Script-ak ez badu zero itzultzen, konpondu.\n"
+"openconnect-en bertsio berriak abortatu egingo dira errore hau gertatzen bada.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1260
 #: ../openconnect-strings.txt:510
 #, c-format
 msgid "CSD script '%s' completed successfully.\n"
-msgstr ""
+msgstr "'%s' CSD script-a ongi gauzatu da.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1288
 #: ../openconnect-strings.txt:513
@@ -1252,13 +1253,13 @@ msgstr "'%s' freskatzen segundo 1en ondoren...\n"
 #: ../openconnect-strings.txt:547
 #, c-format
 msgid "Unsupported hash algorithm '%s' requested.\n"
-msgstr ""
+msgstr "Onartzen ez den '%s' hash algoritmoa eskatu da.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1850
 #: ../openconnect-strings.txt:550
 #, c-format
 msgid "Duplicate hash algorithm '%s' requested.\n"
-msgstr ""
+msgstr "'%s' hash algoritmo bikoiztua eskatu da.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1936
 #: ../openconnect-strings.txt:553
@@ -1275,7 +1276,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/auth.c#l1964
 #: ../openconnect-strings.txt:561
 msgid "Error encoding the challenge response.\n"
-msgstr ""
+msgstr "Errorea erronkaren erantzuna kodetzean.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/compat.c#l250
 #: ../openconnect-strings.txt:564
@@ -1475,7 +1476,7 @@ msgstr "Zerbitzariaren deskonexioa jasota:  %02x '%s'\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/cstp.c#l1038
 #: ../openconnect-strings.txt:672
 msgid "Received server disconnect\n"
-msgstr ""
+msgstr "Zerbitzariaren deskonexioa jaso da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/cstp.c#l1046
 #: ../openconnect-strings.txt:675
@@ -1591,7 +1592,7 @@ msgstr "Pakete ezezaguna (%d luzerakoa) jasota: %02x %02x %02x %02x...\n"
 #: ../openconnect-strings.txt:744
 #, c-format
 msgid "TOS this: %d, TOS last: %d\n"
-msgstr ""
+msgstr "TOS hau: %d, TOS azkena: %d\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/dtls.c#l228
 #: ../openconnect-strings.txt:747
@@ -1621,7 +1622,7 @@ msgstr "DTLS Keepalive jasota\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/dtls.c#l328
 #: ../openconnect-strings.txt:762
 msgid "Compressed DTLS packet received when compression not enabled\n"
-msgstr ""
+msgstr "Konprimatutako DTLS paketea jaso da, baina konpresioa ez dago gaituta\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/dtls.c#l336
 #: ../openconnect-strings.txt:765
@@ -1643,7 +1644,7 @@ msgstr "Huts egin du Keepalive eskaera bidaltzean. Deskonektatzea espero da\n"
 #: ../openconnect-strings.txt:774
 #, c-format
 msgid "Initiating MTU detection (min=%d, max=%d)\n"
-msgstr ""
+msgstr "MTU detekzioa abiarazten (min=%d, max=%d)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/dtls.c#l534
 #: ../openconnect-strings.txt:777
@@ -1655,7 +1656,7 @@ msgstr ""
 #: ../openconnect-strings.txt:780
 #, c-format
 msgid "Failed to send DPD request (%d %d)\n"
-msgstr ""
+msgstr "Huts egin du DPD eskaria bidaltzeak (%d %d)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/dtls.c#l561
 #: ../openconnect-strings.txt:783
@@ -1702,7 +1703,7 @@ msgstr ""
 #: ../openconnect-strings.txt:804
 #, c-format
 msgid "No change in MTU after detection (was %d)\n"
-msgstr ""
+msgstr "Aldaketarik ez MTUn detekzioaren ondoren (%d zen)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/esp-seqno.c#l61
 #: ../openconnect-strings.txt:807
@@ -3120,60 +3121,60 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l2267
 #: ../openconnect-strings.txt:1613
 msgid "Established EAP-TTLS session\n"
-msgstr ""
+msgstr "EAP-TTLS saioa ezarri da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l2934
 #: ../openconnect-strings.txt:1616
 #, c-format
 msgid "Failed to generate STRAP key: %s\n"
-msgstr ""
+msgstr "STRAP gakoa sortzeak huts egin du: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l2943
 #: ../openconnect-strings.txt:1619
 #, c-format
 msgid "Failed to generate STRAP DH key: %s\n"
-msgstr ""
+msgstr "Huts egin du STRAP DH gakoa sortzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l2976
 #: ../openconnect-strings.txt:1622
 #, c-format
 msgid "Failed to decode server DH key: %s\n"
-msgstr ""
+msgstr "Huts egin du DH zerbitzari-gakoa deskodetzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l2988
 #: ../openconnect-strings.txt:1625
 #, c-format
 msgid "Failed to export DH private key parameters: %s\n"
-msgstr ""
+msgstr "Huts egin du DH gako pribatuaren parametroak esportatzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l2994
 #: ../openconnect-strings.txt:1628
 #, c-format
 msgid "Failed to export server DH key parameters: %s\n"
-msgstr ""
+msgstr "Huts egin du DH gako-parametroak esportatzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3002
 #: ../openconnect-strings.txt:1631
 #, c-format
 msgid "HPKE uses unsupported EC curve (%d, %d)\n"
-msgstr ""
+msgstr "HPKE-k onartzen ez den EC kurba darabil (%d, %d)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3015
 #: ../openconnect-strings.txt:1634
 msgid "Failed to create ECC public point for ECDH\n"
-msgstr ""
+msgstr "Huts egin du ECC puntu publikoaren sorrerak ECDHtik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3060
 #: ../openconnect-strings.txt:1637
 #, c-format
 msgid "HKDF extract failed: %s\n"
-msgstr ""
+msgstr "HKDF erauzketak huts egin du: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3072
 #: ../openconnect-strings.txt:1640
 #, c-format
 msgid "HKDF expand failed: %s\n"
-msgstr ""
+msgstr "HKDF hedapenak huts egin du: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3091
 #: ../openconnect-strings.txt:1643
@@ -3191,25 +3192,25 @@ msgstr ""
 #: ../openconnect-strings.txt:1649
 #, c-format
 msgid "Failed to decode STRAP key: %s\n"
-msgstr ""
+msgstr "Huts egin du STRAP gakoa deskodetzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3169
 #: ../openconnect-strings.txt:1652
 #, c-format
 msgid "Failed to regenerate STRAP key: %s\n"
-msgstr ""
+msgstr "Huts egin du STRAP gakoa birsortzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3184
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l2513
 #: ../openconnect-strings.txt:1656
 msgid "Failed to generate STRAP key DER\n"
-msgstr ""
+msgstr "Huts egin du STRAP DER gakoa sortzeak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3209
 #: ../openconnect-strings.txt:1659
 #, c-format
 msgid "STRAP signature failed: %s\n"
-msgstr ""
+msgstr "Huts egin du STRAP sinadurak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3300
 #: ../openconnect-strings.txt:1662
@@ -3220,36 +3221,36 @@ msgstr ""
 #: ../openconnect-strings.txt:1665
 #, c-format
 msgid "gnutls_x509_crt_get_key_purpose_oid: %s.\n"
-msgstr ""
+msgstr "gnutls_x509_crt_get_key_purpose_oid: %s.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3361
 #: ../openconnect-strings.txt:1668
 #, c-format
 msgid "gnutls_X509_crt_get_key_usage: %s.\n"
-msgstr ""
+msgstr "gnutls_X509_crt_get_key_usage: %s.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3378
 #: ../openconnect-strings.txt:1671
 msgid ""
 "The certificate specifies key usages incompatible with authentication.\n"
-msgstr ""
+msgstr "Ziurtagiriak autentifikazioarekin bateragarriak ez diren gako-erabilerak zehazten ditu.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3387
 #: ../openconnect-strings.txt:1675
 msgid "Certificate doesn't specify key usage.\n"
-msgstr "Ziurtagiriak ez du zehazten gakoen erabilera.\n"
+msgstr "Ziurtagiriak ez du zehazten gako-erabilera.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3405
 #: ../openconnect-strings.txt:1678
 #, c-format
 msgid "Precondition failed %s[%s]:%d\n"
-msgstr ""
+msgstr "Aurrebaldintzak huts egin du %s[%s]:%d\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3459
 #: ../openconnect-strings.txt:1681
 #, c-format
 msgid "Failed to generate the PKCS#7 structure: %s.\n"
-msgstr ""
+msgstr "PKCS#7 egitura sortzeak huts egin du: %s.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls.c#l3493
 #: ../openconnect-strings.txt:1684
@@ -3367,7 +3368,7 @@ msgstr "Sartu TPM-ren gakoaren PINa:"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm.c#l246
 #: ../openconnect-strings.txt:1743
 msgid "Enter secondary key TPM PIN:"
-msgstr ""
+msgstr "Sartu bigarren mailako TPM PIN gakoa:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm.c#l257
 #: ../openconnect-strings.txt:1746
@@ -3422,17 +3423,17 @@ msgstr ""
 #: ../openconnect-strings.txt:1771
 #, c-format
 msgid "Failed to parse TPM2 key parent: %s\n"
-msgstr ""
+msgstr "Huts egin du TPM2 gako gurasoaren analisiak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2.c#l319
 #: ../openconnect-strings.txt:1774
 msgid "Failed to parse TPM2 pubkey element\n"
-msgstr ""
+msgstr "Huts egin du TPM2 gako publikoaren elementuaren analisiak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2.c#l324
 #: ../openconnect-strings.txt:1777
 msgid "Failed to parse TPM2 privkey element\n"
-msgstr ""
+msgstr "Huts egin du TPM2 gako pribatuaren elementuaren analisiak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2.c#l329
 #: ../openconnect-strings.txt:1780
@@ -3444,7 +3445,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1783
 #, c-format
 msgid "TPM2 digest too large: %d > %d\n"
-msgstr ""
+msgstr "TPM2 laburpen luzeegia: %d > %d\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2.c#l487
 #: ../openconnect-strings.txt:1786
@@ -3461,7 +3462,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l177
 #: ../openconnect-strings.txt:1792
 msgid "TPM2 password too long; truncating\n"
-msgstr ""
+msgstr "TPM2 pasahitza luzeegia da; laburtzen\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l195
 #: ../openconnect-strings.txt:1795
@@ -3487,14 +3488,14 @@ msgstr "plataforma"
 #: ../openconnect-strings.txt:1807
 #, c-format
 msgid "Creating primary key under %s hierarchy.\n"
-msgstr ""
+msgstr "Gako nagusia sortzen %s hierarkia azpian.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l210
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_ibm.c#l266
 #: ../openconnect-strings.txt:1811
 #, c-format
 msgid "Enter TPM2 %s hierarchy password:"
-msgstr ""
+msgstr "Sartu TPM2 %s hierarkiako pasahitza:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l218
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l316
@@ -3502,7 +3503,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1816
 #, c-format
 msgid "TPM2 Esys_TR_SetAuth failed: 0x%x\n"
-msgstr ""
+msgstr "TPM2 Esys_TR_SetAuth-ek huts egin du: 0x%x\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l230
 #: ../openconnect-strings.txt:1819
@@ -3518,13 +3519,13 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l254
 #: ../openconnect-strings.txt:1825
 msgid "Establishing connection with TPM.\n"
-msgstr ""
+msgstr "Konexioa ezartzen TPMrekin.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l259
 #: ../openconnect-strings.txt:1828
 #, c-format
 msgid "TPM2 Esys_Initialize failed: 0x%x\n"
-msgstr ""
+msgstr "TPM2 Esys_Initialize-ek huts egin du: 0x%x\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l267
 #: ../openconnect-strings.txt:1831
@@ -3536,7 +3537,7 @@ msgstr ""
 #: ../openconnect-strings.txt:1835
 #, c-format
 msgid "TPM2 Esys_Startup failed: 0x%x\n"
-msgstr ""
+msgstr "TPM2 Esys_Startup-ek huts egin du: 0x%x\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l283
 #: ../openconnect-strings.txt:1838
@@ -3548,13 +3549,13 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_ibm.c#l285
 #: ../openconnect-strings.txt:1842
 msgid "Enter TPM2 parent key password:"
-msgstr ""
+msgstr "Sartu TPM2 gako nagusiaren pasahitza:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l308
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_ibm.c#l286
 #: ../openconnect-strings.txt:1846
 msgid "Enter secondary TPM2 parent key password:"
-msgstr ""
+msgstr "Sartu bigarren mailako TPM2 gako nagusiaren pasahitza:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l322
 #: ../openconnect-strings.txt:1849
@@ -3565,13 +3566,13 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l330
 #: ../openconnect-strings.txt:1852
 msgid "TPM2 Esys_Load auth failed\n"
-msgstr ""
+msgstr "TPM2 Esys_Load autentifikazioak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l336
 #: ../openconnect-strings.txt:1855
 #, c-format
 msgid "TPM2 Esys_Load failed: 0x%x\n"
-msgstr ""
+msgstr "TPM2 Esys_Load-ek huts egin du: 0x%x\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l346
 #: ../openconnect-strings.txt:1858
@@ -3584,13 +3585,13 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_ibm.c#l476
 #: ../openconnect-strings.txt:1863
 msgid "Enter TPM2 key password:"
-msgstr ""
+msgstr "Sartu TPM2 gakoaren pasahitza:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l381
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_ibm.c#l377
 #: ../openconnect-strings.txt:1867
 msgid "Enter secondary TPM2 key password:"
-msgstr ""
+msgstr "Sartu bigarren mailako TPM2 gakoaren pasahitza:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l414
 #: ../openconnect-strings.txt:1870
@@ -3601,7 +3602,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l434
 #: ../openconnect-strings.txt:1873
 msgid "TPM2 Esys_RSA_Decrypt auth failed\n"
-msgstr ""
+msgstr "TPM2 Esys_RSA_Decrypt autentifikazioak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l440
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l530
@@ -3627,7 +3628,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l524
 #: ../openconnect-strings.txt:1888
 msgid "TPM2 Esys_Sign auth failed\n"
-msgstr ""
+msgstr "TPM2 Esys_Sign autentifikazioak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_esys.c#l564
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gnutls_tpm2_ibm.c#l512
@@ -3882,61 +3883,61 @@ msgstr ""
 #: ../openconnect-strings.txt:2037
 #, c-format
 msgid "HIP script '%s' exited abnormally\n"
-msgstr ""
+msgstr "'%s' HIP script-a gaizki amaitu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l904
 #: ../openconnect-strings.txt:2040
 #, c-format
 msgid "HIP script '%s' returned non-zero status: %d\n"
-msgstr ""
+msgstr "'%s' HIP script-ak zero ez den egoera itzuli du: %d\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l909
 #: ../openconnect-strings.txt:2043
 #, c-format
 msgid "HIP script '%s' completed successfully (report is %d bytes).\n"
-msgstr ""
+msgstr "'%s' HIP script-a ongi osatu da (txostena %d byte-koa da).\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l914
 #: ../openconnect-strings.txt:2046
 msgid "HIP report submission failed.\n"
-msgstr ""
+msgstr "HIP txostenaren bidalketak huts egin du.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l916
 #: ../openconnect-strings.txt:2049
 msgid "HIP report submitted successfully.\n"
-msgstr ""
+msgstr "HIP txostena ongi bidali da.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l952
 #: ../openconnect-strings.txt:2052
 #, c-format
 msgid "Failed to exec HIP script %s\n"
-msgstr ""
+msgstr "'%s' HIP script-a exekutatzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l966
 #: ../openconnect-strings.txt:2055
 msgid "Gateway says HIP report submission is needed.\n"
-msgstr ""
+msgstr "Atebideak dio HIP txostena bidali behar dela.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l970
 #: ../openconnect-strings.txt:2058
 msgid "Gateway says no HIP report submission is needed.\n"
-msgstr ""
+msgstr "Atebideak dio ez dela HIP txostenik bidali behar.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l1027
 #: ../openconnect-strings.txt:2061
 msgid "ESP tunnel connected; exiting HTTPS mainloop.\n"
-msgstr ""
+msgstr "ESP tunela konektatuta; HTTPS begizta nagusitik irteten.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l1054
 #: ../openconnect-strings.txt:2064
 msgid "Failed to connect ESP tunnel; using HTTPS instead.\n"
-msgstr ""
+msgstr "Huts egin du ESP tunelaren konexioak; HTTPS erabiltzen haren ordez.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l1091
 #: ../openconnect-strings.txt:2067
 #, c-format
 msgid "Packet receive error: %s\n"
-msgstr ""
+msgstr "Errorea paketea jasotzean: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l1112
 #: ../openconnect-strings.txt:2070
@@ -3973,7 +3974,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l1151
 #: ../openconnect-strings.txt:2090
 msgid "Unknown packet. Header dump follows:\n"
-msgstr ""
+msgstr "Pakete ezezaguna. Goiburuen iraulketa jarraian:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gpst.c#l1198
 #: ../openconnect-strings.txt:2093
@@ -4021,12 +4022,12 @@ msgstr "Huts egin du ESP zundaketa bidaltzeak\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gssapi.c#l75
 #: ../openconnect-strings.txt:2118
 msgid "Error importing GSSAPI name for authentication:\n"
-msgstr ""
+msgstr "Errorea GSSAPI izena inportatzean autentifikaziorako:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gssapi.c#l128
 #: ../openconnect-strings.txt:2121
 msgid "Error generating GSSAPI response:\n"
-msgstr ""
+msgstr "Errorea GSSAPI erantzuna sortzean:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gssapi.c#l145
 #: ../openconnect-strings.txt:2124
@@ -4045,19 +4046,19 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/sspi.c#l248
 #: ../openconnect-strings.txt:2133
 msgid "GSSAPI authentication completed\n"
-msgstr ""
+msgstr "GSSAPI autentifikazioa osatu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gssapi.c#l214
 #: ../openconnect-strings.txt:2136
 #, c-format
 msgid "GSSAPI token too large (%zd bytes)\n"
-msgstr ""
+msgstr "GSSAPI tokena luzeegia da (%zd byte)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gssapi.c#l227
 #: ../openconnect-strings.txt:2139
 #, c-format
 msgid "Sending GSSAPI token of %zu bytes\n"
-msgstr ""
+msgstr "%zu byte-ko GSSAPI tokena bidaltzen\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/gssapi.c#l232
 #: ../openconnect-strings.txt:2142
@@ -4188,7 +4189,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/hpke.c#l321
 #: ../openconnect-strings.txt:2211
 msgid "SSO token not alphanumeric\n"
-msgstr ""
+msgstr "SSO tokena ez da alfanumerikoa\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http-auth.c#l69
 #: ../openconnect-strings.txt:2214
@@ -4211,7 +4212,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1167
 #: ../openconnect-strings.txt:2224
 msgid "This version of OpenConnect was built without GSSAPI support\n"
-msgstr ""
+msgstr "OpenConnect aplikazioaren bertsio hau GSSAPI euskarririk gabe eraiki da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http-auth.c#l153
 #: ../openconnect-strings.txt:2227
@@ -4228,7 +4229,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http-auth.c#l169
 #: ../openconnect-strings.txt:2234
 msgid "No more authentication methods to try\n"
-msgstr ""
+msgstr "Ez dago autentifikazio-metodo gehiagorik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l56
 #: ../openconnect-strings.txt:2237
@@ -4304,13 +4305,13 @@ msgstr "Errorea zatiaren goiburua eskuratzean\n"
 #: ../openconnect-strings.txt:2275
 #, c-format
 msgid "HTTP chunk length is negative (%ld)\n"
-msgstr ""
+msgstr "HTTP puxken luzera negatiboa da (%ld)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l447
 #: ../openconnect-strings.txt:2278
 #, c-format
 msgid "HTTP chunk length is too large (%ld)\n"
-msgstr ""
+msgstr "HTTP puxken luzera luzeegia da (%ld)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l470
 #: ../openconnect-strings.txt:2281
@@ -4321,7 +4322,7 @@ msgstr "Errorea HTTParen erantzunaren gorputza eskuratzean\n"
 #: ../openconnect-strings.txt:2284
 #, c-format
 msgid "Error in chunked decoding. Expected '', got: '%s'\n"
-msgstr ""
+msgstr "Errorea puskak deskodetzean. Espero zen: '', eskuratu da: '%s'\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l487
 #: ../openconnect-strings.txt:2287
@@ -4405,12 +4406,12 @@ msgstr "helbide mota ez dago onartuta"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1033
 #: ../openconnect-strings.txt:2332
 msgid "SOCKS server requested username/password but we have none\n"
-msgstr ""
+msgstr "SOCKS zerbitzariak erabiltzailea/pasahitza eskatu ditu, baina ez dugu halakorik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1041
 #: ../openconnect-strings.txt:2335
 msgid "Username and password for SOCKS authentication must be < 255 bytes\n"
-msgstr ""
+msgstr "SOCKS autentifikaziorako erabiltzaileak/pasahitzak < 255 byte eduki behar ditu\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1056
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1119
@@ -4436,12 +4437,12 @@ msgstr "Ustekabeko autentifikazioaren eskaera SOCKS proxy-tik: %02x %02x\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1077
 #: ../openconnect-strings.txt:2350
 msgid "Authenticated to SOCKS server using password\n"
-msgstr ""
+msgstr "SOCKS zerbitzariarekin autentifikatuta pasahitz bidez\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1081
 #: ../openconnect-strings.txt:2353
 msgid "Password authentication to SOCKS server failed\n"
-msgstr ""
+msgstr "SOCKS zerbitzariarekin pasahitz bidez autentifikatzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1144
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/http.c#l1151
@@ -4674,7 +4675,7 @@ msgstr "Soilik 'https://' baimentzen da zerbitzariaren URLan\n"
 #: ../openconnect-strings.txt:2490
 #, c-format
 msgid "Unknown certificate hash: %s.\n"
-msgstr ""
+msgstr "Ziurtagiri-hash ezezaguna: %s.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/library.c#l1559
 #: ../openconnect-strings.txt:2493
@@ -4682,7 +4683,7 @@ msgstr ""
 msgid ""
 "The size of the provided fingerprint is less than the minimum required "
 "(%u).\n"
-msgstr ""
+msgstr "Emandako hatz-markaren tamaina beharrezkoa dena (%u) baino txikiagoa da.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/library.c#l1616
 #: ../openconnect-strings.txt:2498
@@ -4692,7 +4693,7 @@ msgstr "Ez dago inprimakiaren kudeatzailerik: ezin da autentifikatu.\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/library.c#l1620
 #: ../openconnect-strings.txt:2501
 msgid "No form ID. This is a bug in OpenConnect's authentication code.\n"
-msgstr ""
+msgstr "Ez dago inprimakiko IDrik. Akats hori OpenConnect-en autentifikazio-kodearen akatsa da.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/library.c#l1691
 #: ../openconnect-strings.txt:2504
@@ -4724,7 +4725,7 @@ msgstr "Eragiketa abortatu egin du erabiltzaileak\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l470
 #: ../openconnect-strings.txt:2519
 msgid "ReadConsole() didn't read any input\n"
-msgstr ""
+msgstr "ReadConsole() funtzioak ez du inolako sarrerarik irakurri\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l478
 #: ../openconnect-strings.txt:2522
@@ -4755,12 +4756,12 @@ msgstr ""
 #: ../openconnect-strings.txt:2537
 #, c-format
 msgid "Using %s. Features present:"
-msgstr ""
+msgstr "%s erabiltzen. Ezaugarriak:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l686
 #: ../openconnect-strings.txt:2540
 msgid "OpenSSL ENGINE not present"
-msgstr "Ez dago OpenSSL motorra"
+msgstr "Ez dago OpenSSL motorrik"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l725
 #: ../openconnect-strings.txt:2543
@@ -4890,7 +4891,7 @@ msgstr "Aukeratu autentifikazioaren saio-hasieraren hautapena"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l963
 #: ../openconnect-strings.txt:2617
 msgid "Provide authentication form responses"
-msgstr ""
+msgstr "Hornitu autentifikazio-inprimakiaren erantzunak"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l964
 #: ../openconnect-strings.txt:2620
@@ -4920,7 +4921,7 @@ msgstr "Ezarri pasaesaldia edo TPM SRK PINa"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l969
 #: ../openconnect-strings.txt:2635
 msgid "Set external browser executable"
-msgstr ""
+msgstr "Ezarri kanpoko arakatzailearen exekutagarria"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l970
 #: ../openconnect-strings.txt:2638
@@ -4930,7 +4931,7 @@ msgstr "Gakoaren pasaesaldia fitxategi-sistemaren fsid-a da"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l971
 #: ../openconnect-strings.txt:2641
 msgid "Software token type: rsa, totp, hotp or oidc"
-msgstr ""
+msgstr "Software-tokenaren mota: rsa, totp, hotp edo oidc"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l972
 #: ../openconnect-strings.txt:2644
@@ -4955,7 +4956,7 @@ msgstr "Zerbitzariaren balioztatzea"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l981
 #: ../openconnect-strings.txt:2656
 msgid "Accept only server certificate with this fingerprint"
-msgstr ""
+msgstr "Onartu hatz-marka hau duen zerbitzari-ziurtagiria soilik"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l982
 #: ../openconnect-strings.txt:2659
@@ -4970,12 +4971,12 @@ msgstr "Ziurtagiriaren fitxategia zerbitzaria egiaztatzeko"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l985
 #: ../openconnect-strings.txt:2665
 msgid "Internet connectivity"
-msgstr ""
+msgstr "Interneteko konektagarritasuna"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l986
 #: ../openconnect-strings.txt:2668
 msgid "Set VPN server"
-msgstr ""
+msgstr "Ezarri VPM zerbitzaria"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l987
 #: ../openconnect-strings.txt:2671
@@ -4985,17 +4986,17 @@ msgstr "Ezarri proxy zerbitzaria"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l988
 #: ../openconnect-strings.txt:2674
 msgid "Set proxy authentication methods"
-msgstr ""
+msgstr "Ezarri proxy-autentifikaziorako metodoak"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l989
 #: ../openconnect-strings.txt:2677
 msgid "Disable proxy"
-msgstr "Desgaitu proxy-a"
+msgstr "Desgaitu proxya"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l990
 #: ../openconnect-strings.txt:2680
 msgid "Use libproxy to automatically configure proxy"
-msgstr "Erabili 'libproxy' proxy-a automatikoki konfiguratzeko"
+msgstr "Erabili 'libproxy' proxya automatikoki konfiguratzeko"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l992
 #: ../openconnect-strings.txt:2683
@@ -5010,7 +5011,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l995
 #: ../openconnect-strings.txt:2689
 msgid "Use IP when connecting to HOST"
-msgstr ""
+msgstr "Erabili IPa HOSTekin konektatzean"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l996
 #: ../openconnect-strings.txt:2692
@@ -5025,7 +5026,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l999
 #: ../openconnect-strings.txt:2698
 msgid "Authentication (two-phase)"
-msgstr ""
+msgstr "Autentifikazioa (bi fase)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1000
 #: ../openconnect-strings.txt:2701
@@ -5045,7 +5046,7 @@ msgstr "Autentifikatu soilik eta erakutsi saio-hasieraren informazioa"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1003
 #: ../openconnect-strings.txt:2710
 msgid "Fetch and print cookie only; don't connect"
-msgstr ""
+msgstr "Atzitu eta inprimatu cookie-a soilik; ez konektatu"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1004
 #: ../openconnect-strings.txt:2713
@@ -5065,7 +5066,7 @@ msgstr "Jarraitu atzeko planoan abiatu ondoren"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1009
 #: ../openconnect-strings.txt:2722
 msgid "Write the daemon's PID to this file"
-msgstr "Idatzi daemon-aren PIDa fitxategi honetan"
+msgstr "Idatzi daemonaren PIDa fitxategi honetan"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1010
 #: ../openconnect-strings.txt:2725
@@ -5145,7 +5146,7 @@ msgstr "XML konfigurazio-fitxategia"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1033
 #: ../openconnect-strings.txt:2770
 msgid "Request MTU from server (legacy servers only)"
-msgstr ""
+msgstr "Eskatu MTUa zerbitzaritik (zerbitzari zaharrak soilik)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1034
 #: ../openconnect-strings.txt:2773
@@ -5205,12 +5206,12 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1046
 #: ../openconnect-strings.txt:2806
 msgid "OS type to report. Allowed values are the following:"
-msgstr ""
+msgstr "Jakinaraziko den SE mota. Onartutako balioak honakoak dira:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1047
 #: ../openconnect-strings.txt:2809
 msgid "linux, linux-64, win, mac-intel, android, apple-ios"
-msgstr ""
+msgstr "linux, linux-64, win, mac-intel, android, apple-ios"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1048
 #: ../openconnect-strings.txt:2812
@@ -5225,12 +5226,12 @@ msgstr "lehenetsia:"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1051
 #: ../openconnect-strings.txt:2818
 msgid "Trojan binary (CSD) execution"
-msgstr ""
+msgstr "Bitar troianoaren (CSD) exekuzioa"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1053
 #: ../openconnect-strings.txt:2821
 msgid "Drop privileges during trojan execution"
-msgstr ""
+msgstr "Jaregin pribilegioak troianoa exekutatu artean"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1054
 #: ../openconnect-strings.txt:2824
@@ -5240,7 +5241,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1056
 #: ../openconnect-strings.txt:2827
 msgid "Set minimum interval between trojan runs (in seconds)"
-msgstr ""
+msgstr "Ezarri gutxieneko tartea troianoaren exekuzioen artean (segundotan)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1058
 #: ../openconnect-strings.txt:2830
@@ -5260,22 +5261,22 @@ msgstr "Ez saiatu XML POST-en autentifikazioa"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1061
 #: ../openconnect-strings.txt:2839
 msgid "Allow use of the ancient, insecure 3DES and RC4 ciphers"
-msgstr ""
+msgstr "Onartu 3DES eta RC4 zifratze zahar ez seguruak erabiltzea"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1063
 #: ../openconnect-strings.txt:2842
 msgid "Multiple certificate authentication (MCA)"
-msgstr ""
+msgstr "Ziurtagiri anitzen bidezko autentifikazioa (MCA)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1064
 #: ../openconnect-strings.txt:2845
 msgid "Use MCA certificate MCACERT"
-msgstr ""
+msgstr "Erabili MCAren MCACERT ziurtagiria"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1065
 #: ../openconnect-strings.txt:2848
 msgid "Use MCA key MCAKEY"
-msgstr ""
+msgstr "Erabili MCAren MCAKEY gakoa"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1066
 #: ../openconnect-strings.txt:2851
@@ -5321,13 +5322,13 @@ msgstr ""
 #: ../openconnect-strings.txt:2872
 #, c-format
 msgid "Invalid user \"%s\": %s\n"
-msgstr ""
+msgstr "\"%s\" erabiltzaile baliogabea: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1256
 #: ../openconnect-strings.txt:2875
 #, c-format
 msgid "Invalid user ID \"%d\": %s\n"
-msgstr ""
+msgstr "Erabiltzailearen \"%d\" ID baliogabea: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1539
 #: ../openconnect-strings.txt:2878
@@ -5429,7 +5430,7 @@ msgstr "Huts egin du '%s' idazteko irekitzean: %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1655
 #: ../openconnect-strings.txt:2931
 msgid "Failed to continue in background"
-msgstr ""
+msgstr "Huts egin du atzeko planoan jarraitzeak"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1663
 #: ../openconnect-strings.txt:2934
@@ -5441,7 +5442,7 @@ msgstr "Atzeko planoan jarraitzen du: %d PIDa\n"
 #: ../openconnect-strings.txt:2937
 #, c-format
 msgid "WARNING: Cannot set locale: %s\n"
-msgstr ""
+msgstr "ABISUA: Ezin da eskualde-ezarpena ezarri: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1742
 #: ../openconnect-strings.txt:2940
@@ -5501,12 +5502,12 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1920
 #: ../openconnect-strings.txt:2974
 msgid "Failed to allocate memory\n"
-msgstr ""
+msgstr "Huts egin du memoria esleitzeak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l1915
 #: ../openconnect-strings.txt:2977
 msgid "Missing colon in resolve option\n"
-msgstr ""
+msgstr "Bi puntuak falta dira ebazteko aukeran\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2007
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2017
@@ -5601,7 +5602,7 @@ msgstr "Huts egin du SSL konexioa sortzeak\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2360
 #: ../openconnect-strings.txt:3033
 msgid "Set up UDP failed; using SSL instead\n"
-msgstr ""
+msgstr "UDPren konfigurazioak huts egin du: SSL erabiltzen haren ordez\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2366
 #: ../openconnect-strings.txt:3036
@@ -5633,7 +5634,7 @@ msgstr "Zerbitzariak saioa amaitu du; irteten.\n"
 #: ../openconnect-strings.txt:3051
 #, c-format
 msgid "User cancelled (%s); exiting.\n"
-msgstr ""
+msgstr "Erabiltzaileak utzi du bertan behera (%s); irteten.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2410
 #: ../openconnect-strings.txt:3054
@@ -5644,7 +5645,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2420
 #: ../openconnect-strings.txt:3057
 msgid "Unrecoverable I/O error; exiting.\n"
-msgstr ""
+msgstr "S/I errore berrezkuraezina; irteten.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2427
 #: ../openconnect-strings.txt:3060
@@ -5700,7 +5701,7 @@ msgstr "\n"
 #: ../openconnect-strings.txt:3088
 msgid ""
 "To trust this server in future, perhaps add this to your command line:\n"
-msgstr ""
+msgstr "Zerbitzari honetaz etorkizunean fidatzeko, gehitu hau komando-lerroan:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2536
 #: ../openconnect-strings.txt:3092
@@ -5759,7 +5760,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3121
 #, c-format
 msgid "Failed to write token: %s\n"
-msgstr ""
+msgstr "Huts egin du tokena idazteak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2925
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2949
@@ -5770,7 +5771,7 @@ msgstr "Softwarearen tokenaren katea baliogabea da\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2929
 #: ../openconnect-strings.txt:3128
 msgid "Can't open stoken file\n"
-msgstr ""
+msgstr "Ezin da stoken fitxategia ireki\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2931
 #: ../openconnect-strings.txt:3131
@@ -5847,7 +5848,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l259
 #: ../openconnect-strings.txt:3173
 msgid "Delaying cancel.\n"
-msgstr ""
+msgstr "Bertan behera uztea atzeratzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l278
 #: ../openconnect-strings.txt:3176
@@ -5857,7 +5858,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l281
 #: ../openconnect-strings.txt:3179
 msgid "Delaying pause.\n"
-msgstr ""
+msgstr "Pausa atzeratzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l294
 #: ../openconnect-strings.txt:3182
@@ -5879,12 +5880,12 @@ msgstr "'WaitForMultipleObjects'-ek  huts egin du: %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l364
 #: ../openconnect-strings.txt:3191
 msgid "Failed epoll_wait() in mainloop"
-msgstr ""
+msgstr "epoll_wait() funtzioak huts egin du begizta nagusian"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mainloop.c#l396
 #: ../openconnect-strings.txt:3194
 msgid "Failed select() in mainloop"
-msgstr ""
+msgstr "select() funtzioak huts egin du begizta nagusian"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/mtucalc.c#l90
 #: ../openconnect-strings.txt:3197
@@ -5912,14 +5913,14 @@ msgstr ""
 #: ../openconnect-strings.txt:3210
 #, c-format
 msgid "InitializeSecurityContext() failed: %lx\n"
-msgstr ""
+msgstr "InitializeSecurityContext() funtzioak huts egin du: %lx\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/ntlm.c#l114
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/sspi.c#l47
 #: ../openconnect-strings.txt:3214
 #, c-format
 msgid "AcquireCredentialsHandle() failed: %lx\n"
-msgstr ""
+msgstr "AcquireCredentialsHandle() funtzioak huts egin du: %lx\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/ntlm.c#l247
 #: ../openconnect-strings.txt:3217
@@ -5967,7 +5968,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oath.c#l218
 #: ../openconnect-strings.txt:3241
 msgid "This version of OpenConnect was built without PSKC support\n"
-msgstr ""
+msgstr "OpenConnect-en bertsio hau PSKC euskarririk gabe eraiki da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oath.c#l314
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oath.c#l339
@@ -6267,13 +6268,13 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/pulse.c#l2732
 #: ../openconnect-strings.txt:3415
 msgid "new incoming"
-msgstr ""
+msgstr "sarrera berria"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l770
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/pulse.c#l2733
 #: ../openconnect-strings.txt:3419
 msgid "new outgoing"
-msgstr ""
+msgstr "irteera berria"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l795
 #: ../openconnect-strings.txt:3422
@@ -6283,23 +6284,23 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l804
 #: ../openconnect-strings.txt:3425
 msgid "Server terminated connection (session expired)\n"
-msgstr ""
+msgstr "Zerbitzariak konexioa amaitu du (saioa iraungi da)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l808
 #: ../openconnect-strings.txt:3428
 msgid "Server terminated connection (idle timeout)\n"
-msgstr ""
+msgstr "Zerbitzariak konexioa amaitu du (denbora-muga inaktiboa)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l812
 #: ../openconnect-strings.txt:3431
 #, c-format
 msgid "Server terminated connection (reason: %d)\n"
-msgstr ""
+msgstr "Zerbitzariak konexioa amaitu du (arrazoia: %d)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l819
 #: ../openconnect-strings.txt:3434
 msgid "Server sent zero-length oNCP record\n"
-msgstr ""
+msgstr "Zerbitzariak zero luzerako oNCP erregistroa bidali du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l920
 #: ../openconnect-strings.txt:3437
@@ -6316,13 +6317,13 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l942
 #: ../openconnect-strings.txt:3443
 msgid "Unrecognised data packet\n"
-msgstr ""
+msgstr "Datu-pakete ezezaguna\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l1001
 #: ../openconnect-strings.txt:3446
 #, c-format
 msgid "Failed to set up ESP: %s\n"
-msgstr ""
+msgstr "Huts egin du ESP konfiguratzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l1011
 #: ../openconnect-strings.txt:3449
@@ -6340,12 +6341,12 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/pulse.c#l2787
 #: ../openconnect-strings.txt:3456
 msgid "Packet outgoing:\n"
-msgstr ""
+msgstr "Irteerako paketea:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/oncp.c#l1093
 #: ../openconnect-strings.txt:3459
 msgid "Sent ESP enable control packet\n"
-msgstr ""
+msgstr "ESP gaitutako kontrol-paketea bidali da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openconnect-internal.h#l1692
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openconnect-internal.h#l1702
@@ -6364,7 +6365,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-dtls.c#l269
 #: ../openconnect-strings.txt:3470
 msgid "Failed to generate random key\n"
-msgstr ""
+msgstr "Huts egin du ausazko gakoa sortzeak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-dtls.c#l232
 #: ../openconnect-strings.txt:3473
@@ -6390,7 +6391,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-dtls.c#l308
 #: ../openconnect-strings.txt:3485
 msgid "PSK callback\n"
-msgstr ""
+msgstr "PSK atzeradeia\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-dtls.c#l370
 #: ../openconnect-strings.txt:3488
@@ -6400,12 +6401,12 @@ msgstr "Huts egin du DTLSv1 CTX hasieratzean\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-dtls.c#l380
 #: ../openconnect-strings.txt:3491
 msgid "Set DTLS CTX version failed\n"
-msgstr ""
+msgstr "DTLS CTX bertsioa ezartzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-dtls.c#l408
 #: ../openconnect-strings.txt:3494
 msgid "Failed to generate DTLS key\n"
-msgstr ""
+msgstr "DTLS gakoa sortzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-dtls.c#l468
 #: ../openconnect-strings.txt:3497
@@ -6543,7 +6544,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3574
 #, c-format
 msgid "Failed to parse PKCS#11 URI '%s'\n"
-msgstr ""
+msgstr "Huts egin du '%s' PKCS#11 URIaren analisiak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l361
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l586
@@ -6590,24 +6591,24 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l505
 #: ../openconnect-strings.txt:3600
 msgid "Certificate has no public key\n"
-msgstr ""
+msgstr "Ziurtagiriak ez du gako publikorik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l506
 #: ../openconnect-strings.txt:3603
 msgid "Secondary certificate has no public key\n"
-msgstr ""
+msgstr "Bigarren mailako ziurtagiriak ez du gak publikorik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l512
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l536
 #: ../openconnect-strings.txt:3607
 msgid "Certificate does not match private key\n"
-msgstr ""
+msgstr "Ziurtagiria ez dator bat gako pribatuarekin\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l513
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l537
 #: ../openconnect-strings.txt:3611
 msgid "Secondary certificate does not match private key\n"
-msgstr ""
+msgstr "Bigarren mailako ziurtagiria ez dator bat gako pribatuarekin\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl-pkcs11.c#l516
 #: ../openconnect-strings.txt:3614
@@ -6712,32 +6713,32 @@ msgstr "%s-ren ziurtagiri gehigarria: '%s'\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l653
 #: ../openconnect-strings.txt:3671
 msgid "Parse PKCS#12 failed (see above errors)\n"
-msgstr "Huts egin du PKCS#12 analizatzean (ikus gaineko errorak)\n"
+msgstr "Huts egin du PKCS#12 analizatzeak (ikus gaineko errorak)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l654
 #: ../openconnect-strings.txt:3674
 msgid "Parse secondary PKCS#12 failed (see above errors)\n"
-msgstr ""
+msgstr "Huts egin du bigarren mailako PKCS#12 analizatzeak (ikus gaineko errorak)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l671
 #: ../openconnect-strings.txt:3677
 msgid "PKCS#12 contained no certificate!\n"
-msgstr "PKCS#12 ez dauka ziurtagiririk.\n"
+msgstr "PKCS#12-k ez dauka ziurtagiririk.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l672
 #: ../openconnect-strings.txt:3680
 msgid "Secondary PKCS#12 contained no certificate!\n"
-msgstr ""
+msgstr "Bigarren mailako PKCS#12-k ez dauka ziurtagiririk!\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l678
 #: ../openconnect-strings.txt:3683
 msgid "PKCS#12 contained no private key!\n"
-msgstr "PKCS#12 ez dauka gako pribaturik.\n"
+msgstr "PKCS#12-k ez dauka gako pribaturik.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l679
 #: ../openconnect-strings.txt:3686
 msgid "Secondary PKCS#12 contained no private key!\n"
-msgstr ""
+msgstr "Bigarren mailako PKCS#12-k ez dauka gako pribaturik.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/openssl.c#l686
 #: ../openconnect-strings.txt:3689
