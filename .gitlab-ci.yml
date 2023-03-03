@@ -13,6 +13,7 @@
       findutils
       gcc
       gcr-devel
+      gcr3-devel
       gettext-devel
       glib2-devel
       gtk4-devel
@@ -25,12 +26,13 @@
       libxml2-devel
       openconnect-devel
       webkit2gtk3-devel
+      webkit2gtk4.1-devel
 
 # Disable fetching Git, run after the tarball is rolled
 .dist: &dist
   stage: test
   dependencies:
-    - fedora34_dist
+    - fedora37_dist
   variables:
     GIT_STRATEGY: none
 
@@ -50,9 +52,9 @@
     - make -j uninstall
 
 # Roll the distribution tarball
-fedora34_dist:
+fedora37_dist:
   <<: *fedora_deps
-  image: fedora:34
+  image: fedora:37
   stage: build
   script:
     - dnf -y install
