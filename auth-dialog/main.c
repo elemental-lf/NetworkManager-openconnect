@@ -684,8 +684,8 @@ static void cookie_cb (GObject *source_obj, GAsyncResult *res, gpointer data)
 
 	for (l = cookies, i = 0; l != NULL; l = l->next, i+=2) {
 		SoupCookie *cookie = (SoupCookie *)l->data;
-                cookie_array[i] = strdup(cookie->name);
-                cookie_array[i+1] = strdup(cookie->value);
+		cookie_array[i] = strdup(soup_cookie_get_name(cookie));
+		cookie_array[i+1] = strdup(soup_cookie_get_value(cookie));
 	}
 	g_list_free_full(cookies, (GDestroyNotify)soup_cookie_free);
 
@@ -722,8 +722,6 @@ static void cookie_cb (GObject *source_obj, GAsyncResult *res, gpointer data)
 		free(headers_array[i]);
 	}
 	free(headers_array);
-	if (headers)
-		soup_message_headers_free (headers);
 
 	if (!result) {
 		g_mutex_lock(&ctx->mutex);
