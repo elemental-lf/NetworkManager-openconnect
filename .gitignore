@@ -17,6 +17,7 @@ missing
 mkinstalldirs
 POTFILES
 stamp-*
+.dirstamp
 .deps
 .libs
 autom4te.cache
@@ -29,6 +30,7 @@ m4/libtool.m4
 m4/lt*.m4
 appdata/network-manager-openconnect.metainfo.xml
 /cscope.*
+properties/resources.c
 
 nm-openconnect-service.name
 src/nm-openconnect-service
