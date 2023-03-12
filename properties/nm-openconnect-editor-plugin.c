@@ -249,12 +249,23 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 	if (buf)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_REPORTED_OS, buf);
 
-	/* User Certificate */
+	/* Machine Certificate */
+	buf = g_key_file_get_string(keyfile, "openconnect", "MachineCertificate",
+								NULL);
+	if (buf && strcmp(buf, "(null)"))
+		nm_setting_vpn_add_data_item(s_vpn, NM_OPENCONNECT_KEY_MCACERT, buf);
+
+	/* MCA Private Key */
+	buf = g_key_file_get_string(keyfile, "openconnect", "MachinePrivateKey", NULL);
+	if (buf && strcmp(buf, "(null)"))
+		nm_setting_vpn_add_data_item(s_vpn, NM_OPENCONNECT_KEY_MCAKEY, buf);
+
+    /* User Certificate */
 	buf = g_key_file_get_string (keyfile, "openconnect", "UserCertificate", NULL);
 	if (buf && strcmp(buf, "(null)"))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_USERCERT, buf);
 
-	/* Private Key */
+	/* User Private Key */
 	buf = g_key_file_get_string (keyfile, "openconnect", "PrivateKey", NULL);
 	if (buf && strcmp(buf, "(null)"))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PRIVKEY, buf);
@@ -304,6 +315,8 @@ export (NMVpnEditorPlugin *iface,
 	gboolean csd_enable = FALSE;
 	const char *csd_wrapper = NULL;
 	const char *reported_os = NULL;
+	const char *mcacert = NULL;
+	const char *mcaprivkey = NULL;
 	const char *usercert = NULL;
 	const char *privkey = NULL;
 	gboolean pem_passphrase_fsid = FALSE;
@@ -366,6 +379,14 @@ export (NMVpnEditorPlugin *iface,
 	if (value && strlen (value))
 		reported_os = value;
 
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_MCACERT);
+	if (value && strlen (value))
+		mcacert = value;
+
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_MCAKEY);
+	if (value && strlen (value))
+		mcaprivkey = value;
+
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_USERCERT);
 	if (value && strlen (value))
 		usercert = value;
@@ -410,6 +431,8 @@ export (NMVpnEditorPlugin *iface,
 		 "CSDEnable=%s\n"
 		 "CSDWrapper=%s\n"
 		 "ReportedOS=%s\n"
+		 "MachineCertificate=%s\n"
+		 "MachinePrivateKey=%s\n"
 		 "UserCertificate=%s\n"
 		 "PrivateKey=%s\n"
 		 "FSID=%s\n"
@@ -426,8 +449,10 @@ export (NMVpnEditorPlugin *iface,
 		 /* Cisco Secure Desktop */  csd_enable ? "1" : "0",
 		 /* CSD Wrapper Script */    csd_wrapper ? csd_wrapper : "",
 		 /* Reported OS */           reported_os ? reported_os : "",
+		 /* MCA Certificate */       mcacert ? mcacert : "",
+		 /* MCA Private Key */       mcaprivkey ? mcaprivkey : "",
 		 /* User Certificate */      usercert ? usercert : "",
-		 /* Private Key */           privkey ? privkey : "",
+		 /* User Private Key */      privkey ? privkey : "",
 		 /* FSID */                  pem_passphrase_fsid ? "1" : "0",
 		 /* Prevent invalid cert */  prevent_invalid_cert ? "1" : "0",
 		 /* Disable UDP */           disable_udp ? "1" : "0",
@@ -657,4 +682,3 @@ nm_vpn_editor_plugin_factory (GError **error)
 
 	return g_object_new (OPENCONNECT_TYPE_EDITOR_PLUGIN, NULL);
 }
-

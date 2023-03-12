@@ -205,14 +205,27 @@
       </object>
     </child>
     <child>
-      <object class="NmaCertChooser" id="cert_chooser">
+      <object class="NmaCertChooser" id="mca_cert_chooser">
+        <property name="flags">8</property>
+        <property name="title">Machine</property>
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="row">10</property>
+          <property name="column-span">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="NmaCertChooser" id="user_cert_chooser">
         <property name="flags">8</property>
         <property name="title">User</property>
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <layout>
           <property name="column">0</property>
-          <property name="row">10</property>
+          <property name="row">11</property>
           <property name="column-span">2</property>
         </layout>
       </object>

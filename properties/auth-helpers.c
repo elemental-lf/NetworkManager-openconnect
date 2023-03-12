@@ -34,6 +34,8 @@
 #include <unistd.h>
 #include <errno.h>
 
+#include <openconnect.h>
+
 void
 tls_pw_init_auth_widget (GtkBuilder *builder,
                          NMSettingVpn *s_vpn,
@@ -52,7 +54,13 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
 
-	widget = GTK_WIDGET (gtk_builder_get_object (builder, "cert_chooser"));
+#if OPENCONNECT_CHECK_VER(5,8)
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "mca_cert_chooser"));
+	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
+	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
+#endif
+
+	widget = GTK_WIDGET (gtk_builder_get_object (builder, "user_cert_chooser"));
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
 }
@@ -89,7 +97,7 @@ update_cert_from_filechooser (GtkBuilder *builder,
 		authtype = "password";
 	}
 	/* Hack to keep older nm-auth-dialog working */
-	if (!strcmp(key, NM_OPENCONNECT_KEY_USERCERT))
+	if (!strcmp(key, NM_OPENCONNECT_KEY_USERCERT) || !strcmp(key, NM_OPENCONNECT_KEY_MCACERT))
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_AUTHTYPE, authtype);
 	g_free (filename);
 }
@@ -128,7 +136,13 @@ auth_widget_update_connection (GtkBuilder *builder,
                                NMSettingVpn *s_vpn)
 {
 	update_cert_from_filechooser (builder, NM_OPENCONNECT_KEY_CACERT, "ca_chooser", s_vpn);
-	update_cert_from_filechooser (builder, NM_OPENCONNECT_KEY_USERCERT, "cert_chooser", s_vpn);
-	update_key_from_filechooser (builder, NM_OPENCONNECT_KEY_PRIVKEY, "cert_chooser", s_vpn);
+
+#if OPENCONNECT_CHECK_VER(5,8)
+	update_cert_from_filechooser (builder, NM_OPENCONNECT_KEY_MCACERT, "mca_cert_chooser", s_vpn);
+	update_key_from_filechooser (builder, NM_OPENCONNECT_KEY_MCAKEY, "mca_cert_chooser", s_vpn);
+#endif
+
+	update_cert_from_filechooser (builder, NM_OPENCONNECT_KEY_USERCERT, "user_cert_chooser", s_vpn);
+	update_key_from_filechooser (builder, NM_OPENCONNECT_KEY_PRIVKEY, "user_cert_chooser", s_vpn);
 	return TRUE;
 }
