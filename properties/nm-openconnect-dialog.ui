@@ -146,7 +146,7 @@
     </child>
     <child>
       <object class="NmaCertChooser" id="ca_chooser">
-        <property name="flags">13</property>
+        <property name="flags">9</property>
         <property name="title">CA</property>
         <property name="visible">True</property>
         <property name="can-focus">False</property>
@@ -318,7 +318,7 @@
     </child>
     <child>
       <object class="NmaCertChooser" id="cert_chooser">
-        <property name="flags">12</property>
+        <property name="flags">8</property>
         <property name="title">User</property>
         <property name="visible">True</property>
         <property name="can-focus">False</property>
