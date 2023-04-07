@@ -1852,7 +1852,7 @@ static void build_main_dialog(auth_ui_data *ui_data)
 
 static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTable *secrets, char *vpn_uuid)
 {
-	char *vpn_useragent = g_hash_table_lookup(options, "useragent");
+	char *vpn_useragent = g_hash_table_lookup(options, NM_OPENCONNECT_KEY_USERAGENT);
 	auth_ui_data *ui_data;
 
 	ui_data = g_slice_new0(auth_ui_data);
