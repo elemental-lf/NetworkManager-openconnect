@@ -5989,7 +5989,7 @@ msgstr "Neposkytnut žádný argument  --script; DNS a nasměrování nenastaven
 #: ../openconnect-strings.txt:3039
 #, c-format
 msgid "See %s\n"
-msgstr ""
+msgstr "Více na %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fd740cfab2:/main.c#l2381
 #: ../openconnect-strings.txt:3042
