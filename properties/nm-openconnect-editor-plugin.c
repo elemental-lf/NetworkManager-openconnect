@@ -269,6 +269,11 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 	if (true)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PREVENT_INVALID_CERT, "yes");
 
+	/* Disable UDP (DTLS and ESP) and use only TLS tunnel */
+	bval = g_key_file_get_boolean (keyfile, "openconnect", "DisableUDP", NULL);
+	if (bval)
+		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_DISABLE_UDP, "yes");
+
 	/* Soft token mode */
 	buf = g_key_file_get_string (keyfile, "openconnect", "StokenSource", NULL);
 	if (buf)
@@ -303,6 +308,7 @@ export (NMVpnEditorPlugin *iface,
 	const char *privkey = NULL;
 	gboolean pem_passphrase_fsid = FALSE;
 	gboolean prevent_invalid_cert = FALSE;
+	gboolean disable_udp = FALSE;
 	const char *token_mode = NULL;
 	const char *token_secret = NULL;
 	gboolean success = FALSE;
@@ -376,6 +382,10 @@ export (NMVpnEditorPlugin *iface,
 	if (value && !strcmp (value, "yes"))
 		prevent_invalid_cert = TRUE;
 
+	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_DISABLE_UDP);
+	if (value && !strcmp (value, "yes"))
+		disable_udp = TRUE;
+
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_TOKEN_MODE);
 	if (value && strlen (value))
 		token_mode = value;
@@ -404,6 +414,7 @@ export (NMVpnEditorPlugin *iface,
 		 "PrivateKey=%s\n"
 		 "FSID=%s\n"
 		 "PreventInvalidCert=%s\n"
+		 "DisableUDP=%s\n"
 		 "StokenSource=%s\n"
 		 "StokenString=%s\n",
 		 /* Description */           nm_setting_connection_get_id (s_con),
@@ -419,6 +430,7 @@ export (NMVpnEditorPlugin *iface,
 		 /* Private Key */           privkey ? privkey : "",
 		 /* FSID */                  pem_passphrase_fsid ? "1" : "0",
 		 /* Prevent invalid cert */  prevent_invalid_cert ? "1" : "0",
+		 /* Disable UDP */           disable_udp ? "1" : "0",
 		 /* Soft token mode */       token_mode ? token_mode : "",
 		 /* Soft token secret */     token_secret ? token_secret : "");
 
