@@ -7,18 +7,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-openconne"
-"ct/issues\n"
-"POT-Creation-Date: 2023-04-07 15:17+0000\n"
-"PO-Revision-Date: 2023-04-09 12:47+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-openconnec"
+"t/issues\n"
+"POT-Creation-Date: 2023-04-11 08:45+0000\n"
+"PO-Revision-Date: 2023-04-12 08:16+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 20.12.0\n"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
@@ -165,38 +165,73 @@ msgid "Prevent user from manually accepting invalid certificates"
 msgstr "Заборонити користувачеві приймати вручну некоректні сертифікати"
 
 #: ../properties/nm-openconnect-dialog.ui.h:13
+#| msgid "Disable DTLS and ESP"
+msgid "Disable UDP (DTLS and ESP)"
+msgstr "Вимкнути UDP (DTLS та ESP)"
+
+#: ../properties/nm-openconnect-dialog.ui.h:14
+msgid ""
+"\n"
+"          In most cases, OpenConnect can detect network conditions or server "
+"configurations that do not permit\n"
+"          UDP-based tunnels (including DTLS and ESP) to work correctly, and "
+"fall back automatically to a\n"
+"          TLS-based tunnel.\n"
+"\n"
+"          OpenConnect prefers to use a UDP-based tunnel whenever possible, "
+"for performance reasons.\n"
+"\n"
+"          You should only select this option if your connection is "
+"unreliable or non-functional without it.\n"
+"        "
+msgstr ""
+"\n"
+"          Здебільшого, OpenConnect може виявляти умови мережі або"
+" налаштування сервера, які не дозволяють\n"
+"          належну роботу тунелів на основі UDP (включно з DTLS і ESP), і"
+" автоматично переходити на\n"
+"          резервний тунель на основі TLS.\n"
+"\n"
+"          Перевагу в OpenConnect надано використанню, якщо це можливо,"
+" тунелів на основі UDP, з міркувань швидкодії.\n"
+"\n"
+"          Користуватися цим параметром слід, лише якщо з'єднання є"
+" нестабільним або непрацездатним без його використання.\n"
+"        "
+
+#: ../properties/nm-openconnect-dialog.ui.h:23
 msgid "Software Token Authentication"
 msgstr "Програмне розпізнавання за ключем"
 
-#: ../properties/nm-openconnect-dialog.ui.h:14
+#: ../properties/nm-openconnect-dialog.ui.h:24
 msgid "Token _Mode"
 msgstr "_Режим ключа"
 
-#: ../properties/nm-openconnect-dialog.ui.h:15
+#: ../properties/nm-openconnect-dialog.ui.h:25
 msgid "Token Sec_ret"
 msgstr "Р_еєстраційні дані ключа"
 
-#: ../properties/nm-openconnect-dialog.ui.h:16
+#: ../properties/nm-openconnect-dialog.ui.h:26
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: ../properties/nm-openconnect-dialog.ui.h:17
+#: ../properties/nm-openconnect-dialog.ui.h:27
 msgid "RSA SecurID — read from ~/.stokenrc"
 msgstr "RSA SecurID — читання з ~/.stokenrc"
 
-#: ../properties/nm-openconnect-dialog.ui.h:18
+#: ../properties/nm-openconnect-dialog.ui.h:28
 msgid "RSA SecurID — manually entered"
 msgstr "RSA SecurID — введене вручну"
 
-#: ../properties/nm-openconnect-dialog.ui.h:19
+#: ../properties/nm-openconnect-dialog.ui.h:29
 msgid "TOTP — manually entered"
 msgstr "TOTP — введене вручну"
 
-#: ../properties/nm-openconnect-dialog.ui.h:20
+#: ../properties/nm-openconnect-dialog.ui.h:30
 msgid "HOTP — manually entered"
 msgstr "HOTP — введене вручну"
 
-#: ../properties/nm-openconnect-dialog.ui.h:21
+#: ../properties/nm-openconnect-dialog.ui.h:31
 msgid "Yubikey OATH"
 msgstr "OATH Yubikey"
 
@@ -278,8 +313,7 @@ msgstr ""
 #: ../shared/nm-utils/nm-shared-utils.c:207
 #, c-format
 msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
-msgstr ""
-"«%s::%s» не є коректною назвою властивості; «%s» не є підтипом GObject"
+msgstr "«%s::%s» не є коректною назвою властивості; «%s» не є підтипом GObject"
 
 #: ../shared/nm-utils/nm-shared-utils.c:216
 #, c-format
@@ -321,63 +355,90 @@ msgstr "не вдалося завантажити обробник %s з дод
 msgid "unknown error creating editor instance"
 msgstr "невідома помилка під час створення екземпляра редактора"
 
-#: ../src/nm-openconnect-service.c:181
+#: ../src/nm-openconnect-service.c:182
 #, c-format
 msgid "invalid integer property “%s” or out of range [%d -> %d]"
 msgstr ""
 "некоректна цілочисельна властивість «%s» або має значення поза припустимим "
 "діапазоном [%d -> %d]"
 
-#: ../src/nm-openconnect-service.c:191
+#: ../src/nm-openconnect-service.c:192
 #, c-format
 msgid "invalid boolean property “%s” (not yes or no)"
 msgstr ""
 "некоректна булева властивість «%s» (має значення, яке відрізняється від "
 "«yes» або «no»)"
 
-#: ../src/nm-openconnect-service.c:198
+#: ../src/nm-openconnect-service.c:199
 #, c-format
 msgid "unhandled property “%s” type %s"
 msgstr "непридатна до обробки властивість «%s» типу %s"
 
-#: ../src/nm-openconnect-service.c:211
+#: ../src/nm-openconnect-service.c:212
 #, c-format
 msgid "property “%s” invalid or not supported"
 msgstr "властивість «%s» є некоректною або її підтримки не передбачено"
 
-#: ../src/nm-openconnect-service.c:227
+#: ../src/nm-openconnect-service.c:228
 msgid "No VPN configuration options."
 msgstr "Немає параметрів налаштування VPN."
 
-#: ../src/nm-openconnect-service.c:245
+#: ../src/nm-openconnect-service.c:246
 msgid "No VPN secrets!"
 msgstr "Немає реєстраційних даних VPN!"
 
-#: ../src/nm-openconnect-service.c:415
+#: ../src/nm-openconnect-service.c:278
+#| msgid "Could not open /dev/tun for plumbing"
+msgid "Could not open /dev/net/tun"
+msgstr "Не вдалося відкрити /dev/net/tun"
+
+#: ../src/nm-openconnect-service.c:292
+#, c-format
+#| msgid "Could not construct interface name\n"
+msgid "Could not create tunnel interface named '%.*s'"
+msgstr "Не вдалося створити інтерфейс тунелю з назвою «%.*s»"
+
+#: ../src/nm-openconnect-service.c:308
+msgid "Could not create tunnel interface named 'vpnX', for X in 0..255"
+msgstr ""
+"Не вдалося створити інтерфейс тунелю з назвою «vpnX» для X у діапазоні 0...255"
+
+#: ../src/nm-openconnect-service.c:318
+#, c-format
+#| msgid "Could not convert interface name to UTF-8\n"
+msgid "Could not set tunnel interface owner to '%s'"
+msgstr "Не вдалося зробити власником інтерфейсу тунелю «%s»"
+
+#: ../src/nm-openconnect-service.c:329
+#| msgid "Could not construct interface name\n"
+msgid "Could not set tunnel interface persistence"
+msgstr "Не вдалося встановити сталість інтерфейсу тунелю"
+
+#: ../src/nm-openconnect-service.c:456
 msgid "Could not find openconnect binary."
 msgstr "Не вдалося знайти виконуваного файла openconnect."
 
-#: ../src/nm-openconnect-service.c:427
+#: ../src/nm-openconnect-service.c:468
 msgid "No VPN gateway specified."
 msgstr "Не вказаною шлюзу VPN."
 
-#: ../src/nm-openconnect-service.c:437
+#: ../src/nm-openconnect-service.c:478
 msgid "No WebVPN cookie provided."
 msgstr "Не вказано куки WebVPN."
 
-#: ../src/nm-openconnect-service.c:726
+#: ../src/nm-openconnect-service.c:785
 msgid "Don’t quit when VPN connection terminates"
 msgstr "Не виходити, якщо розірвано з'єднання VPN"
 
-#: ../src/nm-openconnect-service.c:727
+#: ../src/nm-openconnect-service.c:786
 msgid "Enable verbose debug logging (may expose passwords)"
 msgstr "Увімкнути докладний журнал діагностики (можливе виведення паролів)"
 
-#: ../src/nm-openconnect-service.c:728
+#: ../src/nm-openconnect-service.c:787
 msgid "D-Bus name to use for this instance"
 msgstr "Назва D-Bus для використання для цього екземпляра"
 
-#: ../src/nm-openconnect-service.c:751
+#: ../src/nm-openconnect-service.c:810
 msgid ""
 "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
 "capability to NetworkManager."
@@ -515,7 +576,6 @@ msgstr "Отримано ще %d байтів після частки %d\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/array.c#l860
 #: ../openconnect-strings.txt:94
 #, c-format
-#| msgid "Received data packet of %d bytes\n"
 msgid "Received partial packet, %d bytes\n"
 msgstr "Отримано частковий пакет, %d байтів\n"
 
@@ -528,7 +588,6 @@ msgstr "Нерозпізнаний пакет даних, довжина %d\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/array.c#l886
 #: ../openconnect-strings.txt:100
 #, c-format
-#| msgid "Received data packet of %d bytes\n"
 msgid "Received partial packet, %d of %d bytes\n"
 msgstr "Отримано частковий пакет, %d з %d байтів\n"
 
@@ -651,8 +710,7 @@ msgstr "Отримано невідомий пакет DTLS\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/ppp.c#l1742
 #: ../openconnect-strings.txt:176
 msgid "Error creating connect request for DTLS session\n"
-msgstr ""
-"Помилка під час спроби створення запиту на з'єднання для сеансу DTLS\n"
+msgstr "Помилка під час спроби створення запиту на з'єднання для сеансу DTLS\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/array.c#l1194
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/ppp.c#l1758
@@ -858,8 +916,8 @@ msgid ""
 "Portal reports GlobalProtect version %s; we will report the same client "
 "version.\n"
 msgstr ""
-"Портал повідомляє про версію GlobalProtect %s; ми повідомимо про ту саму"
-" версію клієнта.\n"
+"Портал повідомляє про версію GlobalProtect %s; ми повідомимо про ту саму "
+"версію клієнта.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/auth-globalprotect.c#l529
 #: ../openconnect-strings.txt:293
@@ -1552,8 +1610,7 @@ msgstr "Отримано надто короткий пакет (%d байтів
 #: ../openconnect-strings.txt:671
 #, c-format
 msgid "Unexpected packet length. SSL_read returned %d but packet is\n"
-msgstr ""
-"Неочікувана довжина пакета. SSL_read повернуто %d, але розмір пакета\n"
+msgstr "Неочікувана довжина пакета. SSL_read повернуто %d, але розмір пакета\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/cstp.c#l1002
 #: ../openconnect-strings.txt:674
@@ -1656,8 +1713,7 @@ msgstr "Недостатньо даних під час записування �
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/digest.c#l252
 #: ../openconnect-strings.txt:736
 msgid "Attempting Digest authentication to proxy\n"
-msgstr ""
-"Спроба виконати розпізнавання за контрольною сумою на проксі-сервері\n"
+msgstr "Спроба виконати розпізнавання за контрольною сумою на проксі-сервері\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/digest.c#l255
 #: ../openconnect-strings.txt:739
@@ -2031,8 +2087,8 @@ msgid ""
 "WARNING: Unknown F5 JSON form field type '%s', treating as 'text'. Please "
 "report to <%s>"
 msgstr ""
-"УВАГА: невідомий тип поля форми JSON F5, «%s», обробляємо як «text». Будь"
-" ласка, повідомте про це за адресою <%s>"
+"УВАГА: невідомий тип поля форми JSON F5, «%s», обробляємо як «text». Будь "
+"ласка, повідомте про це за адресою <%s>"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/f5.c#l308
 #: ../openconnect-strings.txt:938
@@ -2042,10 +2098,10 @@ msgid ""
 "embedded\n"
 "  JSON. This is EXPERIMENTAL. Please report results to <%s>.\n"
 msgstr ""
-"УВАГА: не знайдено форми розпізнавання у форматі HTML. Видобути форму з"
-" вбудованого до JSON\n"
-"  F5. Це ЕКСПЕРИМЕНТАЛЬНА можливість. Будь ласка, повідомте про результати"
-" за адресою <%s>.\n"
+"УВАГА: не знайдено форми розпізнавання у форматі HTML. Видобути форму з "
+"вбудованого до JSON\n"
+"  F5. Це ЕКСПЕРИМЕНТАЛЬНА можливість. Будь ласка, повідомте про результати "
+"за адресою <%s>.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/f5.c#l317
 #: ../openconnect-strings.txt:944
@@ -2189,7 +2245,6 @@ msgstr "Отримано область входу «%s»\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/fortinet.c#l303
 #: ../openconnect-strings.txt:1020
-#| msgid "Invalid PIN format; try again.\n"
 msgid "Invalid credentials; try again."
 msgstr "Некоректні реєстраційні дані; повторіть спробу."
 
@@ -3109,8 +3164,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/openssl.c#l1657
 #: ../openconnect-strings.txt:1520
 msgid "Server presented different cert on rehandshake\n"
-msgstr ""
-"Сервером надано інший сертифікат при повторному узгодженні з'єднання\n"
+msgstr "Сервером надано інший сертифікат при повторному узгодженні з'єднання\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/gnutls.c#l2152
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/openssl.c#l1660
@@ -3177,7 +3231,6 @@ msgstr "не вдалося перевірити підпис"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/gnutls.c#l2205
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/openssl.c#l1678
 #: ../openconnect-strings.txt:1561
-#| msgid "certificate does not match hostname"
 msgid "certificate does not match SNI"
 msgstr "сертифікат не відповідає SNI"
 
@@ -3253,7 +3306,6 @@ msgstr "Спробу з’єднання SSL скасовано\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/gnutls.c#l2524
 #: ../openconnect-strings.txt:1604
 #, c-format
-#| msgid "SSL connection failure: %s\n"
 msgid "SSL connection failure due to fatal alert: %s\n"
 msgstr "Помилка з'єднання SSL через критичне попередження: %s\n"
 
@@ -3916,7 +3968,6 @@ msgstr "Виклик: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/gpst.c#l259
 #: ../openconnect-strings.txt:1961
-#| msgid "Failed to parse server response\n"
 msgid "Failed to parse non-XML server response\n"
 msgstr "Не вдалося обробити відповідь сервера у відмінному від XML форматі\n"
 
@@ -3929,7 +3980,6 @@ msgstr "Відповідь: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/gpst.c#l325
 #: ../openconnect-strings.txt:1968
-#| msgid "Failed to parse server response\n"
 msgid "Failed to parse XML server response\n"
 msgstr "Не вдалося обробити XML-відповідь сервера\n"
 
@@ -4005,8 +4055,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/oncp.c#l770
 #: ../openconnect-strings.txt:2004
 msgid "Ignoring ESP keys since ESP support not available in this build\n"
-msgstr ""
-"Імпортуємо ключі ESP, оскільки у цій збірці недоступна підтримка ESP\n"
+msgstr "Імпортуємо ключі ESP, оскільки у цій збірці недоступна підтримка ESP\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/gpst.c#l585
 #: ../openconnect-strings.txt:2007
@@ -4442,8 +4491,7 @@ msgstr "Не вдалося відкрити зовнішній перегляд
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/hpke.c#l142
 #: ../openconnect-strings.txt:2240
 msgid "Accepted incoming external-browser connection on port 29786\n"
-msgstr ""
-"Прийнято вхідне з'єднання від зовнішнього переглядача на порту 29786\n"
+msgstr "Прийнято вхідне з'єднання від зовнішнього переглядача на порту 29786\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/hpke.c#l149
 #: ../openconnect-strings.txt:2243
@@ -5820,8 +5868,8 @@ msgstr "Не вдалося розмістити у пам'яті структу
 #: ../openconnect-strings.txt:3003
 msgid "WARNING: --juniper is deprecated, use --protocol=nc instead.\n"
 msgstr ""
-"УВАГА: --juniper вважається застарілим, скористайтеся замість нього"
-" --protocol=nc.\n"
+"УВАГА: --juniper вважається застарілим, скористайтеся замість нього --"
+"protocol=nc.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/main.c#l1852
 #: ../openconnect-strings.txt:3006
@@ -5871,10 +5919,10 @@ msgid ""
 "         instead. Perhaps try --interface='u%s', or omit altogether.\n"
 msgstr ""
 "УВАГА: ви працюєте у macOS і вказали --interface=«%s»\n"
-"         Це, ймовірно, не спрацює, оскільки нещодавні версії macOS"
-" використовують\n"
-"         замість цього utun. Спробуйте --interface='u%s' або взагалі"
-" приберіть це.\n"
+"         Це, ймовірно, не спрацює, оскільки нещодавні версії macOS "
+"використовують\n"
+"         замість цього utun. Спробуйте --interface='u%s' або взагалі "
+"приберіть це.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/main.c#l2022
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/main.c#l2032
@@ -7576,8 +7624,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3969
 #, c-format
 msgid "Received MRU %d from server. Nak-offering larger MRU of %d (our MTU)\n"
-msgstr ""
-"Отримано MRU %d від сервера. Nak-пропонуємо більший MRU %d (наш MTU)\n"
+msgstr "Отримано MRU %d від сервера. Nak-пропонуємо більший MRU %d (наш MTU)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/ppp.c#l413
 #: ../openconnect-strings.txt:3972
@@ -7814,8 +7861,7 @@ msgstr "Некоректна інкапсуляція PPP\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/ppp.c#l1223
 #: ../openconnect-strings.txt:4094
 #, c-format
-msgid ""
-"Packet contains %d bytes after payload. Assuming concatenated packet.\n"
+msgid "Packet contains %d bytes after payload. Assuming concatenated packet.\n"
 msgstr ""
 "У пакеті міститься %d байтів після вмісту. Припускаємо обрізаний пакет.\n"
 
@@ -8055,13 +8101,11 @@ msgstr "Виберіть область користувача Pulse:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l811
 #: ../openconnect-strings.txt:4224
-#| msgid "Choose Pulse user realm:"
 msgid "Choose Pulse region:"
 msgstr "Виберіть область Pulse:"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l813
 #: ../openconnect-strings.txt:4227
-#| msgid "Session:"
 msgid "Region:"
 msgstr "Область:"
 
@@ -8284,7 +8328,6 @@ msgstr "Вибір області Pulse\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l1879
 #: ../openconnect-strings.txt:4354
-#| msgid "Pulse realm choice\n"
 msgid "Pulse region choice\n"
 msgstr "Вибір області Pulse\n"
 
@@ -8387,16 +8430,16 @@ msgstr "attr_flag 0x2e00: відомий для версії Pulse >= 9.1R16\n"
 #, c-format
 msgid "attr_flag 0x%04x: unknown Pulse version. Please report to <%s>\n"
 msgstr ""
-"attr_flag 0x%04x: невідома версія Pulse. Будь ласка, повідомте про неї за"
-" адресою <%s>\n"
+"attr_flag 0x%04x: невідома версія Pulse. Будь ласка, повідомте про неї за "
+"адресою <%s>\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l2419
 #: ../openconnect-strings.txt:4409
 #, c-format
 msgid "If any of the above attributes are meaningful, please report to <%s>\n"
 msgstr ""
-"Якщо якийсь з наведених вище атрибутів має значення, будь ласка, повідомте"
-" про це за адресою <%s>\n"
+"Якщо якийсь з наведених вище атрибутів має значення, будь ласка, повідомте "
+"про це за адресою <%s>\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l2424
 #: ../openconnect-strings.txt:4412
@@ -8412,7 +8455,6 @@ msgstr "Отримано маршрут невідомого типу 0x%08x\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l2546
 #: ../openconnect-strings.txt:4418
-#| msgid "Unexpected Pulse config packet:\n"
 msgid "Processing Pulse ESP config packet\n"
 msgstr "Обробка пакета налаштовування ESP Pulse\n"
 
@@ -8433,9 +8475,7 @@ msgstr "Помилковий пакет IF-T/TLS, а мали бути нала�
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l2646
 #: ../openconnect-strings.txt:4430
-#| msgid "Unexpected IF-T/TLS packet when expecting configuration.\n"
-msgid ""
-"Unexpected IF-T/TLS packet when expecting configuration: wrong vendor\n"
+msgid "Unexpected IF-T/TLS packet when expecting configuration: wrong vendor\n"
 msgstr ""
 "Неочікуваний пакет IF-T/TLS, а мали бути налаштування: помилковий виробник\n"
 
@@ -8446,7 +8486,6 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l2726
 #: ../openconnect-strings.txt:4437
 #, c-format
-#| msgid "Unexpected Pulse config packet:\n"
 msgid "Unexpected Pulse configuration packet: %s\n"
 msgstr "Неочікуваний пакет налаштовування Pulse: %s\n"
 
@@ -8498,8 +8537,8 @@ msgid ""
 "Unknown Pulse packet of %d bytes (vendor 0x%03x, type 0x%02x, hdr_len %d, "
 "ident %d)\n"
 msgstr ""
-"Невідомий пакет Pulse з %d байтів (виробник 0x%03x, тип 0x%02x, довжина"
-" заголовка %d, ідентифікатор %d)\n"
+"Невідомий пакет Pulse з %d байтів (виробник 0x%03x, тип 0x%02x, довжина "
+"заголовка %d, ідентифікатор %d)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/pulse.c#l3073
 #: ../openconnect-strings.txt:4469
@@ -9039,8 +9078,7 @@ msgstr "Створюємо код ключа RSA\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/tun-win32.c#l89
 #: ../openconnect-strings.txt:4753
 msgid "Error accessing registry key for network adapters\n"
-msgstr ""
-"Помилка під час спроби доступу до ключа реєстру для адаптерів мережі\n"
+msgstr "Помилка під час спроби доступу до ключа реєстру для адаптерів мережі\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/tun-win32.c#l115
 #: ../openconnect-strings.txt:4756
@@ -9153,8 +9191,7 @@ msgstr "Не вдалося отримати дані щодо версії др
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/tun-win32.c#l389
 #: ../openconnect-strings.txt:4809
 #, c-format
-msgid ""
-"Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n"
+msgid "Error: TAP-Windows driver v9.9 or greater is required (found %ld.%ld)\n"
 msgstr ""
 "Помилка: потрібна версія драйвера TAP-Windows 9.9 або новіша (виявлено %ld."
 "%ld)\n"
@@ -9453,14 +9490,12 @@ msgstr "Не вдалося встановити дескриптор файла
 #: ../openconnect-strings.txt:4968
 #, c-format
 msgid "Failed to set vring #%d kick eventfd: %s\n"
-msgstr ""
-"Не вдалося встановити дескриптор файла події відкидання vring %d: %s\n"
+msgstr "Не вдалося встановити дескриптор файла події відкидання vring %d: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/vhost.c#l183
 #: ../openconnect-strings.txt:4971
 msgid "Failed to find virtual task size; search reached zero"
-msgstr ""
-"Не вдалося знайти розмір віртуального завдання; пошуком повернуто нуль"
+msgstr "Не вдалося знайти розмір віртуального завдання; пошуком повернуто нуль"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d9ff2fe61f:/vhost.c#l233
 #: ../openconnect-strings.txt:4974
