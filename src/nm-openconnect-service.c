@@ -315,7 +315,7 @@ create_persistent_tundev(const char *suggested_name, GError **error)
 		g_set_error (error,
 		             NM_VPN_PLUGIN_ERROR,
 		             NM_VPN_PLUGIN_ERROR_LAUNCH_FAILED,
-		             _("Could not set tunnel interface owner to '%s'"),
+		             _("Could not set tunnel interface owner to '%d'"),
 		             gl.tun_owner);
 		return NULL;
 	}
@@ -616,7 +616,6 @@ real_connect (NMVpnServicePlugin   *plugin,
 	NMSettingConnection *s_con;
 	NMSettingVpn *s_vpn;
 	gint openconnect_fd = -1;
-	const char *suggested_ifname;
 
 	s_con = nm_connection_get_setting_connection(connection);
 	g_assert (s_con);
