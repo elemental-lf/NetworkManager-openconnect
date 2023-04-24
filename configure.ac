@@ -145,7 +145,9 @@ if test x"$with_gtk4" != xno; then
 	PKG_CHECK_MODULES(LIBNMA_GTK4, libnma-gtk4 >= 1.8.33)
 fi
 
-PKG_CHECK_MODULES(WEBKIT, webkit2gtk-4.1)
+PKG_CHECK_MODULES(WEBKIT, webkit2gtk-4.1, [wekbit=4.1],
+			  [PKG_CHECK_MODULES(WEBKIT, webkit2gtk-4.0,
+			  [webkit=4.0], AC_MSG_ERROR(Neither webkit2gtk-4.0 nor wekit2gtk-4.1 found))])
 
 PKG_CHECK_MODULES(LIBNM, libnm >= 1.2.0)
 LIBNM_CFLAGS="$LIBNM_CFLAGS -DNM_VERSION_MIN_REQUIRED=NM_VERSION_1_2"
