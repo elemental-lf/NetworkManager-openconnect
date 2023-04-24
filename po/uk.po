@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-openconne"
 "ct/issues\n"
-"POT-Creation-Date: 2023-04-18 22:54+0000\n"
-"PO-Revision-Date: 2023-04-19 19:59+0300\n"
+"POT-Creation-Date: 2023-04-24 10:01+0000\n"
+"PO-Revision-Date: 2023-04-24 18:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -404,8 +404,9 @@ msgstr ""
 
 #: ../src/nm-openconnect-service.c:318
 #, c-format
-msgid "Could not set tunnel interface owner to '%s'"
-msgstr "Не вдалося зробити власником інтерфейсу тунелю «%s»"
+#| msgid "Could not set tunnel interface owner to '%s'"
+msgid "Could not set tunnel interface owner to '%d'"
+msgstr "Не вдалося зробити власником інтерфейсу тунелю «%d»"
 
 #: ../src/nm-openconnect-service.c:329
 msgid "Could not set tunnel interface persistence"
@@ -423,19 +424,19 @@ msgstr "Не вказаною шлюзу VPN."
 msgid "No WebVPN cookie provided."
 msgstr "Не вказано куки WebVPN."
 
-#: ../src/nm-openconnect-service.c:785
+#: ../src/nm-openconnect-service.c:784
 msgid "Don’t quit when VPN connection terminates"
 msgstr "Не виходити, якщо розірвано з'єднання VPN"
 
-#: ../src/nm-openconnect-service.c:786
+#: ../src/nm-openconnect-service.c:785
 msgid "Enable verbose debug logging (may expose passwords)"
 msgstr "Увімкнути докладний журнал діагностики (можливе виведення паролів)"
 
-#: ../src/nm-openconnect-service.c:787
+#: ../src/nm-openconnect-service.c:786
 msgid "D-Bus name to use for this instance"
 msgstr "Назва D-Bus для використання для цього екземпляра"
 
-#: ../src/nm-openconnect-service.c:810
+#: ../src/nm-openconnect-service.c:809
 msgid ""
 "nm-openconnect-service provides integrated Cisco AnyConnect SSL VPN "
 "capability to NetworkManager."
@@ -5640,8 +5641,8 @@ msgstr "Вади сервера"
 #: ../openconnect-strings.txt:2883
 msgid "Do not offer or use auth methods requiring external browser"
 msgstr ""
-"Не пропонувати або не використовувати методи розпізнавання, які потребують"
-" зовнішнього браузера"
+"Не пропонувати або не використовувати методи розпізнавання, які потребують "
+"зовнішнього браузера"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3dae:/main.c#l1077
 #: ../openconnect-strings.txt:2886
@@ -8331,21 +8332,20 @@ msgid ""
 "        --useragent=\"Pulse-Secure/3.0.0\"\n"
 "Please report results to <%s>.\n"
 msgstr ""
-"Сервер Pulse намагається пройти розпізнавання за допомогою EAP-TLS через"
-" EAP-TTLS,\n"
-"спосіб обробки такої ситуації невідомий. Це може трапитися, якщо сервер МОЖЕ"
-" приймати\n"
-"клієнтські сертифікати TLS, але ваше розпізнавання не потребує таких"
-" сертифікатів.\n"
-"Ви можете обійти цю проблему, повідомивши про дуже стару версію клієнта"
-" Pulse, ось так:\n"
+"Сервер Pulse намагається пройти розпізнавання за допомогою EAP-TLS через EAP-"
+"TTLS,\n"
+"спосіб обробки такої ситуації невідомий. Це може трапитися, якщо сервер МОЖЕ "
+"приймати\n"
+"клієнтські сертифікати TLS, але ваше розпізнавання не потребує таких "
+"сертифікатів.\n"
+"Ви можете обійти цю проблему, повідомивши про дуже стару версію клієнта "
+"Pulse, ось так:\n"
 "        --useragent=\"Pulse-Secure/3.0.0\"\n"
 "Будь ласка, повідомте про результати сюди: <%s>.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3dae:/pulse.c#l1849
 #: ../openconnect-strings.txt:4358
 #, c-format
-#| msgid "SOCKS server requested unknown authentication type %02x\n"
 msgid "Pulse server requested unexpected EAP type 0x%x\n"
 msgstr "Сервером Pulse надіслано запит щодо неочікуваного типу EAP 0x%x\n"
 
@@ -8865,13 +8865,11 @@ msgstr "Скасовано на застарілому дескрипторі ф
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3dae:/ssl.c#l900
 #: ../openconnect-strings.txt:4636
-#| msgid "calculate command"
 msgid "Got cancel command\n"
 msgstr "Отримано команду скасування\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3dae:/ssl.c#l905
 #: ../openconnect-strings.txt:4639
-#| msgid "calculate command"
 msgid "Got pause command\n"
 msgstr "Отримано команду призупинення\n"
 
