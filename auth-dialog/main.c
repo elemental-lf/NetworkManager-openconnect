@@ -1212,16 +1212,10 @@ static int get_config (auth_ui_data *ui_data,
 	}
 
 	/* add gateway to host list */
-	vpnhosts = malloc(sizeof(*vpnhosts));
+	vpnhosts = g_malloc0(sizeof(*vpnhosts));
 	if (!vpnhosts)
 		return -ENOMEM;
 	vpnhosts->hostname = g_strdup(hostname);
-	group = strchr(vpnhosts->hostname, '/');
-	if (group) {
-		*(group++) = 0;
-		vpnhosts->usergroup = g_strdup(group);
-	} else
-		vpnhosts->usergroup = NULL;
 	vpnhosts->hostaddress = g_strdup (hostname);
 	vpnhosts->next = NULL;
 
