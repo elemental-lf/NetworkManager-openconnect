@@ -414,6 +414,12 @@ init_editor_plugin (OpenconnectEditor *self, NMConnection *connection, GError **
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
+#if !OPENCONNECT_CHECK_VER(5,8)
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "mca_cert_chooser"));
+	g_return_val_if_fail (widget, FALSE);
+	gtk_widget_destroy (widget);
+#endif
+
 	if (init_token_ui (self, priv, s_vpn) == FALSE)
 		g_return_val_if_reached (FALSE);
 

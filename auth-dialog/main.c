@@ -1190,6 +1190,9 @@ static int get_config (auth_ui_data *ui_data,
 	char *hostname;
 	char *group;
 	char *csd;
+#if OPENCONNECT_CHECK_VER(5,8)
+	char *mcakey, *mcacert, *mca_key_pass;
+#endif
 	char *sslkey, *cert;
 	char *csd_wrapper;
 	char *reported_os;
@@ -1276,6 +1279,16 @@ static int get_config (auth_ui_data *ui_data,
 	proxy = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_PROXY);
 	if (proxy && proxy[0] && openconnect_set_http_proxy(vpninfo, OC3DUP (proxy)))
 		return -EINVAL;
+
+#if OPENCONNECT_CHECK_VER(5,8)
+	mcacert = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_MCACERT);
+	mcakey  = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_MCAKEY);
+	openconnect_set_mca_cert(vpninfo, OC3DUP(mcacert), OC3DUP(mcakey));
+
+	mca_key_pass = g_hash_table_lookup(options, NM_OPENCONNECT_KEY_MCA_PASS);
+	if (mca_key_pass)
+		openconnect_set_mca_key_password(vpninfo, mca_key_pass);
+#endif
 
 	cert = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_USERCERT);
 	sslkey = g_hash_table_lookup (options, NM_OPENCONNECT_KEY_PRIVKEY);
