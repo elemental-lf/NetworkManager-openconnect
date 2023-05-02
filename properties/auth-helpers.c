@@ -54,11 +54,9 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
 
-#if OPENCONNECT_CHECK_VER(5,8)
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "mca_cert_chooser"));
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (changed_cb), user_data);
-#endif
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "user_cert_chooser"));
 	nma_cert_chooser_add_to_size_group (NMA_CERT_CHOOSER (widget), group);

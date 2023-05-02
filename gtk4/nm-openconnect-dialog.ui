@@ -394,6 +394,7 @@ You should only select this option if your connection is unreliable or non-funct
     <columns>
       <column type="gchararray"/>
       <column type="gchararray"/>
+      <column type="gint"/>
     </columns>
   </object>
   <object class="GtkSizeGroup" id="labels">

@@ -47,6 +47,23 @@
 #define openconnect_has_yubioath_support() 0
 #endif
 
+#if !OPENCONNECT_CHECK_VER(5,5)
+#define OC_PROTO_PROXY				(1<<0)
+#define OC_PROTO_CSD				(1<<1)
+#define OC_PROTO_AUTH_CERT			(1<<2)
+#define OC_PROTO_AUTH_OTP			(1<<3)
+#define OC_PROTO_AUTH_STOKEN		(1<<4)
+#endif
+
+#if !OPENCONNECT_CHECK_VER(5,7)
+#define OC_PROTO_PERIODIC_TROJAN	(1<<5)
+#define OC_PROTO_HIDDEN				(1<<6)
+#endif
+
+#if !OPENCONNECT_CHECK_VER(5,8)
+#define OC_PROTO_AUTH_MCA			(1<<7)
+#endif
+
 #include "auth-helpers.h"
 
 #if !GTK_CHECK_VERSION(4,0,0)
@@ -250,6 +267,7 @@ init_protocol_combo_options (GtkComboBox *protocol_combo)
 		gtk_list_store_set(protocol_combo_list, &iter,
 						   0, protos[i].pretty_name,
 						   1, protos[i].name,
+						   2, protos[i].flags,
 						   -1);
 	}
 	openconnect_free_supported_protocols(protos);
@@ -258,12 +276,14 @@ init_protocol_combo_options (GtkComboBox *protocol_combo)
 	gtk_list_store_set(protocol_combo_list, &iter,
 					   0, _("Cisco AnyConnect"),
 					   1, "anyconnect",
+					   2, OC_PROTO_PROXY | OC_PROTO_CSD | OC_PROTO_AUTH_CERT | OC_PROTO_AUTH_OTP | OC_PROTO_AUTH_STOKEN,
 					   -1);
 #  if OPENCONNECT_CHECK_VER(5,1)
 	gtk_list_store_append(protocol_combo_list, &iter);
 	gtk_list_store_set(protocol_combo_list, &iter,
 					   0, _("Juniper/Pulse Network Connect"),
 					   1, "nc",
+					   2, OC_PROTO_PROXY | OC_PROTO_CSD | OC_PROTO_AUTH_CERT | OC_PROTO_AUTH_OTP | OC_PROTO_AUTH_STOKEN,
 					   -1);
 #  endif
 #endif
@@ -414,12 +434,6 @@ init_editor_plugin (OpenconnectEditor *self, NMConnection *connection, GError **
 	}
 	g_signal_connect (G_OBJECT (widget), "changed", G_CALLBACK (stuff_changed_cb), self);
 
-#if !OPENCONNECT_CHECK_VER(5,8)
-	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "mca_cert_chooser"));
-	g_return_val_if_fail (widget, FALSE);
-	gtk_widget_destroy (widget);
-#endif
-
 	if (init_token_ui (self, priv, s_vpn) == FALSE)
 		g_return_val_if_reached (FALSE);
 
@@ -471,9 +485,18 @@ update_connection (NMVpnEditor *iface,
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "protocol_combo"));
 	model = gtk_combo_box_get_model (GTK_COMBO_BOX (widget));
 	if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (widget), &iter)) {
-		gtk_tree_model_get (model, &iter, 1, &str, -1);
+		gint flags = 0;
+		gtk_tree_model_get (model, &iter, 1, &str, 2, &flags, -1);
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PROTOCOL, str);
 		g_free(str);
+
+		widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "mca_cert_chooser"));
+		if (widget) {
+			if (flags & OC_PROTO_AUTH_MCA)
+				gtk_widget_show(widget);
+			else
+				gtk_widget_hide(widget);
+		}
 	}
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "gateway_entry"));

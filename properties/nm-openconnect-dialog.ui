@@ -550,6 +550,8 @@ You should only select this option if your connection is unreliable or non-funct
       <column type="gchararray"/>
       <!-- column-name protocol_value -->
       <column type="gchararray"/>
+      <!-- column-name protocol_flags -->
+      <column type="gint"/>
     </columns>
   </object>
   <object class="GtkSizeGroup" id="labels">
