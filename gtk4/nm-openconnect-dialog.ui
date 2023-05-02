@@ -6,7 +6,7 @@
     <property name="column_spacing">6</property>
     <child>
       <object class="GtkLabel" id="label22">
-        <property name="label" translatable="yes">General</property>
+        <property name="label" translatable="1">General</property>
         <attributes>
           <attribute name="weight" value="bold"></attribute>
         </attributes>
@@ -21,7 +21,7 @@
     </child>
     <child>
       <object class="GtkLabel" id="vpn_protocol_label">
-        <property name="label" translatable="yes">_VPN Protocol</property>
+        <property name="label" translatable="1">_VPN Protocol</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">protocol_combo</property>
@@ -49,7 +49,7 @@
     </child>
     <child>
       <object class="GtkLabel" id="gateway_label">
-        <property name="label" translatable="yes">_Gateway</property>
+        <property name="label" translatable="1">_Gateway</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">gateway_entry</property>
@@ -72,7 +72,7 @@
     </child>
     <child>
       <object class="GtkLabel" id="useragent_label">
-        <property name="label" translatable="yes">_User Agent:</property>
+        <property name="label" translatable="1">_User Agent:</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">user_agent_entry</property>
@@ -108,7 +108,7 @@
     </child>
     <child>
       <object class="GtkLabel" id="proxy_label">
-        <property name="label" translatable="yes">_Proxy</property>
+        <property name="label" translatable="1">_Proxy</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">proxy_entry</property>
@@ -132,7 +132,7 @@
     <child>
       <object class="GtkCheckButton" id="csd_button">
         <property name="focusable">1</property>
-        <property name="label" translatable="yes">Allow security scanner _trojan (CSD)</property>
+        <property name="label" translatable="1">Allow security scanner _trojan (CSD)</property>
         <property name="use_underline">1</property>
         <layout>
           <property name="column">0</property>
@@ -143,7 +143,7 @@
     </child>
     <child>
       <object class="GtkLabel" id="csd_trojan_script_label">
-        <property name="label" translatable="yes">Trojan (CSD) _Wrapper Script</property>
+        <property name="label" translatable="1">Trojan (CSD) _Wrapper Script</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">csd_wrapper_entry</property>
@@ -166,8 +166,8 @@
     </child>
     <child>
       <object class="GtkLabel" id="reported_os_label">
-        <property name="label" translatable="yes">Reported OS</property>
-        <property name="tooltip_text" translatable="yes">Common values: linux linux-64 win mac-intel android apple-ios</property>
+        <property name="label" translatable="1">Reported OS</property>
+        <property name="tooltip_text" translatable="1">Common values: linux linux-64 win mac-intel android apple-ios</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">reported_os</property>
@@ -190,7 +190,7 @@
     </child>
     <child>
       <object class="GtkLabel" id="label25">
-        <property name="label" translatable="yes">Certificate Authentication</property>
+        <property name="label" translatable="1">Certificate Authentication</property>
         <attributes>
           <attribute name="weight" value="bold"></attribute>
         </attributes>
@@ -220,7 +220,7 @@
     <child>
       <object class="GtkCheckButton" id="fsid_button">
         <property name="focusable">1</property>
-        <property name="label" translatable="yes">Use _FSID for key passphrase</property>
+        <property name="label" translatable="1">Use _FSID for key passphrase</property>
         <property name="use_underline">1</property>
         <layout>
           <property name="column">0</property>
@@ -232,7 +232,7 @@
     <child>
       <object class="GtkCheckButton" id="prevent_invalid_cert_button">
         <property name="focusable">1</property>
-        <property name="label" translatable="yes">Prevent user from manually accepting invalid certificates</property>
+        <property name="label" translatable="1">Prevent user from manually accepting invalid certificates</property>
         <property name="use_underline">1</property>
         <layout>
           <property name="column">0</property>
@@ -243,31 +243,20 @@
     </child>
     <child>
       <object class="GtkCheckButton" id="disable_udp_button">
-        <property name="border_width">2</property>
         <property name="focusable">1</property>
-        <property name="label" translatable="yes">Disable UDP (DTLS and ESP)</property>
-        <property name="tooltip-text" translatable="yes">
-          In most cases, OpenConnect can detect network conditions or server configurations that do not permit
-          UDP-based tunnels (including DTLS and ESP) to work correctly, and fall back automatically to a
-          TLS-based tunnel.
+        <property name="label" translatable="1">Disable UDP (DTLS and ESP)</property>
+        <property name="tooltip-text" translatable="1">In most cases, OpenConnect can detect network conditions or server configurations that do not permit UDP-based tunnels (including DTLS and ESP) to work correctly, and fall back automatically to a TLS-based tunnel.
 
-          OpenConnect prefers to use a UDP-based tunnel whenever possible, for performance reasons.
+OpenConnect prefers to use a UDP-based tunnel whenever possible, for performance reasons.
 
-          You should only select this option if your connection is unreliable or non-functional without it.
-        </property>
+You should only select this option if your connection is unreliable or non-functional without it.</property>
         <property name="use_underline">1</property>
-        <property name="relief">GTK_RELIEF_NORMAL</property>
-        <layout>
-          <property name="padding">0</property>
-          <property name="expand">False</property>
-          <property name="fill">False</property>
-        </layout>
       </object>
     </child>
     <child>
       <object class="GtkLabel" id="token_label">
         <property name="visible">0</property>
-        <property name="label" translatable="yes">Software Token Authentication</property>
+        <property name="label" translatable="1">Software Token Authentication</property>
         <attributes>
           <attribute name="weight" value="bold"></attribute>
         </attributes>
@@ -284,7 +273,7 @@
     <child>
       <object class="GtkLabel" id="token_mode_label">
         <property name="visible">0</property>
-        <property name="label" translatable="yes">Token _Mode</property>
+        <property name="label" translatable="1">Token _Mode</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">token_mode</property>
@@ -315,7 +304,7 @@
     <child>
       <object class="GtkLabel" id="token_secret_label">
         <property name="visible">0</property>
-        <property name="label" translatable="yes">Token Sec_ret</property>
+        <property name="label" translatable="1">Token Sec_ret</property>
         <property name="use_underline">1</property>
         <property name="xalign">1</property>
         <property name="mnemonic_widget">token_secret</property>
