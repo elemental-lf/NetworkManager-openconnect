@@ -242,6 +242,29 @@
       </object>
     </child>
     <child>
+      <object class="GtkCheckButton" id="disable_udp_button">
+        <property name="border_width">2</property>
+        <property name="focusable">1</property>
+        <property name="label" translatable="yes">Disable UDP (DTLS and ESP)</property>
+        <property name="tooltip-text" translatable="yes">
+          In most cases, OpenConnect can detect network conditions or server configurations that do not permit
+          UDP-based tunnels (including DTLS and ESP) to work correctly, and fall back automatically to a
+          TLS-based tunnel.
+
+          OpenConnect prefers to use a UDP-based tunnel whenever possible, for performance reasons.
+
+          You should only select this option if your connection is unreliable or non-functional without it.
+        </property>
+        <property name="use_underline">1</property>
+        <property name="relief">GTK_RELIEF_NORMAL</property>
+        <layout>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </layout>
+      </object>
+    </child>
+    <child>
       <object class="GtkLabel" id="token_label">
         <property name="visible">0</property>
         <property name="label" translatable="yes">Software Token Authentication</property>
