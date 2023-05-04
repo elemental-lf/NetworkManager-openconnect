@@ -277,7 +277,7 @@ import (NMVpnEditorPlugin *iface, const char *path, GError **error)
 
 	/* Prevent invalid cert */
 	bval = g_key_file_get_boolean (keyfile, "openconnect", "PreventInvalidCert", NULL);
-	if (true)
+	if (bval)
 		nm_setting_vpn_add_data_item (s_vpn, NM_OPENCONNECT_KEY_PREVENT_INVALID_CERT, "yes");
 
 	/* Disable UDP (DTLS and ESP) and use only TLS tunnel */
