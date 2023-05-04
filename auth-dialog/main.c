@@ -1188,7 +1188,6 @@ static int get_config (auth_ui_data *ui_data,
 	char *proxy;
 	char *xmlconfig;
 	char *hostname;
-	char *group;
 	char *csd;
 #if OPENCONNECT_CHECK_VER(5,8)
 	char *mcakey, *mcacert, *mca_key_pass;
