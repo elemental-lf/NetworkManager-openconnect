@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: network-manager-openconnect\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-openconne"
 "ct/issues\n"
-"POT-Creation-Date: 2023-04-24 10:01+0000\n"
-"PO-Revision-Date: 2023-04-24 18:27+0300\n"
+"POT-Creation-Date: 2023-05-02 14:42+0000\n"
+"PO-Revision-Date: 2023-05-04 22:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -169,68 +169,75 @@ msgid "Disable UDP (DTLS and ESP)"
 msgstr "Вимкнути UDP (DTLS та ESP)"
 
 #: ../properties/nm-openconnect-dialog.ui.h:14
+#| msgid ""
+#| "\n"
+#| "          In most cases, OpenConnect can detect network conditions or "
+#| "server configurations that do not permit\n"
+#| "          UDP-based tunnels (including DTLS and ESP) to work correctly, "
+#| "and fall back automatically to a\n"
+#| "          TLS-based tunnel.\n"
+#| "\n"
+#| "          OpenConnect prefers to use a UDP-based tunnel whenever "
+#| "possible, for performance reasons.\n"
+#| "\n"
+#| "          You should only select this option if your connection is "
+#| "unreliable or non-functional without it.\n"
+#| "        "
 msgid ""
+"In most cases, OpenConnect can detect network conditions or server "
+"configurations that do not permit UDP-based tunnels (including DTLS and ESP) "
+"to work correctly, and fall back automatically to a TLS-based tunnel.\n"
 "\n"
-"          In most cases, OpenConnect can detect network conditions or server "
-"configurations that do not permit\n"
-"          UDP-based tunnels (including DTLS and ESP) to work correctly, and "
-"fall back automatically to a\n"
-"          TLS-based tunnel.\n"
+"OpenConnect prefers to use a UDP-based tunnel whenever possible, for "
+"performance reasons.\n"
 "\n"
-"          OpenConnect prefers to use a UDP-based tunnel whenever possible, "
-"for performance reasons.\n"
-"\n"
-"          You should only select this option if your connection is "
-"unreliable or non-functional without it.\n"
-"        "
+"You should only select this option if your connection is unreliable or non-"
+"functional without it."
 msgstr ""
+"Здебільшого, OpenConnect може виявляти умови мережі або налаштування"
+" сервера, які не дозволяють належну роботу тунелів на основі UDP (включно з"
+" DTLS і ESP), і "
+"автоматично переходити на резервний тунель на основі TLS.\n"
 "\n"
-"          Здебільшого, OpenConnect може виявляти умови мережі або "
-"налаштування сервера, які не дозволяють\n"
-"          належну роботу тунелів на основі UDP (включно з DTLS і ESP), і "
-"автоматично переходити на\n"
-"          резервний тунель на основі TLS.\n"
+"Перевагу в OpenConnect надано використанню, якщо це можливо, тунелів на"
+" основі UDP, з міркувань швидкодії.\n"
 "\n"
-"          Перевагу в OpenConnect надано використанню, якщо це можливо, "
-"тунелів на основі UDP, з міркувань швидкодії.\n"
-"\n"
-"          Користуватися цим параметром слід, лише якщо з'єднання є "
-"нестабільним або непрацездатним без його використання.\n"
-"        "
+"Користуватися цим параметром слід, лише якщо з'єднання є нестабільним або"
+" непрацездатним без його використання."
 
-#: ../properties/nm-openconnect-dialog.ui.h:23
+#: ../properties/nm-openconnect-dialog.ui.h:19
 msgid "Software Token Authentication"
 msgstr "Програмне розпізнавання за ключем"
 
-#: ../properties/nm-openconnect-dialog.ui.h:24
+#: ../properties/nm-openconnect-dialog.ui.h:20
 msgid "Token _Mode"
 msgstr "_Режим ключа"
 
-#: ../properties/nm-openconnect-dialog.ui.h:25
+#: ../properties/nm-openconnect-dialog.ui.h:21
 msgid "Token Sec_ret"
 msgstr "Р_еєстраційні дані ключа"
 
-#: ../properties/nm-openconnect-dialog.ui.h:26
+#: ../properties/nm-openconnect-dialog.ui.h:22
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: ../properties/nm-openconnect-dialog.ui.h:27
+#: ../properties/nm-openconnect-dialog.ui.h:23
 msgid "RSA SecurID — read from ~/.stokenrc"
 msgstr "RSA SecurID — читання з ~/.stokenrc"
 
-#: ../properties/nm-openconnect-dialog.ui.h:28
+#: ../properties/nm-openconnect-dialog.ui.h:24
 msgid "RSA SecurID — manually entered"
 msgstr "RSA SecurID — введене вручну"
 
-#: ../properties/nm-openconnect-dialog.ui.h:29
+#: ../properties/nm-openconnect-dialog.ui.h:25
 msgid "TOTP — manually entered"
 msgstr "TOTP — введене вручну"
 
-#: ../properties/nm-openconnect-dialog.ui.h:30
+#: ../properties/nm-openconnect-dialog.ui.h:26
 msgid "HOTP — manually entered"
 msgstr "HOTP — введене вручну"
 
-#: ../properties/nm-openconnect-dialog.ui.h:31
+#: ../properties/nm-openconnect-dialog.ui.h:27
 msgid "Yubikey OATH"
 msgstr "OATH Yubikey"
 
@@ -404,7 +411,6 @@ msgstr ""
 
 #: ../src/nm-openconnect-service.c:318
 #, c-format
-#| msgid "Could not set tunnel interface owner to '%s'"
 msgid "Could not set tunnel interface owner to '%d'"
 msgstr "Не вдалося зробити власником інтерфейсу тунелю «%d»"
 
