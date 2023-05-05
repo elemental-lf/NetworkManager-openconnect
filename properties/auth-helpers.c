@@ -58,7 +58,8 @@ tls_pw_init_auth_widget (GtkBuilder *builder,
 	if (s_vpn) {
 		value = nm_setting_vpn_get_data_item (s_vpn, NM_OPENCONNECT_KEY_CACERT);
 		if (value && strlen (value))
-			nma_cert_chooser_set_cert_uri (NMA_CERT_CHOOSER (widget), value);
+			nma_cert_chooser_set_cert (NMA_CERT_CHOOSER (widget), value,
+									   NM_SETTING_802_1X_CK_SCHEME_PATH);
 	}
 
 	widget = GTK_WIDGET (gtk_builder_get_object (builder, "mca_cert_chooser"));
