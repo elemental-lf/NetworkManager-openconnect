@@ -2076,9 +2076,10 @@ int main (int argc, char **argv)
 		g_hash_table_iter_init (&iter, _ui_data->secrets);
 		while (g_hash_table_iter_next (&iter, (gpointer *)&key, (gpointer *)&value))
 			fprintf(paramf, "%s\n%s\n", key, value);
-		fprintf(paramf, "\n\n");
-		fflush(paramf);
 	}
+
+	fprintf(paramf, "\n\n");
+	fflush(paramf);
 
 	wait_for_quit ();
 
