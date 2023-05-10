@@ -1969,7 +1969,9 @@ static gboolean process_stdin (GIOChannel *source, GIOCondition condition, auth_
 		if (c == '\0' || c == '\n') {
 			if (!strcmp(ui_data->stdin_line->str, "QUIT")) {
 				ui_data->quit_seen = TRUE;
-				gtk_main_quit();
+				/* Only really quit when called properly from the main loop. */
+				if (condition)
+					gtk_main_quit();
 			}
 			g_string_truncate(ui_data->stdin_line, 0);
 			continue;
@@ -2062,8 +2064,21 @@ int main (int argc, char **argv)
 	_ui_data->stdin_channel = g_io_channel_unix_new (0);
 	_ui_data->stdin_source = g_io_create_watch(_ui_data->stdin_channel, G_IO_IN);
 	_ui_data->stdin_line = g_string_new("");
-	g_source_set_callback(_ui_data->stdin_source, (GSourceFunc)process_stdin, _ui_data, NULL);
-	g_source_attach(_ui_data->stdin_source, NULL);
+
+	/*
+	 * https://gitlab.gnome.org/GNOME/network-manager-applet/-/issues/179
+	 *
+	 * Some versions of nm-applet send the QUIT immediately along with the
+	 * DONE after the config+secrets. So check for it right now, before
+	 * displaying the dialog. If it's already been sent, ignore it (but
+	 * leave ui_data->quit_seen TRUE so that we don't wait later).
+	 */
+	process_stdin(NULL, 0, _ui_data);
+
+	if (!_ui_data->quit_seen) {
+		g_source_set_callback(_ui_data->stdin_source, (GSourceFunc)process_stdin, _ui_data, NULL);
+		g_source_attach(_ui_data->stdin_source, NULL);
+	}
 
 	if (allow_interaction) {
 #if OPENCONNECT_CHECK_VER(3,4)
