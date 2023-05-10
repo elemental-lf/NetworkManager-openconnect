@@ -181,6 +181,11 @@ typedef struct auth_ui_data {
 
 	int cookie_retval;
 
+	GIOChannel *stdin_channel;
+	GSource *stdin_source;
+	GString *stdin_line;
+	gboolean quit_seen;
+
 	int cancel_pipes[2];
 	gboolean cancelled; /* fully cancel the whole challenge-response series */
 	gboolean getting_cookie;
@@ -1922,32 +1927,6 @@ static auth_ui_data *init_ui_data (char *vpn_name, GHashTable *options, GHashTab
 	return ui_data;
 }
 
-static void wait_for_quit (void)
-{
-	GString *str;
-	char c;
-	ssize_t n;
-	time_t start;
-
-	str = g_string_sized_new (10);
-	start = time (NULL);
-	do {
-		errno = 0;
-		n = read (0, &c, 1);
-		if (n == 0)
-			break;
-		if (n < 0 && errno == EAGAIN)
-			g_usleep (G_USEC_PER_SEC / 10);
-		else if (n == 1) {
-			g_string_append_c (str, c);
-			if (strstr (str->str, "QUIT") || (str->len > 10))
-				break;
-		} else
-			break;
-	} while (time (NULL) < start + 20);
-	g_string_free (str, TRUE);
-}
-
 static struct option long_options[] = {
 	{"reprompt", 0, 0, 'r'},
 	{"uuid", 1, 0, 'u'},
@@ -1972,6 +1951,33 @@ static gpointer init_connection (auth_ui_data *ui_data)
 		ui_data->autosubmit = 0;
 
 	return NULL;
+}
+
+static gboolean process_stdin (GIOChannel *source, GIOCondition condition, auth_ui_data *ui_data)
+{
+	gsize count;
+	GIOStatus status;
+	char c;
+
+	while (1) {
+		status = g_io_channel_read_chars(ui_data->stdin_channel, &c, 1, &count, NULL);
+		if (status == G_IO_STATUS_AGAIN)
+			return TRUE;
+		g_return_val_if_fail(status == G_IO_STATUS_NORMAL, FALSE);
+
+		/* Like nm_vpn_service_plugin_read_vpn_details(), treat \0 as \n */
+		if (c == '\0' || c == '\n') {
+			if (!strcmp(ui_data->stdin_line->str, "QUIT")) {
+				ui_data->quit_seen = TRUE;
+				gtk_main_quit();
+			}
+			g_string_truncate(ui_data->stdin_line, 0);
+			continue;
+		}
+
+		if (ui_data->stdin_line->len < 10)
+			g_string_append_c(ui_data->stdin_line, c);
+	}
 }
 
 int main (int argc, char **argv)
@@ -2051,6 +2057,14 @@ int main (int argc, char **argv)
 		return 1;
 	}
 
+
+	g_unix_set_fd_nonblocking(0, TRUE, NULL);
+	_ui_data->stdin_channel = g_io_channel_unix_new (0);
+	_ui_data->stdin_source = g_io_create_watch(_ui_data->stdin_channel, G_IO_IN);
+	_ui_data->stdin_line = g_string_new("");
+	g_source_set_callback(_ui_data->stdin_source, (GSourceFunc)process_stdin, _ui_data, NULL);
+	g_source_attach(_ui_data->stdin_source, NULL);
+
 	if (allow_interaction) {
 #if OPENCONNECT_CHECK_VER(3,4)
 		openconnect_set_token_callbacks (_ui_data->vpninfo, _ui_data, NULL, update_token);
@@ -2081,7 +2095,8 @@ int main (int argc, char **argv)
 	fprintf(paramf, "\n\n");
 	fflush(paramf);
 
-	wait_for_quit ();
+	if (!_ui_data->quit_seen)
+		gtk_main();
 
 	return 0;
 }
