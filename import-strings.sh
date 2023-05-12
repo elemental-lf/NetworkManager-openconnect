@@ -11,7 +11,8 @@ fi
 # with the project's web site which is also held in the git repository. There's
 # race condition here, if the server is updating as we run this script. But it's
 # unlikely that the string in question would move far, so it should be good enough.
-COMMIT="$(cd $OPENCONNECT_DIR && git rev-parse HEAD)"
+COMMIT="$(git -C "$OPENCONNECT_DIR" rev-parse HEAD)"
+TOPLEVEL="$(git -C "$OPENCONNECT_DIR" rev-parse --show-toplevel)"
 if ! echo $COMMIT | grep -E -q "[a-f0-9]{40}"; then
     echo "Error: Failed to fetch commit ID from $OPENCONNECT_DIR"
     exit 1
@@ -22,8 +23,10 @@ make po/openconnect.pot || exit 1
 popd
 
 COMMIT=$(echo $COMMIT | cut -c1-10)
-GITWEB=https://git.infradead.org/users/dwmw2/openconnect.git/blob/${COMMIT}:/
+GITWEB=https://git.infradead.org/users/dwmw2/openconnect.git/blob/
 OUTFILE=openconnect-strings-$COMMIT.txt
+NR_STRINGS=$(grep -c ^msgid $OPENCONNECT_BUILD_DIR/po/openconnect.pot)
+NR_DONE=0
 
 cat >$OUTFILE <<EOF
 This file contains strings from the OpenConnect VPN client, found at
@@ -44,10 +47,13 @@ while read -r line; do
     case "$line" in
 	"#:"*)
 	    echo >>$OUTFILE
-	    # FIXME: If it was already in openconnect-strings.txt can we keep the
-	    #   previous URL instead of using the latest commit, to reduce churn?
 	    for src in ${line###: }; do
-		echo "// ${GITWEB}${src%%:*}#l${src##*:}" >>$OUTFILE
+		THISCOMMIT=${COMMIT}
+		FILE=${src%%:*}
+		LINE=${src##*:}
+		eval `git -C "$TOPLEVEL" blame $COMMIT -fnswL $LINE,$LINE -- $FILE |
+		    sed "s/\([0-9a-f]\+\) \([^ ]\+\) \([0-9]\+\) .*/THISCOMMIT=\1\nFILE=\2\nLINE=\3\n/"`
+		echo "// ${GITWEB}${THISCOMMIT}:/${FILE}#l${LINE}" >>$OUTFILE
 	    done
 	    real_strings=yes
 	    ;;
@@ -56,6 +62,8 @@ while read -r line; do
 		echo -n "_(${line##msgid }" >>$OUTFILE
 		in_msgid=yes
 	    fi
+	    NR_DONE=$((${NR_DONE} + 1))
+	    echo -en "\rDone $NR_DONE/$NR_STRINGS"
 	    ;;
 	"msgstr "*|"")
 	    if [ "$in_msgid" = "yes" ]; then
@@ -71,7 +79,7 @@ while read -r line; do
 	    ;;
    esac
 done
-
+echo ""
 MESSAGES=$(grep -c "^_(" openconnect-strings-$COMMIT.txt)
 
 echo "Got $MESSAGES messages from openconnect upstream"
