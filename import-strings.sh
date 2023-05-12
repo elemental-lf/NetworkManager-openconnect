@@ -12,7 +12,7 @@ fi
 # race condition here, if the server is updating as we run this script. But it's
 # unlikely that the string in question would move far, so it should be good enough.
 COMMIT="$(cd $OPENCONNECT_DIR && git rev-parse HEAD)"
-if ! echo $COMMIT | egrep -q "[a-f0-9]{40}"; then
+if ! echo $COMMIT | grep -E -q "[a-f0-9]{40}"; then
     echo "Error: Failed to fetch commit ID from $OPENCONNECT_DIR"
     exit 1
 fi
@@ -81,8 +81,18 @@ if [ "$MESSAGES" -lt 100 ]; then
     rm openconnect-strings-$COMMIT.txt
     exit 1
 fi
-NEWSHA=$(grep -v ^// openconnect-strings-$COMMIT.txt | sha1sum)
-OLDSHA=$(grep -v ^// openconnect-strings.txt | sha1sum)
+
+# Filter out the noise in openconnect-strings.txt for comparison:
+#
+# /^\($\|\/\/\)/	# Match lines matching ^$ (empty) or ^//
+#     d;		# ... and delete them.
+# :a			# Label 'a'
+# /"$/			# Match lines ending with a "
+#     {N;ba};		# Append the next line, branch back to 'a'
+# s/\n//g		# Remove any newline *within* a buffer
+#
+NEWSHA=$(sed '/^\($\|\/\/\)/d;:a;/"$/{N;ba};s/\n//g' openconnect-strings-$COMMIT.txt | sort | sha1sum)
+OLDSHA=$(sed '/^\($\|\/\/\)/d;:a;/"$/{N;ba};s/\n//g' openconnect-strings.txt | sort | sha1sum)
 if [ "$NEWSHA" != "$OLDSHA" ]; then
     echo New strings
     mv openconnect-strings-$COMMIT.txt openconnect-strings.txt
@@ -106,12 +116,13 @@ for a in po/*.po ; do
 	msgattrib -F --no-fuzzy $a > $a.nmo
 	msgmerge -q -N -C $OPENCONNECT_DIR/$a -F $a.nmo $OPENCONNECT_BUILD_DIR/po/openconnect.pot > $OPENCONNECT_DIR/$a.merged1
 	msgattrib -F --no-fuzzy --no-obsolete $OPENCONNECT_DIR/$a.merged1 > $OPENCONNECT_DIR/$a.merged2
-	msgmerge -q -N -F $OPENCONNECT_DIR/$a $OPENCONNECT_BUILD_DIR/po/openconnect.pot > $OPENCONNECT_DIR/$a.unmerged
-	if ! cmp $OPENCONNECT_DIR/$a.merged2 $OPENCONNECT_DIR/$a.unmerged; then
+	msgmerge -q -N -F $OPENCONNECT_DIR/$a $OPENCONNECT_BUILD_DIR/po/openconnect.pot > $OPENCONNECT_DIR/$a.unmerged1
+	msgattrib -F --no-fuzzy --no-obsolete $OPENCONNECT_DIR/$a.unmerged1 > $OPENCONNECT_DIR/$a.unmerged2
+	if ! cmp $OPENCONNECT_DIR/$a.merged2 $OPENCONNECT_DIR/$a.unmerged2; then
 	    echo New changes for OpenConnect $a
 	    mv $OPENCONNECT_DIR/$a.merged2 $OPENCONNECT_DIR/$a
 	fi
-	rm -f $OPENCONNECT_DIR/$a.merged2 $OPENCONNECT_DIR/$a.merged1 $OPENCONNECT_DIR/$a.unmerged $a.nmo
+	rm -f $OPENCONNECT_DIR/$a.merged2 $OPENCONNECT_DIR/$a.merged1 $OPENCONNECT_DIR/$a.unmerged2 $OPENCONNECT_DIR/$a.unmerged1 $a.nmo
     fi
 done
 
