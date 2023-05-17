@@ -1,4 +1,22 @@
 ==========================================================
+NetworkManager-openconnect-1.2.10
+Overview of changes since NetworkManager-openconnect-1.2.8
+==========================================================
+
+This is a new stable release of NetworkManager-openconnect.  Notable changes include:
+
+* Improved cancellation handling.
+* Support SAML/SSO authentication for some VPN protocols.
+* Allow useragent override.
+* Support webkit2gtk-4.1.
+* Allow choosing certificates/keys from PKCS#11 tokens.
+* Allow custom interface name.
+* Allow UDP connectivity to be disabled.
+* Support multi-certificate authentication for AnyConnect.
+* Fix hangs with external browsers which spam stdout.
+* Update translations.
+
+==========================================================
 NetworkManager-openconnect-1.2.8
 Overview of changes since NetworkManager-openconnect-1.2.6
 ==========================================================
