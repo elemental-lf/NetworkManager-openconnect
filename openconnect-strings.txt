@@ -2227,6 +2227,7 @@ _("SOCKS proxy demands message confidentiality, which is not supported\n");
 _("SOCKS proxy demands protection unknown type 0x%02x\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/d6780b960:/hpke.c#l58
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/d4fc4b084:/hpke.c#l86
 _("Spawning external browser '%s'\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/d6780b960:/hpke.c#l73
@@ -4917,6 +4918,9 @@ _("Failed to put tun file descriptor into message-discard mode");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/4b960afd1:/tun.c#l183
 _("tun device is unsupported on this platform\n");
+
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/4ca0aa1bc:/tun.c#l197
+_("Requested tun device name '%s' is too long\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/eef00ae2f:/tun.c#l432
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/0f484d6c7:/tun.c#l619
