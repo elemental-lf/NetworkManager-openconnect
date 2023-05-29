@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: NetworkManager-openconnect main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-"
 "openconnect/issues\n"
-"POT-Creation-Date: 2023-05-20 07:34+0000\n"
-"PO-Revision-Date: 2023-05-20 14:23+0300\n"
+"POT-Creation-Date: 2023-05-20 17:27+0000\n"
+"PO-Revision-Date: 2023-05-27 00:14+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -5282,7 +5282,7 @@ msgstr "Başlangıçtan sonra arka planda çalış"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f8da07270:/main.c#l829
 #: ../openconnect-strings.txt:2769
 msgid "Write the daemon's PID to this file"
-msgstr "Arka plan hizmetinin PID bilgisini bu dosyaya yaz"
+msgstr "Art alan hizmetinin PID bilgisini bu dosyaya yaz"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f8da07270:/main.c#l830
 #: ../openconnect-strings.txt:2772
