@@ -1,21 +1,22 @@
 # Turkish translation of NetworkManager-openconnect.
+# Copyright (C) 2015-2023 NetworkManager-openconnect's COPYRIGHT HOLDER
 # This file is distributed under the same license as the NetworkManager-openconnect package.
 #
 # Ozan Çağlayan <ozan_at_pardus.org.tr>
 # Kaan Özdinçer <kaanozdincer@gmail.com>, 2015.
 # İşbaran Akçayır <isbaran@gmail.com>, 2015.
 # Simge Sezgin <simgesezgin88@gmail.com>, 2015.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2020, 2022.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager-openconnect main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-"
 "openconnect/issues\n"
-"POT-Creation-Date: 2023-05-20 17:27+0000\n"
-"PO-Revision-Date: 2023-05-27 00:14+0300\n"
+"POT-Creation-Date: 2023-05-29 12:35+0000\n"
+"PO-Revision-Date: 2023-07-02 14:41+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,73 +49,73 @@ msgstr "Cisco AnyConnect, Juniper ve ocserv tabanlı ağlar ile uyumludur."
 msgid "The NetworkManager Developers"
 msgstr "NetworkManager Geliştiricileri"
 
-#: ../auth-dialog/main.c:878
+#: ../auth-dialog/main.c:885
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
 msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:908
+#: ../auth-dialog/main.c:915
 #, c-format
 msgid "Connect to VPN “%s”"
 msgstr "“%s” VPN’e bağlan"
 
-#: ../auth-dialog/main.c:910
+#: ../auth-dialog/main.c:917
 msgid "Connect to VPN"
 msgstr "VPN’e bağlan"
 
-#: ../auth-dialog/main.c:987
+#: ../auth-dialog/main.c:994
 msgid "<b>The certificate may be invalid or untrusted!</b>\n"
 msgstr "<b>Sertifika geçersiz veya güvenilmez!</b>\n"
 
-#: ../auth-dialog/main.c:988
+#: ../auth-dialog/main.c:995
 msgid "<b>Reason: "
 msgstr "<b>Neden: "
 
-#: ../auth-dialog/main.c:1008 ../auth-dialog/main.c:1848
+#: ../auth-dialog/main.c:1015 ../auth-dialog/main.c:1855
 msgid "_Cancel"
 msgstr "_İptal Et"
 
-#: ../auth-dialog/main.c:1018
+#: ../auth-dialog/main.c:1025
 msgid "I really know what I am doing"
 msgstr "Ne yaptığımı gerçekten biliyorum"
 
-#: ../auth-dialog/main.c:1027
+#: ../auth-dialog/main.c:1034
 msgid "Connect anyway"
 msgstr "Yine de bağlan"
 
-#: ../auth-dialog/main.c:1771
+#: ../auth-dialog/main.c:1778
 msgid "_Close"
 msgstr "_Kapat"
 
-#: ../auth-dialog/main.c:1788
+#: ../auth-dialog/main.c:1795
 msgid "VPN host"
 msgstr "VPN sunucu"
 
-#: ../auth-dialog/main.c:1799
+#: ../auth-dialog/main.c:1806
 msgid "C_onnect"
 msgstr "B_ağlan"
 
-#: ../auth-dialog/main.c:1806
+#: ../auth-dialog/main.c:1813
 msgid "Automatically start connecting next time"
 msgstr "Sonraki kez kendiliğinden bağlanmaya başla"
 
-#: ../auth-dialog/main.c:1825
+#: ../auth-dialog/main.c:1832
 msgid "Select a host to fetch the login form"
 msgstr "Giriş formunun alınacağı sunucu seç"
 
-#: ../auth-dialog/main.c:1830
+#: ../auth-dialog/main.c:1837
 msgid "Contacting host, please wait…"
 msgstr "Ana makineye başvuruluyor, lütfen bekleyin…"
 
-#: ../auth-dialog/main.c:1842
+#: ../auth-dialog/main.c:1849
 msgid "_Login"
 msgstr "_Giriş"
 
-#: ../auth-dialog/main.c:1854
+#: ../auth-dialog/main.c:1861
 msgid "Save passwords"
 msgstr "Parolaları kaydet"
 
-#: ../auth-dialog/main.c:1862
+#: ../auth-dialog/main.c:1869
 msgid "Log"
 msgstr "Günlükle"
 
@@ -2854,7 +2855,7 @@ msgstr "Sistem anahtarı %s içeri aktarılırken hata: %s\n"
 #: ../openconnect-strings.txt:1406
 #, c-format
 msgid "Trying PKCS#11 key URL %s\n"
-msgstr "PKCS#11 anahtar URL'i %s deneniyor\n"
+msgstr "PKCS#11 anahtar URLʼsi %s deneniyor\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2cc4d410f:/gnutls.c#l577
 #: ../openconnect-strings.txt:1409
@@ -2866,7 +2867,7 @@ msgstr "PKCS#11 anahtar yapısı oluşturulurken hata: %s\n"
 #: ../openconnect-strings.txt:1412
 #, c-format
 msgid "Error importing PKCS#11 URL %s: %s\n"
-msgstr "PKCS#11 URL %s içeri aktarılırken hata: %s\n"
+msgstr "PKCS#11 URLʼsi %s içeri aktarılırken hata: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8af8f5473:/gnutls.c#l1268
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0a23a8835:/openssl-pkcs11.c#l649
@@ -4536,13 +4537,13 @@ msgstr "Bağlantı kapatılmadan HTTP 1.0 gövdesi alınamıyor\n"
 #: ../openconnect-strings.txt:2334
 #, c-format
 msgid "Failed to parse redirected URL '%s': %s\n"
-msgstr "Yeniden yönlendirme URL'i '%s' ayrıştırılamadı: %s\n"
+msgstr "Yeniden yönlendirme URLʼsi '%s' ayrıştırılamadı: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9c7a58a89:/http.c#l669
 #: ../openconnect-strings.txt:2337
 #, c-format
 msgid "Cannot follow redirection to non-https URL '%s'\n"
-msgstr "https-olmayan yönlendirme adresi '%s' takip edilemez\n"
+msgstr "https olmayan yönlendirme adresi '%s' takip edilemez\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3edcc28d1:/http.c#l680
 #: ../openconnect-strings.txt:2340
@@ -4869,12 +4870,12 @@ msgstr "IPv6 yapılandırması alındı fakat MTU %d çok küçük.\n"
 #: ../openconnect-strings.txt:2528
 #, c-format
 msgid "Failed to parse server URL '%s'\n"
-msgstr "Sunucu URL '%s' ayrıştırılamadı\n"
+msgstr "Sunucu URLʼsi '%s' ayrıştırılamadı\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/23267eeba:/library.c#l217
 #: ../openconnect-strings.txt:2531
 msgid "Only https:// permitted for server URL\n"
-msgstr "Sunucu URL için yalnızca https:// kabul edilir\n"
+msgstr "Sunucu URLʼsi için yalnızca https:// kabul edilir\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/bb8e67ddc:/library.c#l951
 #: ../openconnect-strings.txt:2534
@@ -9622,566 +9623,3 @@ msgstr "hesapla komutu"
 #: ../openconnect-strings.txt:5183
 msgid "Unrecognised response from Yubikey when generating tokencode\n"
 msgstr "Tokencode oluşturulurken Yubikey'den gelen tanınmayan yanıt\n"
-
-#~ msgid "OpenConnect was not built with liboath support\n"
-#~ msgstr "OpenConnect liboath desteğiyle derlendi\n"
-
-#~ msgid "Choose authentication login selection"
-#~ msgstr "Kimlik doğrulama giriş seçimini seç"
-
-#~ msgid "Set login usergroup"
-#~ msgstr "Giriş kullanıcı kümesi ayarla"
-
-#~ msgid "Unknown Pulse packet\n"
-#~ msgstr "Bilinmeyen Pulse paketi\n"
-
-#~ msgid "SAML %s authentication is required via external script.\n"
-#~ msgstr "Dış betik aracılığıyla SAML %s kimlik doğrulaması gerekli.\n"
-
-#~ msgid ""
-#~ "Please report %d unexpected values above (of which %d fatal) to "
-#~ "<openconnect-devel@lists.infradead.org>\n"
-#~ msgstr ""
-#~ "Lütfen yukardaki %d beklenmedik değeri (hangi %d ölümcül hatanın) "
-#~ "<openconnect-devel@lists.infradead.org> adresine bildirin\n"
-
-#~ msgid ""
-#~ "For assistance with OpenConnect, please see the web page at\n"
-#~ "  https://www.infradead.org/openconnect/mail.html\n"
-#~ msgstr ""
-#~ "OpenConnect konusunda yardım için, lütfen\n"
-#~ "  https://www.infradead.org/openconnect/mail.html adresindeki web\n"
-#~ "sayfasına bakın\n"
-
-#~ msgid "Connection retry timeout in seconds"
-#~ msgstr "Bağlantı yeniden deneme zaman aşımının saniye türünden değeri"
-
-#~ msgid ""
-#~ "Disabling all HTTP connection re-use due to --no-http-keepalive option.\n"
-#~ "If this helps, please report to <openconnect-devel@lists.infradead.org>.\n"
-#~ msgstr ""
-#~ "--no-http-keepalive seçeneğinden dolayı HTTP bağlantılarının yeniden "
-#~ "kullanılması devre dışı.\n"
-#~ "Eğer bu yardımcı olursa, lütfen <openconnect-devel@lists.infradead.org> "
-#~ "adresine e-posta atın.\n"
-
-#~ msgid ""
-#~ "WARNING: You specified %s. This should not be\n"
-#~ "         necessary; please report cases where a priority string\n"
-#~ "         override is necessary to connect to a server\n"
-#~ "         to <openconnect-devel@lists.infradead.org>.\n"
-#~ msgstr ""
-#~ "UYARI: %s belirttiniz. Bu gerekli değildir;\n"
-#~ "         bir sunucuya bağlanmada öncelik dizgesinin\n"
-#~ "         üstüne yazılması gereken durumları şu adrese\n"
-#~ "         bildirin: <openconnect-devel@lists.infradead.org>.\n"
-
-#~ msgid "See https://www.infradead.org/openconnect/vpnc-script.html\n"
-#~ msgstr ""
-#~ "https://www.infradead.org/openconnect/vpnc-script.html adresine bakın\n"
-
-#~ msgid "open net"
-#~ msgstr "open net"
-
-#~ msgid "SIOCSIFMTU"
-#~ msgstr "SIOCSIFMTU"
-
-#~ msgid ""
-#~ "To configure local networking, openconnect must be running as root\n"
-#~ "See https://www.infradead.org/openconnect/nonroot.html for more "
-#~ "information\n"
-#~ msgstr ""
-#~ "Yerel ağı yapılandırmak için openconnect kök olarak çalıştırılmalıdır\n"
-#~ "Daha çok bilgi için https://www.infradead.org/openconnect/nonroot.html\n"
-
-#~ msgid "ttls_pull_timeout_func %dms\n"
-#~ msgstr "ttls_pull_timeout_func %dms\n"
-
-#~ msgid "OS type (linux,linux-64,win,...) to report"
-#~ msgstr "Bildirilecek işletim sistemi (linux, linux-64,win,...) türü"
-
-#~ msgid "Invalid OS identity \"%s\"\n"
-#~ msgstr "Geçersiz OS kimliği \"%s\"\n"
-
-#~ msgid "Choose a Certificate Authority certificate…"
-#~ msgstr "Sertifika Otoritesi sertifikası seç…"
-
-#~ msgid "Choose your personal certificate…"
-#~ msgstr "Kişisel sertifikanızı seçin…"
-
-#~ msgid "Choose your private key…"
-#~ msgstr "Özel anahtarınızı seçin…"
-
-#~ msgid "PEM certificates (*.pem, *.crt, *.key)"
-#~ msgstr "PEM sertifikaları (*.pem, *.crt, *.key)"
-
-#~ msgid "Select A File"
-#~ msgstr "Bir dosya seçin"
-
-#~ msgid "CA C_ertificate"
-#~ msgstr "CA S_ertifikası"
-
-#~ msgid "_User Certificate"
-#~ msgstr "_Kullanıcı Sertifikası"
-
-#~ msgid "Private _Key"
-#~ msgstr "Özel _Anahtar"
-
-#~ msgid ""
-#~ "\n"
-#~ "WARNING: No DTLS support in this binary. Performance will be impaired.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "UYARI: Bu ikilide DTLS desteklenmiyor. Performans bozulacaktır.\n"
-
-#~ msgid " "
-#~ msgstr " "
-
-#~ msgid "(NOTE: liboath (TOTP,HOTP) disabled in this build)"
-#~ msgstr "(NOT: Bu derlemede liboath (TOTP,HOTP) devre dışı bırakıldı)"
-
-#~ msgid "(error 0x%x)"
-#~ msgstr "(hata 0x%x)"
-
-#~ msgid "<b>Certificate Authentication</b>"
-#~ msgstr "<b>Sertifika Kimlik Doğrulama</b>"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>Genel</b>"
-
-#~ msgid "<b>Software Token Authentication</b>"
-#~ msgstr "<b>Yazılım Jetonu Kimlik Doğrulama</b>"
-
-#~ msgid "Add key from PKCS#11 failed\n"
-#~ msgstr "PKCS#11'den anahtar ekleme başarısız oldu\n"
-
-#~ msgid "Add key from TPM failed\n"
-#~ msgstr "TPM'den anahtar ekleme başarısız oldu\n"
-
-#~ msgid "Allow Cisco Secure Desktop _trojan"
-#~ msgstr "Cisco Güvenli Masaüstü _truva atına izin ver"
-
-#~ msgid "Bind UDP socket for DTLS"
-#~ msgstr "UDP soketini DTLS için bağla"
-
-#~ msgid "CSD _Wrapper Script:"
-#~ msgstr "CSD _Wrapper Betiği:"
-
-#~ msgid "CSTP Ciphersuite: %s\n"
-#~ msgstr "CSTP Şifreleme: %s\n"
-
-#~ msgid "Certificate (TLS)"
-#~ msgstr "Sertifika (TLS)"
-
-#~ msgid "Certificate (TLS) with TPM"
-#~ msgstr "TPM ile sertifika (TLS)"
-
-#~ msgid ""
-#~ "Certificate from VPN server \"%s\" failed verification.\n"
-#~ "Reason: %s\n"
-#~ "Do you want to accept it?"
-#~ msgstr ""
-#~ "\"%s\" VPN sunucusundan alınan sertifika doğrulanamadı.\n"
-#~ "Sebep: %s\n"
-#~ "Sertifikayı kabul ediyor musunuz?"
-
-#~ msgid "Choose a Certificate Authority certificate..."
-#~ msgstr "Bir sertifika otoritesi (CA) sertifikası seçin..."
-
-#~ msgid "Choose your personal certificate..."
-#~ msgstr "Kişisel sertifikanızı seçin..."
-
-#~ msgid "Choose your private key..."
-#~ msgstr "Özel anahtarınızı seçin..."
-
-#~ msgid "Connect to VPN '%s'"
-#~ msgstr "VPN'e bağlan '%s'"
-
-#~ msgid "Connected %s as %s%s%s, using %s\n"
-#~ msgstr "%s%s%s gibi %s'ye bağlanıldı, %s kullanılarak\n"
-
-#, fuzzy
-#~ msgid "Connected as %s%s%s, using SSL%s%s, with %s%s%s %s\n"
-#~ msgstr "%s%s%s olarak bağlanıldı, SSL%s%s kullanıldı, %s%s%s %s ile\n"
-
-#~ msgid "Connected to HTTPS on %s\n"
-#~ msgstr "%s üzerinden HTTPS bağlanıldı\n"
-
-#~ msgid "Contacting host, please wait..."
-#~ msgstr "Sunucuyla iletişime geçiliyor, lütfen bekleyin..."
-
-#~ msgid "Cookie was rejected on reconnection; exiting.\n"
-#~ msgstr "Yeniden bağlantı sırasında çerez reddedildi; çıkılıyor.\n"
-
-#~ msgid "DTLS got write error %d. Falling back to SSL\n"
-#~ msgstr "DTLS %d yazma hatası aldı. Bağlantı SSL'e düşürülüyor\n"
-
-#~ msgid "DTLS got write error: %s. Falling back to SSL\n"
-#~ msgstr "DTLS yazma hatası aldı: %s. Bağlantı SSL'e düşürülüyor\n"
-
-#~ msgid "DTLS option %s : %s\n"
-#~ msgstr "DTLS seçeneği %s : %s\n"
-
-#~ msgid "Disable DTLS"
-#~ msgstr "DTLS devre dışı bırak"
-
-#~ msgid "Disable compression"
-#~ msgstr "Sıkıştırmayı kapat"
-
-#~ msgid "Do not require server SSL cert to be valid"
-#~ msgstr "Geçerli olması için SSL sertifikasına ihtiyaç yok"
-
-#~ msgid "Don't quit when VPN connection terminates"
-#~ msgstr "VPN bağlantınız sonlanırsa çıkmayın"
-
-#~ msgid "Drop privileges during CSD execution"
-#~ msgstr "CSD çalıştırma sırasında ayrıcalıkları bırak"
-
-#~ msgid "Dump HTTP authentication traffic (implies --verbose"
-#~ msgstr "HTTP kimlik doğrulama trafiğini dök (--verbose ayrıntılı"
-
-#~ msgid "Enable compression (default)"
-#~ msgstr "Sıkıştırmayı etkinleştir (öntanımlı)"
-
-#~ msgid "Encountered form with no ID\n"
-#~ msgstr "Kimliksiz formla karşılaşıldı\n"
-
-#~ msgid "Error in chunked decoding. Expected '', got: '%s'"
-#~ msgstr "Yığın halinde çözmede hata. Beklenen \", alınan: '%s'"
-
-#~ msgid "Error processing HTTP response\n"
-#~ msgstr "HTTP yanıtı işlenirken hata\n"
-
-#~ msgid ""
-#~ "Error: Running the 'Cisco Secure Desktop' trojan on Windows is not yet "
-#~ "implemented.\n"
-#~ msgstr ""
-#~ "Hata: Windows üzerinde henüz uygulanmayan 'Cisco Secure Desktop' truva "
-#~ "atı çalıştırılıyor.\n"
-
-#~ msgid "Established DTLS connection (using OpenSSL). Ciphersuite %s.\n"
-#~ msgstr "DTLS bağlantısı sağlandı (OpenSSL kullanarak). Ciphersuite %s.\n"
-
-#~ msgid "Failed to SHA1 input data for signing: %s\n"
-#~ msgstr "İmzalama için SHA1 girdi verisi başarısız: %s\n"
-
-#~ msgid "Failed to instantiated private key from PKCS#11\n"
-#~ msgstr "PKCS#11'den özel anahtar örnekleme başarısız\n"
-
-#~ msgid "Failed to obtain WebVPN cookie\n"
-#~ msgstr "WebVPN çerezi alma işlemi başarısız oldu\n"
-
-#~ msgid "Failed to read from SSL socket\n"
-#~ msgstr "SSL soketten okuma işlemi başarısız oldu\n"
-
-#~ msgid "Failed to read from SSL socket: %s\n"
-#~ msgstr "SSL soketten okunamadı: %s\n"
-
-#~ msgid "Failed to reconnect to host %s\n"
-#~ msgstr "%s sunucusuna yeniden bağlanma başarısız\n"
-
-#~ msgid "Failed to reconnect to proxy %s\n"
-#~ msgstr "%s vekil sunucusuna yeniden bağlanılamadı\n"
-
-#~ msgid "Failed to send cookie to TNCC\n"
-#~ msgstr "TNCC’ye çerez gönderme başarısız\n"
-
-#~ msgid "Failed to send start command to TNCC\n"
-#~ msgstr "TNCC’ye başlat komutu gönderilemedi\n"
-
-#~ msgid "Failed to set DTLS priority: %s\n"
-#~ msgstr "DTLS önceliği ayarlanamadı: %s\n"
-
-#~ msgid "Failed to set TLS priority string: %s\n"
-#~ msgstr "TLS öncelik dizgesini ayarlama başarısız: %s\n"
-
-#~ msgid "Failed to set uid %ld\n"
-#~ msgstr "uid %ld ayarlanamadı\n"
-
-#~ msgid "Failed to use X509 certificate from keystore\n"
-#~ msgstr "Anahtar deposundan X509 sertifikası kullanma başarısız oldu\n"
-
-#~ msgid "Failed to use private key from keystore\n"
-#~ msgstr "Anahtar deposundan özel anahtar kullanma başarısız\n"
-
-#~ msgid "Failed to write to SSL socket\n"
-#~ msgstr "SSL sokete yazma işlemi başarısız oldu\n"
-
-#~ msgid "Failed to write to SSL socket: %s\n"
-#~ msgstr "SSL soketine yazılamadı: %s\n"
-
-#~ msgid "Fetch webvpn cookie only; don't connect"
-#~ msgstr "Sadece webvpn çerezini getir; bağlanma"
-
-#~ msgid "File %s has suspicious size %zd\n"
-#~ msgstr "%s dosyası şüpheli %zd boyutta\n"
-
-#~ msgid ""
-#~ "For assistance with OpenConnect, please see the web page at\n"
-#~ "  http://www.infradead.org/openconnect/mail.html\n"
-#~ msgstr ""
-#~ "OpenConnect konusunda yardım için, lütfen\n"
-#~ "  http://www.infradead.org/openconnect/mail.html adresindeki web\n"
-#~ "sayfasına bakın\n"
-
-#~ msgid "Got inappropriate HTTP GET-tunnel response: %.*s\n"
-#~ msgstr "Uygunsuz HTTP GET-tunnel yanıtı alındı: %.*s\n"
-
-#~ msgid "Got next CA '%s' from PKCS11\n"
-#~ msgstr "PKCS11'dan sonraki CA '%s' alındı\n"
-
-#~ msgid "HOTP - manually entered"
-#~ msgstr "HOTP - elle girilen"
-
-#~ msgid "Ignoring non-matching TAP interface \"%s\"\n"
-#~ msgstr "Eşleşmeyen TAP arayüzü \"%s\" yok sayılıyor\n"
-
-#~ msgid ""
-#~ "Ignoring portal's HIP report interval (%d minutes), because no HIP report "
-#~ "script provided.\n"
-#~ msgstr ""
-#~ "Portalın HIP rapor sıklığı (%d dakika) göz ardı ediliyor, çünkü HIP rapor "
-#~ "betiği sağlanmadı.\n"
-
-#~ msgid "Invalid user \"%s\"\n"
-#~ msgstr "Geçersiz kullanıcı \"%s\"\n"
-
-#~ msgid "Invalid user uid=%ld\n"
-#~ msgstr "Geçersiz kullanıcı uid=%ld\n"
-
-#~ msgid "Not precisely one DTLS cipher\n"
-#~ msgstr "Tam bir DTLS şifresi değil\n"
-
-#~ msgid "Open UDP socket for DTLS:"
-#~ msgstr "DTLS için UDP soketi aç:"
-
-#~ msgid ""
-#~ "Open client for Cisco AnyConnect VPN, version %s\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Cisco AnyConnect VPN için istemci aç, sürüm %s\n"
-#~ "\n"
-
-#~ msgid "Opened tun device %s\n"
-#~ msgstr "Tun aygıtı %s açıldı\n"
-
-#~ msgid "PKCS#12 contained no certificate!"
-#~ msgstr "PKCS#12 sertifika içermiyor!"
-
-#~ msgid "PKCS#12 contained no private key!"
-#~ msgstr "PKCS#12 hiçbir özel anahtar içermiyor!"
-
-#~ msgid "Password / SecurID"
-#~ msgstr "Parola / SecurID"
-
-#~ msgid ""
-#~ "Potential IPv6-related GlobalProtect config tag <%s>: %s\n"
-#~ "This build does not support GlobalProtect IPv6 due to a lack of\n"
-#~ "of information on how it is configured. Please report this\n"
-#~ "to <openconnect-devel@lists.infradead.org>.\n"
-#~ msgstr ""
-#~ "Olası IPv6 bağıntılı GlobalProtect yapılandırma etiketi <%s>: %s\n"
-#~ "Bu inşa, nasıl yapılandırılacağıyla ilgili bilgi eksikliği nedeniyle\n"
-#~ "GlobalProtect IPv6 desteği sunmamaktadır. Lütfen bunu\n"
-#~ "<openconnect-devel@lists.infradead.org> adresine bildirin.\n"
-
-#~ msgid "Print webvpn cookie before connecting"
-#~ msgstr "Bağlanmadan önce webvpn çerezini yazdır"
-
-#~ msgid "RSA SecurID - manually entered"
-#~ msgstr "RSA SecurID - elle girilmiş"
-
-#~ msgid "RSA SecurID - read from ~/.stokenrc"
-#~ msgstr "RSA SecurID -  ~/.stokenrc dosyasından oku"
-
-#~ msgid "Received ESP packet of %d bytes\n"
-#~ msgstr "%d baytın ESP paketi alındı\n"
-
-#~ msgid "Received ESP packet with unrecognised payload type %02x\n"
-#~ msgstr " %02x Tanınmayan yük türlü ESP paketi alındı\n"
-
-#~ msgid "Renegotiated SSL on %s\n"
-#~ msgstr "%s üzerindeki SSL yeniden değerlendirildi\n"
-
-#~ msgid "Request MTU from server"
-#~ msgstr "Sunucudan MTU iste"
-
-#~ msgid "Run SCRIPT instead of CSD binary"
-#~ msgstr "CSD ikiliği yerine SCRIPT çalıştır"
-
-#~ msgid "SSL read cancelled\n"
-#~ msgstr "SSL okuma iptal edildi\n"
-
-#~ msgid ""
-#~ "SSL read error %d (server probably closed connection); reconnecting.\n"
-#~ msgstr ""
-#~ "SSL okuma hatası %d (sunucu muhtemelen bağlantıyı kapattı); yeniden "
-#~ "bağlanılıyor.\n"
-
-#~ msgid "SSL read error: %s; reconnecting.\n"
-#~ msgstr "SSL okuma hatası: %s; yeniden bağlanılıyor.\n"
-
-#~ msgid "SSL send failed: %s\n"
-#~ msgstr "SSL gönder başarısız oldu: %s\n"
-
-#~ msgid "SSL socket closed uncleanly\n"
-#~ msgstr "SSL soket temiz olmayan bir şekilde kapattı\n"
-
-#~ msgid "SSL write cancelled\n"
-#~ msgstr "SSL yazması iptal edildi\n"
-
-#~ msgid ""
-#~ "SSL_set_session() failed with old protocol version 0x%x\n"
-#~ "Are you using a version of OpenSSL older than 0.9.8m?\n"
-#~ "See http://rt.openssl.org/Ticket/Display.html?id=1751\n"
-#~ "Use the --no-dtls command line option to avoid this message\n"
-#~ msgstr ""
-#~ "Eski protokol sürümü 0x%x ile SSL_set_session() başarısız oldu\n"
-#~ "OpenSSL'in 0.9.8m'den daha eski bir sürümünü mü kullanıyorsunuz?\n"
-#~ "http://rt.openssl.org/Ticket/Display.html?id=1751 adresine bakın\n"
-#~ "Bu iletiyi engellemek için --no-dtls komut satırı seçeneğini kullan\n"
-
-#~ msgid "SSL_write failed: %d\n"
-#~ msgstr "SSL_write başarısız oldu: %d\n"
-
-#~ msgid "See http://www.infradead.org/openconnect/vpnc-script.html\n"
-#~ msgstr ""
-#~ "http://www.infradead.org/openconnect/vpnc-script.html adresine bakın\n"
-
-#~ msgid "Sending LZS compressed data packet of %d bytes (was %d)\n"
-#~ msgstr "%d bayt LZS sıkıştırılmış veri paketi gönderiliyor (%d idi)\n"
-
-#~ msgid "Sending deflate compressed data packet of %d bytes (was %d)\n"
-#~ msgstr "%d bayt deflate sıkıştırılmış veri paketi gönderiliyor (%d idi)\n"
-
-#~ msgid "Sent ESP packet of %d bytes\n"
-#~ msgstr "%d baytın ESP paketi gönderildi\n"
-
-#~ msgid "Server SSL certificate didn't match: %s\n"
-#~ msgstr "Sunucu SSL sertifikası uyuşmadı: %s\n"
-
-#~ msgid "Server's certificate SHA1 fingerprint"
-#~ msgstr "Sunucunun sertifika SHA1 parmakizi"
-
-#~ msgid "Session will expire after %d minutes.\n"
-#~ msgstr "Oturum %d dakika sonra sona erecek.\n"
-
-#~ msgid "Set local port for DTLS datagrams"
-#~ msgstr "DTLS veri birimi için yerel bağlantı noktası ayarla"
-
-#~ msgid "Set minimum Dead Peer Detection interval"
-#~ msgstr "Asgari Ölü Uç Tespit aralığı ayarla"
-
-#~ msgid "Set up DTLS failed; using SSL instead\n"
-#~ msgstr "DTLS ayarlama başarısız oldu; yerine SSL kullanarak\n"
-
-#~ msgid "Setting certificate recovation list failed: %s\n"
-#~ msgstr ""
-#~ "Sertifika yürürlükten kaldırma listesi ayarlaması başarısız oldu: %s\n"
-
-#~ msgid "TOTP - manually entered"
-#~ msgstr "TOTP - elle girilen"
-
-#~ msgid "TUNSETIFF failed: %s\n"
-#~ msgstr "TUNSETIFF başarısız: %s\n"
-
-#~ msgid ""
-#~ "To configure local networking, openconnect must be running as root\n"
-#~ "See http://www.infradead.org/openconnect/nonroot.html for more "
-#~ "information\n"
-#~ msgstr ""
-#~ "Yerel ağı yapılandırmak için openconnect kök olarak çalıştırılmalıdır\n"
-#~ "Daha çok bilgi için http://www.infradead.org/openconnect/nonroot.html\n"
-
-#~ msgid "Trying to run Linux CSD trojan script.\n"
-#~ msgstr "Linux CSD truva atı betiği çalıştırma deneniyor.\n"
-
-#~ msgid "Type:"
-#~ msgstr "Tür:"
-
-#~ msgid "UDP (DTLS) connect:\n"
-#~ msgstr "UDP (DTLS) bağlan:\n"
-
-#~ msgid "Unable to generate OATH HOTP token code: %s\n"
-#~ msgstr "OATH HOTP jeton kodu oluşturulamadı: %s\n"
-
-#~ msgid "Unable to generate OATH TOTP token code: %s\n"
-#~ msgstr "OATH TOTP jeton kodu oluşturulamadı: %s\n"
-
-#~ msgid "Unknown form ID '%s'\n"
-#~ msgstr "Bilinmeyen form kimliği '%s'\n"
-
-#~ msgid "Unknown protocol family %d. Cannot do DTLS\n"
-#~ msgstr "Bilinmeyen protokol ailesi %d. DTLS yapılamıyor\n"
-
-#~ msgid "Use WebVPN cookie COOKIE"
-#~ msgstr "WebVPN çerezi COOKIE kullan"
-
-#~ msgid "User cancelled (SIGINT); exiting.\n"
-#~ msgstr "Kullanıcı iptal etti (SIGINT); çıkılıyor.\n"
-
-#~ msgid "User cancelled (SIGINT/SIGTERM); exiting.\n"
-#~ msgstr "Kullanıcı iptal etti (SIGINT/SIGTERM); çıkılıyor.\n"
-
-#~ msgid "User detached from session (SIGHUP); exiting.\n"
-#~ msgstr "Kullanıcı oturumdan ayrıldı (SIGHUP); çıkılıyor.\n"
-
-#~ msgid "User name:"
-#~ msgstr "Kullanıcı adı:"
-
-#~ msgid "Using GnuTLS. Features present:"
-#~ msgstr "GnuTLS kullanılıyor. Mevcut özellikler:"
-
-#~ msgid "Using OpenSSL. Features present:"
-#~ msgstr "OpenSSL kullanılıyor. Mevcut özellikler:"
-
-#~ msgid ""
-#~ "WARNING: GnuTLS returned incorrect issuer certs; authentication may "
-#~ "fail!\n"
-#~ msgstr ""
-#~ "UYARI: GnuTLS hatalı sertifika sağlayıcı bilgisi dönüyor; kimlik "
-#~ "doğrulama işlemi başarısız sonuçlanabilir!\n"
-
-#~ msgid "deflate"
-#~ msgstr "sıkıştırmak"
-
-#~ msgid "invalid boolean property '%s' (not yes or no)"
-#~ msgstr "'%s' geçersiz bir mantıksal sabit (evet veya hayır değil)"
-
-#~ msgid "invalid integer property '%s' or out of range [%d -> %d]"
-#~ msgstr "'%s' geçersiz bir tamsayı veya sınırların dışında [%d -> %d]"
-
-#~ msgid "property '%s' invalid or not supported"
-#~ msgstr "'%s' özelliği geçersiz veya desteklenmiyor"
-
-#~ msgid "unhandled property '%s' type %s"
-#~ msgstr "tanınmayan özellik '%s' tür %s"
-
-#~ msgid "using OpenSSL"
-#~ msgstr "OpenSSL kullanarak"
-
-#~ msgid "This version of openconnect was built without libproxy support\n"
-#~ msgstr "Openconnect'in bu sürümü libproxy desteği olmadan derlendi\n"
-
-#~ msgid ""
-#~ "WARNING: This version of openconnect is %s but\n"
-#~ "         the libopenconnect library is %s\n"
-#~ msgstr ""
-#~ "UYARI: Openconnect sürümü %s ancak\n"
-#~ "         libopenconnect kütüphanesi %s'dir\n"
-
-#~ msgid ""
-#~ "WARNING: This version of openconnect was built without iconv\n"
-#~ "         support but you appear to be using the legacy character\n"
-#~ "         set \"%s\". Expect strangeness.\n"
-#~ msgstr ""
-#~ "UYARI: Openconnect uygulamasının bu sürümü iconv desteği olmadan\n"
-#~ "         derlendi ancak \"%s\" eski karakter kümesini kullanıyor "
-#~ "görünüyorsunuz.\n"
-#~ "         Garip davranışlara hazır olun.\n"
-
-#~ msgid "fgetws() failed: %s\n"
-#~ msgstr "fgetws() başarısız: %s\n"
-
-#~ msgid "CommandLineToArgvW() failed: %s\n"
-#~ msgstr "CommandLineToArgvW() başarısız oldu: %s\n"
