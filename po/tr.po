@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: NetworkManager-openconnect main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-"
 "openconnect/issues\n"
-"POT-Creation-Date: 2023-05-29 12:35+0000\n"
-"PO-Revision-Date: 2023-07-02 14:41+0300\n"
+"POT-Creation-Date: 2023-08-22 20:28+0000\n"
+"PO-Revision-Date: 2023-10-17 17:31+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4\n"
 "X-POOTLE-MTIME: 1426801579.000000\n"
 
 #: ../appdata/network-manager-openconnect.metainfo.xml.in.h:1
@@ -73,7 +73,7 @@ msgstr "<b>Neden: "
 
 #: ../auth-dialog/main.c:1015 ../auth-dialog/main.c:1855
 msgid "_Cancel"
-msgstr "_İptal Et"
+msgstr "İ_ptal"
 
 #: ../auth-dialog/main.c:1025
 msgid "I really know what I am doing"
@@ -936,7 +936,7 @@ msgstr "Bilinmeyen form girdi (input) türü '%s' göz ardı ediliyor\n"
 #: ../openconnect-strings.txt:323
 #, c-format
 msgid "Discarding duplicate option '%s'\n"
-msgstr "Çiftleme (duplicate) seçeneği '%s' kullanımdan çıkarılıyor\n"
+msgstr "Çiftleme (duplicate) seçeneği '%s' gözden çıkarılıyor\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/cb56ec21e:/auth-html.c#l205
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/766633fac:/auth.c#l343
@@ -8328,13 +8328,13 @@ msgstr "%d baytın IF-T/TLS veri paketi gönderiliyor\n"
 #: ../openconnect-strings.txt:4488
 #, c-format
 msgid "Discard bad split include: \"%s\"\n"
-msgstr "\"%s\" dahil kötü bölmeyi çıkar\n"
+msgstr "\"%s\" dahil kötü bölmeyi gözden çıkar\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e49e49e33:/script.c#l134
 #: ../openconnect-strings.txt:4491
 #, c-format
 msgid "Discard bad split exclude: \"%s\"\n"
-msgstr "\"%s\" hariç kötü bölmeyi çıkar\n"
+msgstr "\"%s\" hariç kötü bölmeyi gözden çıkar\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e49e49e33:/script.c#l161
 #: ../openconnect-strings.txt:4494
