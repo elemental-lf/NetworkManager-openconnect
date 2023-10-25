@@ -13,9 +13,9 @@ msgstr ""
 "Project-Id-Version: NetworkManager-openconnect main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-"
 "openconnect/issues\n"
-"POT-Creation-Date: 2023-08-22 20:28+0000\n"
-"PO-Revision-Date: 2023-10-17 17:31+0300\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"POT-Creation-Date: 2023-10-21 09:12+0000\n"
+"PO-Revision-Date: 2023-10-25 16:32+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -1841,7 +1841,7 @@ msgstr ""
 #: ../openconnect-strings.txt:832
 #, c-format
 msgid "Discarding ancient ESP packet with seq %u (expected %<PRIu64>)\n"
-msgstr ""
+msgstr "%u sekanslı eski ESP paketi gözden çıkarılıyor (beklenen %<PRIu64>)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/497b3dd7a:/esp-seqno.c#l109
 #: ../openconnect-strings.txt:835
@@ -1853,7 +1853,7 @@ msgstr ""
 #: ../openconnect-strings.txt:838
 #, c-format
 msgid "Discarding replayed ESP packet with seq %u\n"
-msgstr ""
+msgstr "%u sekanslı yeniden oynatılan ESP paketi gözden çıkarılıyor\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/497b3dd7a:/esp-seqno.c#l123
 #: ../openconnect-strings.txt:841
@@ -2515,7 +2515,7 @@ msgstr "TLS için select() başarısız"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ccf17dd06:/openssl.c#l174
 #: ../openconnect-strings.txt:1211
 msgid "TLS/DTLS write cancelled\n"
-msgstr ""
+msgstr "TLS/DTLS yazma iptal edildi\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ccf17dd06:/gnutls.c#l122
 #: ../openconnect-strings.txt:1214
@@ -2537,7 +2537,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ccf17dd06:/openssl.c#l291
 #: ../openconnect-strings.txt:1226
 msgid "TLS/DTLS read cancelled\n"
-msgstr ""
+msgstr "TLS/DTLS okuma iptal edildi\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ccf17dd06:/gnutls.c#l186
 #: ../openconnect-strings.txt:1229
@@ -5883,7 +5883,7 @@ msgstr "Oturum, sunucuca sonlandırıldı; çıkılıyor.\n"
 #: ../openconnect-strings.txt:3107
 #, c-format
 msgid "User cancelled (%s); exiting.\n"
-msgstr ""
+msgstr "Kullanıcı iptal etti (%s); çıkılıyor.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/7789af0e5:/main.c#l2039
 #: ../openconnect-strings.txt:3110
@@ -6502,6 +6502,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3458
 msgid "Discarding Legacy IP frame in the middle of oNCP config\n"
 msgstr ""
+"oNCP yapılandırmasının ortasındaki Eski IP çerçevesi gözden çıkarılıyor\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d1b86efd8:/oncp.c#l744
 #: ../openconnect-strings.txt:3461
@@ -7678,7 +7679,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l1212
 #: ../openconnect-strings.txt:4118
 msgid "Send PPP discard request as keepalive\n"
-msgstr ""
+msgstr "PPP gözden çıkar isteğini keepalive olarak gönder\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l1216
 #: ../openconnect-strings.txt:4121
@@ -8416,7 +8417,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8388bc370:/ssl.c#l196
 #: ../openconnect-strings.txt:4536
 msgid "Socket accept cancelled\n"
-msgstr ""
+msgstr "Yuva kabulü iptal edildi\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8388bc370:/ssl.c#l207
 #: ../openconnect-strings.txt:4539
@@ -8592,10 +8593,8 @@ msgstr ""
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3da:/ssl.c#l900
 #: ../openconnect-strings.txt:4633
-#, fuzzy
-#| msgid "calculate command"
 msgid "Got cancel command\n"
-msgstr "hesapla komutu"
+msgstr "İptal komutu var\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3da:/ssl.c#l905
 #: ../openconnect-strings.txt:4636
