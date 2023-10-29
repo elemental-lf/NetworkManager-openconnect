@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr "Project-Id-Version: gimp master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gimp/issues\n"
-"POT-Creation-Date: 2023-05-28 03:13+0000\n"
-"PO-Revision-Date: 2023-08-23 20:00+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-openconnect/issues\n"
+"POT-Creation-Date: 2023-08-23 06:27+0000\n"
+"PO-Revision-Date: 2023-10-29 20:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -41,73 +41,73 @@ msgstr "Cisco AnyConnect, Juniper eta ocserv sisteman oinarritutako sareekin bat
 msgid "The NetworkManager Developers"
 msgstr "NetworkManager aplikazioaren garatzaileak"
 
-#: ../auth-dialog/main.c:878
+#: ../auth-dialog/main.c:885
 #, c-format
 msgid "OpenConnect: %s: %s:%s"
 msgstr "OpenConnect: %s: %s:%s"
 
-#: ../auth-dialog/main.c:908
+#: ../auth-dialog/main.c:915
 #, c-format
 msgid "Connect to VPN “%s”"
 msgstr "Konektatu “%s” VNParekin"
 
-#: ../auth-dialog/main.c:910
+#: ../auth-dialog/main.c:917
 msgid "Connect to VPN"
 msgstr "Konektatu VPNarekin"
 
-#: ../auth-dialog/main.c:987
+#: ../auth-dialog/main.c:994
 msgid "<b>The certificate may be invalid or untrusted!</b>\n"
 msgstr "<b>Ziurtagiria baliogabea edo fidagarritasun gutxikoa izan daiteke!</b>\n"
 
-#: ../auth-dialog/main.c:988
+#: ../auth-dialog/main.c:995
 msgid "<b>Reason: "
 msgstr "<b>Arrazoia: "
 
-#: ../auth-dialog/main.c:1008 ../auth-dialog/main.c:1848
+#: ../auth-dialog/main.c:1015 ../auth-dialog/main.c:1855
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: ../auth-dialog/main.c:1018
+#: ../auth-dialog/main.c:1025
 msgid "I really know what I am doing"
 msgstr "Badakit zertan ari naizen"
 
-#: ../auth-dialog/main.c:1027
+#: ../auth-dialog/main.c:1034
 msgid "Connect anyway"
 msgstr "Konektatu dena den"
 
-#: ../auth-dialog/main.c:1771
+#: ../auth-dialog/main.c:1778
 msgid "_Close"
 msgstr "_Itxi"
 
-#: ../auth-dialog/main.c:1788
+#: ../auth-dialog/main.c:1795
 msgid "VPN host"
 msgstr "VPN ostalaria"
 
-#: ../auth-dialog/main.c:1799
+#: ../auth-dialog/main.c:1806
 msgid "C_onnect"
 msgstr "_Konektatu"
 
-#: ../auth-dialog/main.c:1806
+#: ../auth-dialog/main.c:1813
 msgid "Automatically start connecting next time"
 msgstr "Hasi konektatzen automatikoki hurrengo aldian"
 
-#: ../auth-dialog/main.c:1825
+#: ../auth-dialog/main.c:1832
 msgid "Select a host to fetch the login form"
 msgstr "Hautatu ostalaria saioaren inprimakia lortzeko"
 
-#: ../auth-dialog/main.c:1830
+#: ../auth-dialog/main.c:1837
 msgid "Contacting host, please wait…"
 msgstr "Ostalariarekin kontaktatzen, itxaron…"
 
-#: ../auth-dialog/main.c:1842
+#: ../auth-dialog/main.c:1849
 msgid "_Login"
 msgstr "_Saio-hasiera"
 
-#: ../auth-dialog/main.c:1854
+#: ../auth-dialog/main.c:1861
 msgid "Save passwords"
 msgstr "Gorde pasahitzak"
 
-#: ../auth-dialog/main.c:1862
+#: ../auth-dialog/main.c:1869
 msgid "Log"
 msgstr "Erregistratu"
 
@@ -133,11 +133,11 @@ msgstr "_Proxy-a"
 
 #: ../properties/nm-openconnect-dialog.ui.h:6
 msgid "Allow security scanner _trojan (CSD)"
-msgstr "Onartu segurtasuna eskaneatzeko _troianoa (CSD)"
+msgstr "Onartu segurtasuna eskaneatzeko _troiarra (CSD)"
 
 #: ../properties/nm-openconnect-dialog.ui.h:7
 msgid "Trojan (CSD) _Wrapper Script"
-msgstr "Troianoaren (CSD) _egokitze-scripta"
+msgstr "Troiarraren (CSD) _egokitze-scripta"
 
 #: ../properties/nm-openconnect-dialog.ui.h:8
 msgid "Reported OS"
@@ -643,7 +643,7 @@ msgstr "DTLS konexio berriaren saiakera\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/04671ef02:/ppp.c#l1654
 #: ../openconnect-strings.txt:160
 msgid "Failed to receive authentication response from DTLS\n"
-msgstr "Huts egin dau autentifikazio-erantzuna jasotzeak DTLStik\n"
+msgstr "Huts egin du autentifikazio-erantzuna jasotzeak DTLStik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/de93bad15:/array.c#l1081
 #: ../openconnect-strings.txt:163
@@ -947,7 +947,7 @@ msgstr "DSPREAUTH cookie-rik ez; ez da TNCC probatuko\n"
 #: ../openconnect-strings.txt:345
 #, c-format
 msgid "Trying to run TNCC/Host Checker Trojan script '%s'.\n"
-msgstr ""
+msgstr "'%s' TNCC/Host Checker script troiarra exekutatzen saiatzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/5ebfec224:/auth-juniper.c#l405
 #: ../openconnect-strings.txt:348
@@ -998,7 +998,7 @@ msgstr "Berriro autentifikatzeko tartea eskuratu da TNCCtik: %d segundo\n"
 #: ../openconnect-strings.txt:372
 #, c-format
 msgid "Unexpected non-empty line from TNCC after DSPREAUTH cookie: '%s'\n"
-msgstr ""
+msgstr "Hutsik ez dagoen lerroa TNCCtik DSPREAUTH cookie-aren ondoren, espero ez zena: '%s'\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/5c1cba8b9:/auth-juniper.c#l327
 #: ../openconnect-strings.txt:375
@@ -1025,7 +1025,7 @@ msgstr "Ez 'name' ez 'id' elementurik ez duen inprimakia aurkitu da\n"
 #: ../openconnect-strings.txt:388
 #, c-format
 msgid "Form action (%s) likely indicates that TNCC/Host Checker failed.\n"
-msgstr ""
+msgstr "Inprimaki-ekintzak (%s) ziur aski adierazten du TNCC/Host Checker scriptak huts egin duela.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/c8a6ee941:/auth-juniper.c#l795
 #: ../openconnect-strings.txt:391
@@ -1155,7 +1155,7 @@ msgstr "XML profil berria deskargatu da\n"
 msgid ""
 "Error: Running the 'Cisco Secure Desktop' trojan on this platform is not yet "
 "implemented.\n"
-msgstr ""
+msgstr "Errorea: 'Cisco Secure Desktop' troiarra plataforma honetan exekutatzea ez dago inplementatuta oraindik.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/318d5777a:/auth.c#l993
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/79f5ed273:/mainloop.c#l140
@@ -1204,7 +1204,7 @@ msgid ""
 "Error: Server asked us to download and run a 'Cisco Secure Desktop' trojan.\n"
 "This facility is disabled by default for security reasons, so you may wish "
 "to enable it.\n"
-msgstr "Errorea: zerbitzariak 'Cisco Secure Desktop' troianoa deskargatzeko eta exekutatzeko eskatu du\n"
+msgstr "Errorea: zerbitzariak 'Cisco Secure Desktop' troiarra deskargatzeko eta exekutatzeko eskatu du\n"
 "Desgaituta dago segurtasunaren arrazoiak direla eta, agian gaitzea nahiko duzu.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/321066cf8:/auth.c#l1244
@@ -1217,25 +1217,25 @@ msgstr "Aldi baterako '%s' direktorioa ez da idazgarria: %s\n"
 #: ../openconnect-strings.txt:503
 #, c-format
 msgid "Failed to open temporary CSD script file: %s\n"
-msgstr "Huts egin du CSD script-aren aldi baterako fitxategia irekitzean: %s\n"
+msgstr "Huts egin du CSD scriptaren aldi baterako fitxategia irekitzean: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/321066cf8:/auth.c#l1261
 #: ../openconnect-strings.txt:506
 #, c-format
 msgid "Failed to write temporary CSD script file: %s\n"
-msgstr "Huts egin du CSD script-aren aldi baterako fitxategia idaztean: %s\n"
+msgstr "Huts egin du CSD scriptaren aldi baterako fitxategia idaztean: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/7083a0ac5:/auth.c#l1122
 #: ../openconnect-strings.txt:509
 #, c-format
 msgid "Trying to run CSD Trojan script '%s'.\n"
-msgstr ""
+msgstr "'%s' CSD troiar scripta exekutatzen saiatzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ad3ef669b:/auth.c#l1129
 #: ../openconnect-strings.txt:512
 #, c-format
 msgid "CSD script '%s' exited abnormally\n"
-msgstr "'%s' CSD script-a gaizki amaitu da\n"
+msgstr "'%s' CSD scripta gaizki amaitu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ad3ef669b:/auth.c#l1134
 #: ../openconnect-strings.txt:515
@@ -1255,7 +1255,7 @@ msgstr "Autentifikazioak huts egin dezake. Script-ak ez badu zero itzultzen, kon
 #: ../openconnect-strings.txt:523
 #, c-format
 msgid "CSD script '%s' completed successfully.\n"
-msgstr "'%s' CSD script-a ongi gauzatu da.\n"
+msgstr "'%s' CSD scripta ongi gauzatu da.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/5c1cba8b9:/auth.c#l1203
 #: ../openconnect-strings.txt:526
@@ -1269,7 +1269,7 @@ msgstr "Abisua: CSD kode ez-segurua exekutatzen ari zara 'root'-aren pribilegioe
 #: ../openconnect-strings.txt:531
 #, c-format
 msgid "Failed to exec CSD script %s\n"
-msgstr "Huts gin du '%s' CSD script-a exekutatzean\n"
+msgstr "Huts gin du '%s' CSD scripta exekutatzean\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/321066cf8:/auth.c#l1372
 #: ../openconnect-strings.txt:534
@@ -1861,7 +1861,7 @@ msgstr "Bidali ESP zundaketak\n"
 #: ../openconnect-strings.txt:867
 #, c-format
 msgid "ESP receive error: %s\n"
-msgstr ""
+msgstr "ESP jasotze-errorea: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4daac3fa2:/esp.c#l198
 #: ../openconnect-strings.txt:870
@@ -1918,12 +1918,12 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/be62fff9e:/esp.c#l295
 #: ../openconnect-strings.txt:897
 msgid "Failed to allocate memory to decrypt ESP packet\n"
-msgstr ""
+msgstr "Huts egin du ESP paketea deszifratzeko memoria esleitzeak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/be62fff9e:/esp.c#l301
 #: ../openconnect-strings.txt:900
 msgid "LZO decompression of ESP packet failed\n"
-msgstr ""
+msgstr "Huts egin du ESP paketearen LZO deskonpresioak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/be62fff9e:/esp.c#l307
 #: ../openconnect-strings.txt:903
@@ -1934,12 +1934,12 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2c700089a:/esp.c#l345
 #: ../openconnect-strings.txt:906
 msgid "Rekey not implemented for ESP\n"
-msgstr ""
+msgstr "Gakoa birnegoziatzea ez dago ESPrako inplementatuta\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2c700089a:/esp.c#l349
 #: ../openconnect-strings.txt:909
 msgid "ESP detected dead peer\n"
-msgstr ""
+msgstr "ESPk pareko hila detektatu du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2c700089a:/esp.c#l356
 #: ../openconnect-strings.txt:912
@@ -2372,7 +2372,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f449451c7:/openssl-dtls.c#l404
 #: ../openconnect-strings.txt:1161
 msgid "DTLS session resume failed; possible MITM attack. Disabling DTLS.\n"
-msgstr ""
+msgstr "DTLS saioa berrabiarazteak huts egin du; agian MITM eraso bat dago. DTLS desgaitzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/595e35262:/gnutls-dtls.c#l206
 #: ../openconnect-strings.txt:1164
@@ -3801,7 +3801,7 @@ msgstr "Erronka: %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/cb2be9106:/gpst.c#l206
 #: ../openconnect-strings.txt:1964
 msgid "Failed to parse non-XML server response\n"
-msgstr ""
+msgstr "Huts egin du XML ez den zerbitzari-erantzuna analizatzeak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/cb2be9106:/gpst.c#l207
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8e7efd51f:/gpst.c#l270
@@ -3813,7 +3813,7 @@ msgstr "Erantzuna: %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/cb2be9106:/gpst.c#l262
 #: ../openconnect-strings.txt:1971
 msgid "Failed to parse XML server response\n"
-msgstr ""
+msgstr "Huts egin du zerbitzariaren XML erantzuna analizatzeak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b056e27c9:/gpst.c#l300
 #: ../openconnect-strings.txt:1974
@@ -3875,7 +3875,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/cfe8cc43e:/oncp.c#l1277
 #: ../openconnect-strings.txt:2007
 msgid "Ignoring ESP keys since ESP support not available in this build\n"
-msgstr ""
+msgstr "ESP gakoei ez ikusiarena egiten, bertsio honek ez baitu ESP euskarririk\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/90b2ffc03:/gpst.c#l632
 #: ../openconnect-strings.txt:2010
@@ -3997,19 +3997,19 @@ msgstr ""
 #: ../openconnect-strings.txt:2081
 #, c-format
 msgid "HIP script '%s' exited abnormally\n"
-msgstr "'%s' HIP script-a gaizki amaitu da\n"
+msgstr "'%s' HIP scripta gaizki amaitu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f06b564fa:/gpst.c#l895
 #: ../openconnect-strings.txt:2084
 #, c-format
 msgid "HIP script '%s' returned non-zero status: %d\n"
-msgstr "'%s' HIP script-ak zero ez den egoera itzuli du: %d\n"
+msgstr "'%s' HIP scriptak zero ez den egoera itzuli du: %d\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/7083a0ac5:/gpst.c#l1002
 #: ../openconnect-strings.txt:2087
 #, c-format
 msgid "HIP script '%s' completed successfully (report is %d bytes).\n"
-msgstr "'%s' HIP script-a ongi osatu da (txostena %d byte-koa da).\n"
+msgstr "'%s' HIP scripta ongi osatu da (txostena %d byte-koa da).\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4e35d5053:/gpst.c#l881
 #: ../openconnect-strings.txt:2090
@@ -4025,7 +4025,7 @@ msgstr "HIP txostena ongi bidali da.\n"
 #: ../openconnect-strings.txt:2096
 #, c-format
 msgid "Failed to exec HIP script %s\n"
-msgstr "'%s' HIP script-a exekutatzeak huts egin du\n"
+msgstr "'%s' HIP scripta exekutatzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f8713a8cd:/gpst.c#l1013
 #: ../openconnect-strings.txt:2099
@@ -5224,7 +5224,7 @@ msgstr "Atxikitu denbora-zigilua aurretik aurrerapenen mezuei"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ffd55f342:/main.c#l852
 #: ../openconnect-strings.txt:2793
 msgid "VPN configuration script"
-msgstr "VPNa konfiguratzeko script-a"
+msgstr "VPNa konfiguratzeko scripta"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f8da07270:/main.c#l839
 #: ../openconnect-strings.txt:2796
@@ -5319,7 +5319,7 @@ msgstr "HTTP goiburuaren 'User-Agent': eremua"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/436198af5:/main.c#l817
 #: ../openconnect-strings.txt:2850
 msgid "Local hostname to advertise to server"
-msgstr ""
+msgstr "Zerbitzariari iragarriko zaion ostalari-izen lokala"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/845e57262:/main.c#l951
 #: ../openconnect-strings.txt:2853
@@ -5344,22 +5344,22 @@ msgstr "lehenetsia:"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ffd55f342:/main.c#l879
 #: ../openconnect-strings.txt:2865
 msgid "Trojan binary (CSD) execution"
-msgstr "Bitar troianoaren (CSD) exekuzioa"
+msgstr "Bitar troiarraren (CSD) exekuzioa"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f073e5b2b:/main.c#l881
 #: ../openconnect-strings.txt:2868
 msgid "Drop privileges during trojan execution"
-msgstr "Jaregin pribilegioak troianoa exekutatu artean"
+msgstr "Jaregin pribilegioak troiarra exekutatu artean"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f073e5b2b:/main.c#l882
 #: ../openconnect-strings.txt:2871
 msgid "Run SCRIPT instead of trojan binary"
-msgstr ""
+msgstr "Exekutatu SCRIPT troiar bitarraren ordez"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f5911aa17:/main.c#l960
 #: ../openconnect-strings.txt:2874
 msgid "Set minimum interval between trojan runs (in seconds)"
-msgstr "Ezarri gutxieneko tartea troianoaren exekuzioen artean (segundotan)"
+msgstr "Ezarri gutxieneko tartea troiarraren exekuzioen artean (segundotan)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ffd55f342:/main.c#l884
 #: ../openconnect-strings.txt:2877
@@ -5369,7 +5369,7 @@ msgstr "Zerbitzari-akatsak"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2560a29f1:/main.c#l1076
 #: ../openconnect-strings.txt:2880
 msgid "Do not offer or use auth methods requiring external browser"
-msgstr ""
+msgstr "Ez eskaini edo erabili kanpoko nabigatzailea behar duten autentifikazio-metodoak"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f8da07270:/main.c#l863
 #: ../openconnect-strings.txt:2883
@@ -5404,7 +5404,7 @@ msgstr "Erabili MCAren MCAKEY gakoa"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a24fef5d5:/main.c#l976
 #: ../openconnect-strings.txt:2901
 msgid "Passphrase MCAPASS for MCACERT/MCAKEY"
-msgstr ""
+msgstr "MCACERT/MCAKEYrako MCAPASS pasaesaldia"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9b66010c4:/main.c#l684
 #: ../openconnect-strings.txt:2904
@@ -5494,32 +5494,32 @@ msgstr "ezarrita"
 #: ../openconnect-strings.txt:2950
 #, c-format
 msgid "Configured as %s%s%s, with SSL%s%s %s and %s%s%s %s\n"
-msgstr ""
+msgstr "Honela konfiguratua: %s%s%s, SSL: %s%s %s eta %s%s%s %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b056e27c9:/main.c#l1487
 #: ../openconnect-strings.txt:2953
 #, c-format
 msgid "Session authentication will expire at %s\n"
-msgstr ""
+msgstr "Saioaren autentifikazioaren iraungitze-data: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/7d8747806:/main.c#l1610
 #: ../openconnect-strings.txt:2956
 #, c-format
 msgid ""
 "RX: %<PRIu64> packets (%<PRIu64> B); TX: %<PRIu64> packets (%<PRIu64> B)\n"
-msgstr ""
+msgstr "RX: %<PRIu64> pakete (%<PRIu64> B); TX: %<PRIu64> pakete (%<PRIu64> B)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b156b581e:/main.c#l1445
 #: ../openconnect-strings.txt:2960
 #, c-format
 msgid "SSL ciphersuite: %s\n"
-msgstr ""
+msgstr "SSL zifratze-suitea: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b156b581e:/main.c#l1447
 #: ../openconnect-strings.txt:2963
 #, c-format
 msgid "%s ciphersuite: %s\n"
-msgstr ""
+msgstr "%s zifratze-suitea: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b156b581e:/main.c#l1450
 #: ../openconnect-strings.txt:2966
@@ -5537,7 +5537,7 @@ msgstr ""
 #: ../openconnect-strings.txt:2972
 #, c-format
 msgid "Next Trojan invocation in %ld seconds\n"
-msgstr ""
+msgstr "Hurrengo troiar deitzea %ld segundotan\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/557ac6cfa:/main.c#l1431
 #: ../openconnect-strings.txt:2975
@@ -5594,7 +5594,7 @@ msgstr "Huts egin du vpninfo egitura esleitzean\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/26f6d3381:/main.c#l1847
 #: ../openconnect-strings.txt:3006
 msgid "WARNING: --juniper is deprecated, use --protocol=nc instead.\n"
-msgstr ""
+msgstr "ABISUA: --juniper zaharkituta dago, erabili --protocol=nc haren ordez.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/776104159:/main.c#l421
 #: ../openconnect-strings.txt:3009
@@ -5611,7 +5611,7 @@ msgstr "Ezin da '%s' konfigurazio-fitxategia ireki: %s\n"
 #: ../openconnect-strings.txt:3015
 #, c-format
 msgid "Invalid compression mode '%s'\n"
-msgstr ""
+msgstr "Konpresio-modu baliogabea: '%s'\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ce7378bd0:/main.c#l1725
 #: ../openconnect-strings.txt:3018
@@ -5663,7 +5663,8 @@ msgstr "HTTPren konexio guztiak berrerabiltzea desgaitzen '--no-http-keepalive' 
 msgid ""
 "The --no-cert-check option was insecure and has been removed.\n"
 "Fix your server's certificate or use --servercert to trust it.\n"
-msgstr ""
+msgstr "--no-cert-check aukera ez zen segurua eta kendu egin da.\n"
+"Konpondu zure zerbitzariaren ziurtagiria edo erabili --servercert hartaz fidatzeko.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f18f58253:/main.c#l447
 #: ../openconnect-strings.txt:3050
@@ -5772,7 +5773,7 @@ msgstr "Erabiltzaileak utzi du bertan behera (%s); irteten.\n"
 #: ../openconnect-strings.txt:3110
 #, c-format
 msgid "User detached from session (%s); exiting.\n"
-msgstr ""
+msgstr "Erabiltzailea saiotik askatu da (%s); irteten.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/958020bea:/main.c#l2026
 #: ../openconnect-strings.txt:3113
@@ -5808,7 +5809,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3130
 #, c-format
 msgid "Could not check server's certificate against %s\n"
-msgstr ""
+msgstr "Ezin da zerbitzariaren ziurtagiria egiaztatu %s hatz-markarekin\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/856d39d06:/main.c#l2261
 #: ../openconnect-strings.txt:3133
@@ -5816,7 +5817,7 @@ msgstr ""
 msgid ""
 "None of the %d fingerprint(s) specified via --servercert match server's "
 "certificate: %s\n"
-msgstr ""
+msgstr "--servercert bidez zehaztutako %d hatz-marketako bat ere ez dator bat zerbitzari-ziurtagiriarekin: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/aed7759dd:/main.c#l948
 #: ../openconnect-strings.txt:3138
@@ -5863,7 +5864,7 @@ msgstr "bai"
 #: ../openconnect-strings.txt:3162
 #, c-format
 msgid "Server key hash: %s\n"
-msgstr ""
+msgstr "Zerbitzari-gakoaren hash-a: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a5e00b1fa:/main.c#l1127
 #: ../openconnect-strings.txt:3165
@@ -5923,7 +5924,7 @@ msgstr "Hutsegite orokorra 'libstoken' liburutegian\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/39541d5a9:/main.c#l3009
 #: ../openconnect-strings.txt:3196
 msgid "General failure in TOTP/HOTP support\n"
-msgstr ""
+msgstr "Hutsegite orokorra TOTP/HOTP euskarrian\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/c24046b93:/main.c#l1910
 #: ../openconnect-strings.txt:3199
@@ -5954,7 +5955,7 @@ msgstr "Hutsegite orokorra 'oidc' liburutegian.\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/79f5ed273:/mainloop.c#l121
 #: ../openconnect-strings.txt:3214
 msgid "Set up tun script failed\n"
-msgstr "Huts egin du 'tun' script-a konfiguratzean\n"
+msgstr "Huts egin du 'tun' scripta konfiguratzean\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/79f5ed273:/mainloop.c#l128
 #: ../openconnect-strings.txt:3217
@@ -5965,12 +5966,12 @@ msgstr "Huts egin du TUN gailua konfiguratzean\n"
 #: ../openconnect-strings.txt:3220
 #, c-format
 msgid "Delaying tunnel with reason: %s\n"
-msgstr ""
+msgstr "Tunela atzeratzen honako arrazoiarengatik: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9ec1fb1a4:/mainloop.c#l245
 #: ../openconnect-strings.txt:3223
 msgid "Delaying cancel (immediate callback).\n"
-msgstr ""
+msgstr "Bertan behera uztea atzeratzen (berehalako atzeradeia).\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9ec1fb1a4:/mainloop.c#l248
 #: ../openconnect-strings.txt:3226
@@ -5980,12 +5981,12 @@ msgstr "Bertan behera uztea atzeratzen.\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9ec1fb1a4:/mainloop.c#l267
 #: ../openconnect-strings.txt:3229
 msgid "Delaying pause (immediate callback).\n"
-msgstr ""
+msgstr "Pausatzea atzeratzen (berehalako atzeradeia).\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9ec1fb1a4:/mainloop.c#l270
 #: ../openconnect-strings.txt:3232
 msgid "Delaying pause.\n"
-msgstr "Pausa atzeratzen.\n"
+msgstr "Pausatzea atzeratzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/654d565f3:/mainloop.c#l128
 #: ../openconnect-strings.txt:3235
@@ -6024,7 +6025,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3253
 #, c-format
 msgid "After removing %s/IPv%d headers, MTU of %d\n"
-msgstr ""
+msgstr "%s/IPv%d goiburuak kendu ondoren, MTUa honakoa da: %d\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2b90f3335:/mtucalc.c#l115
 #: ../openconnect-strings.txt:3256
@@ -6052,7 +6053,7 @@ msgstr "AcquireCredentialsHandle() funtzioak huts egin du: %lx\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e5fedab1b:/ntlm.c#l235
 #: ../openconnect-strings.txt:3270
 msgid "Error communicating with ntlm_auth helper\n"
-msgstr ""
+msgstr "Errorea ntlm_auth laguntzailearekin komunikatzean\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/70dd287c2:/ntlm.c#l265
 #: ../openconnect-strings.txt:3273
@@ -6080,7 +6081,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d4606b645:/nullppp.c#l80
 #: ../openconnect-strings.txt:3285
 msgid "Terminating because nullppp has reached network state.\n"
-msgstr ""
+msgstr "Amaitzen nullppp sareko egoerara iritsi delako.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e410cdfcf:/oath.c#l99
 #: ../openconnect-strings.txt:3288
@@ -6324,7 +6325,7 @@ msgstr "Espero ez zen erantzuna, %d tamainakoa, ostalari-izenaren paketearen ond
 #: ../openconnect-strings.txt:3427
 #, c-format
 msgid "Server response to hostname packet is error 0x%02x\n"
-msgstr ""
+msgstr "Ostalari-paketearen aurrean zerbitzariaren erantzuna 0x%02x errorea da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2823a479a:/oncp.c#l647
 #: ../openconnect-strings.txt:3430
@@ -6461,7 +6462,7 @@ msgstr "Huts egin du ESP konfiguratzeak: %s\n"
 #: ../openconnect-strings.txt:3505
 #, c-format
 msgid "Unknown KMP message %d of size %d:\n"
-msgstr ""
+msgstr "%d KMP mezu ezezaguna, %d tamainakoa:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/79042d6f5:/oncp.c#l1496
 #: ../openconnect-strings.txt:3508
@@ -6491,7 +6492,7 @@ msgstr "ERROREA: %s() deitu da UTF-8 baliogabearekin '%s' argumenturako\n"
 #: ../openconnect-strings.txt:3522
 #, c-format
 msgid "Unable to calculate DTLS overhead for %s\n"
-msgstr ""
+msgstr "Ezin da DTLS zeharkakoa kalkulatu honetarako: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0787d693f:/openssl-dtls.c#l210
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0787d693f:/openssl-dtls.c#l269
@@ -6518,7 +6519,7 @@ msgstr "Huts egin du DTLSv1 saioa hasieratzean\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0787d693f:/openssl-dtls.c#l275
 #: ../openconnect-strings.txt:3538
 msgid "Too large application ID size\n"
-msgstr ""
+msgstr "Aplikazioaren ID tamaina handiegia\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/120b59248:/openssl-dtls.c#l188
 #: ../openconnect-strings.txt:3541
@@ -6569,13 +6570,13 @@ msgstr "SSL_set_session() funtzioak huts egin du\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b056e27c9:/openssl-dtls.c#l592
 #: ../openconnect-strings.txt:3569
 msgid "Create DTLS dgram BIO failed\n"
-msgstr ""
+msgstr "DTLS dgram BIO sortzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8aa72856e:/openssl-dtls.c#l606
 #: ../openconnect-strings.txt:3572
 #, c-format
 msgid "Established DTLS connection (using OpenSSL). Ciphersuite %s-%s.\n"
-msgstr ""
+msgstr "DTLS konexio ezarri da (OpenSSL erabili). Zifratze-suitea: %s-%s.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b056e27c9:/openssl-dtls.c#l714
 #: ../openconnect-strings.txt:3575
@@ -6695,7 +6696,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3641
 #, c-format
 msgid "Failed to find PKCS#11 cert '%s'\n"
-msgstr ""
+msgstr "Huts egin du PKCS#11 '%s' ziurtagiria aurkitzeak\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/77a91693f:/openssl-pkcs11.c#l377
 #: ../openconnect-strings.txt:3644
@@ -6706,7 +6707,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3647
 #, c-format
 msgid "Using secondary PKCS#11 certificate %s\n"
-msgstr ""
+msgstr "Bigarren mailako PKCS#11 %s ziurtagiria erabiltzen\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/77a91693f:/openssl-pkcs11.c#l434
 #: ../openconnect-strings.txt:3650
@@ -6772,12 +6773,12 @@ msgstr "Bigarren mailako PKCS#11 %s gakoa erabiltzen\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0a23a8835:/openssl-pkcs11.c#l656
 #: ../openconnect-strings.txt:3685
 msgid "Failed to instantiate private key from PKCS#11\n"
-msgstr ""
+msgstr "Huts egin du gako pribatuaren instantzia sortzeak PKCS#11-tik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0a23a8835:/openssl-pkcs11.c#l657
 #: ../openconnect-strings.txt:3688
 msgid "Failed to instantiate secondary private key from PKCS#11\n"
-msgstr ""
+msgstr "Huts egin du bigarren mailako gako pribatuaren instantzia sortzeak PKCS#11-tik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/77a91693f:/openssl-pkcs11.c#l593
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/77a91693f:/openssl-pkcs11.c#l599
@@ -7096,7 +7097,7 @@ msgstr "Errorea bezeroaren ziurtagiriko 'notAfter' eremuan\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0a23a8835:/openssl.c#l1674
 #: ../openconnect-strings.txt:3869
 msgid "Error in secondary client cert notAfter field\n"
-msgstr ""
+msgstr "Errorea bigarren mailako bezero-ziurtagiriaren notAfter eremuan\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/bf14319ca:/openssl.c#l980
 #: ../openconnect-strings.txt:3872
@@ -7197,7 +7198,7 @@ msgstr "SSO tokenaren deszifratzeak huts egin du\n"
 #: ../openconnect-strings.txt:3926
 #, c-format
 msgid "SSL Finished message too large (%zd bytes)\n"
-msgstr ""
+msgstr "Amaitutako SSL mezua handiegia da (%zd byte)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/222178086:/openssl.c#l2458
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/222178086:/openssl.c#l2495
@@ -7233,7 +7234,7 @@ msgstr "Hasierako HDLC bandera-sekuentzia (0x7e) falta da\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l131
 #: ../openconnect-strings.txt:3948
 msgid "HDLC buffer ended without FCS and flag sequence (0x7e)\n"
-msgstr ""
+msgstr "HDLC bufferra FCS eta bandera-sekuentzia gabe amaitu da (0x7e)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l137
 #: ../openconnect-strings.txt:3951
@@ -7284,7 +7285,7 @@ msgstr ""
 #: ../openconnect-strings.txt:3975
 #, c-format
 msgid "Received MRU %d from server. Setting our MTU to match.\n"
-msgstr ""
+msgstr "MRU %d jaso da zerbitzaritik. Gure MTU ezartzen bat etor dadin.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l372
 #: ../openconnect-strings.txt:3978
@@ -7301,22 +7302,22 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l383
 #: ../openconnect-strings.txt:3984
 msgid "Received protocol field compression from server\n"
-msgstr ""
+msgstr "Protokoloaren eremu-konpresioa jaso da zerbitzaritik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l388
 #: ../openconnect-strings.txt:3987
 msgid "Received address and control field compression from server\n"
-msgstr ""
+msgstr "Helbidearen eta kontroleko eremu-konpresioa jaso da zerbitzaritik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l395
 #: ../openconnect-strings.txt:3990
 msgid "Received deprecated IP-Addresses from server, ignoring\n"
-msgstr ""
+msgstr "IP helbide zaharkituak jaso dira zerbitzaritik, ez ikusiarena egiten\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l402
 #: ../openconnect-strings.txt:3993
 msgid "Received Van Jacobson TCP/IP compression from server\n"
-msgstr ""
+msgstr "Van Jacobson TCP/IP konpresioa jaso da zerbitzaritik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l410
 #: ../openconnect-strings.txt:3996
@@ -7340,25 +7341,25 @@ msgstr ""
 #: ../openconnect-strings.txt:4005
 #, c-format
 msgid "Received %ld extra bytes at end of Config-Request:\n"
-msgstr ""
+msgstr "%ld byte gehigarri jaso dira konfigurazio-eskaeraren amaieran:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l461
 #: ../openconnect-strings.txt:4008
 #, c-format
 msgid "Reject %s/id %d config from server\n"
-msgstr ""
+msgstr "Baztertu %s/id %d konfigurazioa zerbitzaritik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l472
 #: ../openconnect-strings.txt:4011
 #, c-format
 msgid "Nak %s/id %d config from server\n"
-msgstr ""
+msgstr "Nak %s/id %d konfigurazioa zerbitzaritik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l478
 #: ../openconnect-strings.txt:4014
 #, c-format
 msgid "Ack %s/id %d config from server\n"
-msgstr ""
+msgstr "Ack %s/id %d konfigurazioa zerbitzaritik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9ca12dc18:/ppp.c#l513
 #: ../openconnect-strings.txt:4017
@@ -7454,19 +7455,19 @@ msgstr ""
 #: ../openconnect-strings.txt:4065
 #, c-format
 msgid "Received %s/id %d %s from server\n"
-msgstr ""
+msgstr "%s/id %d %s jaso dira zerbitzaritik\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l770
 #: ../openconnect-strings.txt:4068
 #, c-format
 msgid "Server terminates with reason: %s\n"
-msgstr ""
+msgstr "Zerbitzaria amaitu da honako arrazoiarengatik:%s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l797
 #: ../openconnect-strings.txt:4071
 #, c-format
 msgid "Server rejected our request to configure IPv%d\n"
-msgstr ""
+msgstr "Zerbitzariak baztertu egin du IPv%d konfiguratzeko egin dugun eskaria\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d2402eb30:/ppp.c#l1016
 #: ../openconnect-strings.txt:4074
@@ -7477,13 +7478,13 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/76a42bef0:/ppp.c#l1111
 #: ../openconnect-strings.txt:4077
 msgid "PPP payload exceeds receive buffer\n"
-msgstr ""
+msgstr "PPPren karga erabilgarriak jasotako bufferra gainditzen du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/76a42bef0:/ppp.c#l1150
 #: ../openconnect-strings.txt:4080
 #, c-format
 msgid "Short packet received (%d bytes). Waiting for more.\n"
-msgstr ""
+msgstr "Pakete laburra jaso da (%d byte). Gehiagoren zain.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a6937b663:/ppp.c#l1033
 #: ../openconnect-strings.txt:4083
@@ -7495,7 +7496,7 @@ msgstr ""
 #: ../openconnect-strings.txt:4086
 #, c-format
 msgid "PPP payload len %d exceeds receive buffer %d\n"
-msgstr ""
+msgstr "PPPren karga erabilgarriaren luzerak (%d) jasotako bufferra gainditzen du (%d)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/76a42bef0:/ppp.c#l1187
 #: ../openconnect-strings.txt:4089
@@ -7514,7 +7515,7 @@ msgstr "PPP kapsulatze baliogabea\n"
 #: ../openconnect-strings.txt:4097
 #, c-format
 msgid "Packet contains %d bytes after payload. Assuming concatenated packet.\n"
-msgstr ""
+msgstr "Paketeak %d byte ditu karga erabilgarriaren ondoren. Pakete kateatuak daudela onartzen.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l1085
 #: ../openconnect-strings.txt:4100
@@ -7553,12 +7554,12 @@ msgstr "Huts egin du PPP ezartzeak\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l1212
 #: ../openconnect-strings.txt:4118
 msgid "Send PPP discard request as keepalive\n"
-msgstr ""
+msgstr "Bidali PPP baztertze-eskarria Keepalive gisa\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/a47406b43:/ppp.c#l1216
 #: ../openconnect-strings.txt:4121
 msgid "Send PPP echo request as DPD\n"
-msgstr ""
+msgstr "Bidali PPP oihartzun-eskaria PDP gisa\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/d2402eb30:/ppp.c#l1444
 #: ../openconnect-strings.txt:4124
@@ -7581,18 +7582,18 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/04671ef02:/ppp.c#l1540
 #: ../openconnect-strings.txt:4133
 msgid "DTLS tunnel connected; exiting HTTPS mainloop.\n"
-msgstr ""
+msgstr "DTLS tunela konektatuta; HTTPS begizta nagusitik irteten.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/04671ef02:/ppp.c#l1574
 #: ../openconnect-strings.txt:4136
 #, c-format
 msgid "Failed to connect DTLS tunnel; using HTTPS instead (state %d).\n"
-msgstr ""
+msgstr "Huts egin du DTLS tunelaren konexioak; HTTPS erabiltzen haren ordez (%d egoera).\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/04671ef02:/ppp.c#l1599
 #: ../openconnect-strings.txt:4139
 msgid "Establishing PPP tunnel over TLS failed\n"
-msgstr ""
+msgstr "PPP tunela TLSaren gainean ezartzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/04671ef02:/ppp.c#l1610
 #: ../openconnect-strings.txt:4142
@@ -7614,7 +7615,7 @@ msgstr "Huts egin du DTLS saioa autentifikatzeak\n"
 #: ../openconnect-strings.txt:4151
 #, c-format
 msgid "Received internal Legacy IP address %s\n"
-msgstr ""
+msgstr "Barneko %s IP helbide zaharkitua jaso da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l298
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/49fbe6f19:/pulse.c#l324
@@ -7647,7 +7648,7 @@ msgstr ""
 #: ../openconnect-strings.txt:4170
 #, c-format
 msgid "Unexpected length %d for attr 0x%x\n"
-msgstr ""
+msgstr "Espero ez zen %d luzera 0x%x atributurako\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l362
 #: ../openconnect-strings.txt:4173
@@ -7671,7 +7672,7 @@ msgstr "ESP soilik: %d\n"
 #: ../openconnect-strings.txt:4182
 #, c-format
 msgid "Received internal gateway IPv6 address %s\n"
-msgstr ""
+msgstr "Barneko %s IPv6 atebide-helbidea jaso da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/7bbbc9cd0:/pulse.c#l515
 #: ../openconnect-strings.txt:4185
@@ -7683,7 +7684,7 @@ msgstr ""
 #: ../openconnect-strings.txt:4188
 #, c-format
 msgid "Unknown attr 0x%x len %d:%s\n"
-msgstr ""
+msgstr "0x%x atributu ezezaguna (%d luzera):%s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l486
 #: ../openconnect-strings.txt:4191
@@ -7694,7 +7695,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/35e03f856:/pulse.c#l506
 #: ../openconnect-strings.txt:4194
 msgid "Short write to IF-T/TLS\n"
-msgstr ""
+msgstr "Idazte laburra IF-T/TLSn\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l498
 #: ../openconnect-strings.txt:4197
@@ -7879,7 +7880,7 @@ msgstr "Errorea Pulse konexio-eskaria sortzean\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1066
 #: ../openconnect-strings.txt:4307
 msgid "Unexpected response to IF-T/TLS version negotiation:\n"
-msgstr ""
+msgstr "Espero ez zen erantzuna IF-T/TLS bertsio-negoziazioan:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1071
 #: ../openconnect-strings.txt:4310
@@ -7897,7 +7898,7 @@ msgstr "Huts egin du EAP-TTLS saioa ezartzeak\n"
 msgid ""
 "WARNING: Server provided certificate MD5 does not match its actual "
 "certificate.\n"
-msgstr ""
+msgstr "ABISUA: Zerbitzariak hornitutako MD5a ez dator bat bere uneko ziurtagiriarekin.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/270eda80a:/pulse.c#l1489
 #: ../openconnect-strings.txt:4321
@@ -7925,7 +7926,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/62653d993:/pulse.c#l1638
 #: ../openconnect-strings.txt:4334
 msgid "Please report this value and the behaviour of the official client.\n"
-msgstr ""
+msgstr "Jakinarazi balio hau eta bezero ofizialaren portaera.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/48e69d156:/pulse.c#l1795
 #: ../openconnect-strings.txt:4337
@@ -7967,7 +7968,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1350
 #: ../openconnect-strings.txt:4361
 msgid "Pulse authentication cookie not accepted\n"
-msgstr ""
+msgstr "Pulse autentifikazio-cookiea ez da onartzen\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1356
 #: ../openconnect-strings.txt:4364
@@ -7988,18 +7989,18 @@ msgstr "Pulse eskualdearen aukera\n"
 #: ../openconnect-strings.txt:4373
 #, c-format
 msgid "Pulse password auth request, code 0x%02x\n"
-msgstr ""
+msgstr "Pulse pasahitz-autentifikazioaren eskaera, 0x%02x kodea\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/48e69d156:/pulse.c#l1867
 #: ../openconnect-strings.txt:4376
 #, c-format
 msgid "Pulse password request with unknown code 0x%02x. Please report.\n"
-msgstr ""
+msgstr "Pulse pasahitz-eskaera 0x%02x kode ezezagunarekin. Eman honen berri.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/569a7d6aa:/pulse.c#l1572
 #: ../openconnect-strings.txt:4379
 msgid "Pulse password general token code request\n"
-msgstr ""
+msgstr "Pulse pasahitzaren token orokorraren kode-eskaera\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1379
 #: ../openconnect-strings.txt:4382
@@ -8010,12 +8011,12 @@ msgstr "Pulse saioaren muga; %d saio\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1386
 #: ../openconnect-strings.txt:4385
 msgid "Unhandled Pulse auth request\n"
-msgstr ""
+msgstr "Maneiatu gabeko Pulse autentifikazio-eskaera\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1423
 #: ../openconnect-strings.txt:4388
 msgid "Unexpected response instead of IF-T/TLS auth success:\n"
-msgstr ""
+msgstr "Espero ez zen erantzuna IF-T/TLS autentifikazio-arrakastaren ordez:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9c45fd072:/pulse.c#l2007
 #: ../openconnect-strings.txt:4391
@@ -8054,7 +8055,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b795ff352:/pulse.c#l1638
 #: ../openconnect-strings.txt:4410
 msgid "Unexpected Pulse config packet:\n"
-msgstr ""
+msgstr "Espero ez zen Pulse konfigurazio-paketea:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/bad0f0430:/pulse.c#l2352
 #: ../openconnect-strings.txt:4413
@@ -8097,7 +8098,7 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/bad0f0430:/pulse.c#l2500
 #: ../openconnect-strings.txt:4434
 msgid "Processing Pulse ESP config packet\n"
-msgstr ""
+msgstr "Pulse ESP konfigurazio-paketea prozesatzen\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/35e03f856:/pulse.c#l1755
 #: ../openconnect-strings.txt:4437
@@ -8112,12 +8113,12 @@ msgstr "ESP konfigurazio baliogabea\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/eea59ff04:/pulse.c#l1763
 #: ../openconnect-strings.txt:4443
 msgid "Bad IF-T/TLS packet when expecting configuration:\n"
-msgstr ""
+msgstr "IF-T/TLS pakete okerra konfigurazioa espero zenean:\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2615
 #: ../openconnect-strings.txt:4446
 msgid "Unexpected IF-T/TLS packet when expecting configuration: wrong vendor\n"
-msgstr ""
+msgstr "Espero ez zen IF-T/TLS paketea konfigurazioa espero zenean: hornitzaile okerra\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2639
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2644
@@ -8127,42 +8128,42 @@ msgstr ""
 #: ../openconnect-strings.txt:4453
 #, c-format
 msgid "Unexpected Pulse configuration packet: %s\n"
-msgstr ""
+msgstr "Espero ez zen Pulse konfigurazio-paketea: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2640
 #: ../openconnect-strings.txt:4456
 msgid "wrong type field (!= 1)"
-msgstr ""
+msgstr "mota okerreko eremua (!= 1)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2645
 #: ../openconnect-strings.txt:4459
 msgid "too short"
-msgstr ""
+msgstr "laburregia"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2652
 #: ../openconnect-strings.txt:4462
 msgid "non-zero values at offsets 0x10, 0x14, 0x18, 0x1c, or 0x24"
-msgstr ""
+msgstr "zero ez diren balioak desplazamendu hauetan: 0x10, 0x14, 0x18, 0x1c edo 0x24"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2657
 #: ../openconnect-strings.txt:4465
 msgid "length at offset 0x28 != packet length - 0x10"
-msgstr ""
+msgstr "luzera 0x28 desplazamenduan != pakete-luzera - 0x10"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2696
 #: ../openconnect-strings.txt:4468
 msgid "identifier at offset 0x20 is unknown"
-msgstr ""
+msgstr "0x20 desplazamenduko identifikatzailea ezezaguna da"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/808a702d0:/pulse.c#l2571
 #: ../openconnect-strings.txt:4471
 msgid "Insufficient configuration found\n"
-msgstr ""
+msgstr "Ez da aski konfiguraziorik aurkitu\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/35e03f856:/pulse.c#l2000
 #: ../openconnect-strings.txt:4474
 msgid "ESP rekey failed\n"
-msgstr ""
+msgstr "ESP gakoa birnegoziatzeak huts egin du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f1540c9d0:/pulse.c#l2732
 #: ../openconnect-strings.txt:4477
@@ -8214,13 +8215,13 @@ msgstr ""
 #: ../openconnect-strings.txt:4502
 #, c-format
 msgid "Ignoring legacy network because address \"%s\" is invalid.\n"
-msgstr ""
+msgstr "Sare zaharkituari ez ikusiarena egiten \"%s\" helbidea baliogabea delako.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e49e49e33:/script.c#l277
 #: ../openconnect-strings.txt:4505
 #, c-format
 msgid "Ignoring legacy network because netmask \"%s\" is invalid.\n"
-msgstr ""
+msgstr "Sare zaharkituari ez ikusiarena egiten \"%s\" sare-maskara baliogabea delako.\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/b056e27c9:/script.c#l594
 #: ../openconnect-strings.txt:4508
@@ -8256,12 +8257,12 @@ msgstr "'%s' scripta ustekabean amaitu da (%x)\n"
 #: ../openconnect-strings.txt:4524
 #, c-format
 msgid "Script '%s' returned error %d\n"
-msgstr "'%s' script-ak %d errorea itzuli du\n"
+msgstr "'%s' scriptak %d errorea itzuli du\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fe2f766b6:/ssl.c#l110
 #: ../openconnect-strings.txt:4527
 msgid "Failed select() for socket connect"
-msgstr ""
+msgstr "Socket-konexioko select() funtzioak huts egin du"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2412b1da5:/ssl.c#l999
 #: ../openconnect-strings.txt:4530
@@ -8271,12 +8272,12 @@ msgstr "Socket-aren konexioa bertan behera utzita\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8388bc370:/ssl.c#l191
 #: ../openconnect-strings.txt:4533
 msgid "Failed select() for socket accept"
-msgstr ""
+msgstr "Socket-a onartzeko select() funtzioak huts egin du"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8388bc370:/ssl.c#l196
 #: ../openconnect-strings.txt:4536
 msgid "Socket accept cancelled\n"
-msgstr ""
+msgstr "Socket-a onartzea bertan behera utzi da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/8388bc370:/ssl.c#l207
 #: ../openconnect-strings.txt:4539
@@ -8335,7 +8336,7 @@ msgstr "'%s%s%s:%s' zerbitzariarekin konektatzen saiatzen\n"
 #: ../openconnect-strings.txt:4567
 #, c-format
 msgid "Connected to %s%s%s:%s\n"
-msgstr ""
+msgstr "%s%s%s zerbitzariarekin konektatuta:%s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/eef00ae2f:/ssl.c#l1001
 #: ../openconnect-strings.txt:4570
@@ -8346,12 +8347,12 @@ msgstr "Huts egin du biltegiaren socketaren helbidea (sockaddr) esleitzean\n"
 #: ../openconnect-strings.txt:4573
 #, c-format
 msgid "Failed to connect to %s%s%s:%s: %s\n"
-msgstr ""
+msgstr "Huts egin du %s%s%s zerbitzariarekin konektatzeak:%s: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/2f55fec32:/ssl.c#l327
 #: ../openconnect-strings.txt:4576
 msgid "Forgetting non-functional previous peer address\n"
-msgstr ""
+msgstr "Funtzionalak ez diren aurreko parekoen helbideak ahazten\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/eef00ae2f:/ssl.c#l1016
 #: ../openconnect-strings.txt:4579
@@ -8363,7 +8364,7 @@ msgstr "Huts egin du '%s' ostalariarekin konektatzean\n"
 #: ../openconnect-strings.txt:4582
 #, c-format
 msgid "Reconnecting to proxy %s\n"
-msgstr ""
+msgstr "%s proxyarekin berriro konektatzen\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/eef00ae2f:/ssl.c#l1135
 #: ../openconnect-strings.txt:4585
@@ -8374,13 +8375,13 @@ msgstr "vfs-ren estatistikak: %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e57699e1d:/ssl.c#l404
 #: ../openconnect-strings.txt:4588
 msgid "Could not obtain file system ID for passphrase\n"
-msgstr ""
+msgstr "Ezin da fitxategi-sistemaren IDa eskuratu pasaesaldirako\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/45f8f22de:/ssl.c#l419
 #: ../openconnect-strings.txt:4591
 #, c-format
 msgid "Failed to open private key file '%s': %s\n"
-msgstr ""
+msgstr "Huts egin du gako pribatuaren '%s' fitxategia irekitzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/eef00ae2f:/ssl.c#l1152
 #: ../openconnect-strings.txt:4594
@@ -8451,17 +8452,17 @@ msgstr ""
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3da:/ssl.c#l900
 #: ../openconnect-strings.txt:4633
 msgid "Got cancel command\n"
-msgstr ""
+msgstr "Bertan behera uzteko komandoa eskuratu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/e1a3be3da:/ssl.c#l905
 #: ../openconnect-strings.txt:4636
 msgid "Got pause command\n"
-msgstr ""
+msgstr "Pausatzeko komandoa eskuratu da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fe2f766b6:/ssl.c#l843
 #: ../openconnect-strings.txt:4639
 msgid "Failed select() for command socket"
-msgstr ""
+msgstr "Komandoaren socket-erako select() funtzioak huts egin du"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ccb1573f0:/ssl.c#l938
 #: ../openconnect-strings.txt:4642
@@ -8535,7 +8536,7 @@ msgstr "Konektatu UDP socket-a"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9b6885730:/ssl.c#l1007
 #: ../openconnect-strings.txt:4678
 msgid "Make UDP socket non-blocking"
-msgstr ""
+msgstr "UDP socket-a blokeatzailea izan ez dadin bihurtu"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/613bca6f9:/ssl.c#l910
 #: ../openconnect-strings.txt:4681
@@ -8551,7 +8552,7 @@ msgstr "lo: %ds; iraungitze-denbora: %ds\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fe2f766b6:/ssl.c#l1121
 #: ../openconnect-strings.txt:4687
 msgid "Failed select() for socket send"
-msgstr ""
+msgstr "Socket-a bidaltzeko select() funtzioak huts egin du"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/fe2f766b6:/ssl.c#l1160
 #: ../openconnect-strings.txt:4690
@@ -8568,7 +8569,7 @@ msgstr ""
 #: ../openconnect-strings.txt:4696
 #, c-format
 msgid "Sending SSPI token of %lu bytes\n"
-msgstr ""
+msgstr "%lu byte-ko SSPI tokena bidaltzen\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4dd05b4f2:/sspi.c#l199
 #: ../openconnect-strings.txt:4699
@@ -8610,13 +8611,13 @@ msgstr ""
 #: ../openconnect-strings.txt:4718
 #, c-format
 msgid "EncryptMessage() failed: %lx\n"
-msgstr ""
+msgstr "EncryptMessage() funtzioak huts egin du: %lx\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4dd05b4f2:/sspi.c#l296
 #: ../openconnect-strings.txt:4721
 #, c-format
 msgid "EncryptMessage() result too large (%lu + %lu + %lu)\n"
-msgstr ""
+msgstr "EncryptMessage() funtzioaren emaitza luzeegia da (%lu + %lu + %lu)\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4dd05b4f2:/sspi.c#l318
 #: ../openconnect-strings.txt:4724
@@ -8647,7 +8648,7 @@ msgstr ""
 #: ../openconnect-strings.txt:4737
 #, c-format
 msgid "DecryptMessage failed: %lx\n"
-msgstr ""
+msgstr "DecryptMessage funtzioak huts egin du: %lx\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4dd05b4f2:/sspi.c#l367
 #: ../openconnect-strings.txt:4740
@@ -8925,7 +8926,7 @@ msgstr "Huts gin du TAP gailuan idaztean: %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/cb1a342a4:/tun-win32.c#l285
 #: ../openconnect-strings.txt:4893
 msgid "Spawning tunnel scripts is not yet supported on Windows\n"
-msgstr "Tunelaren script-ak sortzea ez dago oraindik onartuta Windows-en\n"
+msgstr "Tunelaren scriptak sortzea ez dago oraindik onartuta Windows-en\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/f8fbc0b30:/tun.c#l121
 #: ../openconnect-strings.txt:4896
@@ -8962,30 +8963,30 @@ msgstr "ireki /dev/tun"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/720c63e28:/tun.c#l145
 #: ../openconnect-strings.txt:4914
 msgid "Failed to create new tun"
-msgstr "Huts egin d 'tun' berria sortzean"
+msgstr "Huts egin du tun berria sortzeak"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/720c63e28:/tun.c#l151
 #: ../openconnect-strings.txt:4917
 msgid "Failed to put tun file descriptor into message-discard mode"
-msgstr "Huts egin du 'tun' fitxategiaren deskriptorea 'baztertu mezua' moduan jartzean"
+msgstr "Huts egin du tun fitxategiaren deskriptorea 'baztertu mezua' moduan jartzean"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4b960afd1:/tun.c#l183
 #: ../openconnect-strings.txt:4920
 msgid "tun device is unsupported on this platform\n"
-msgstr ""
+msgstr "tun gailua ez da onartzen plataforma honetan\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/4ca0aa1bc:/tun.c#l197
 #: ../openconnect-strings.txt:4923
 #, c-format
 msgid "Requested tun device name '%s' is too long\n"
-msgstr ""
+msgstr "Eskatutako tun gailuaren izena, '%s', luzeegia da\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/eef00ae2f:/tun.c#l432
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0f484d6c7:/tun.c#l619
 #: ../openconnect-strings.txt:4927
 #, c-format
 msgid "Failed to open tun device: %s\n"
-msgstr "Huts egin du 'tun' gailua irekitzean: %s\n"
+msgstr "Huts egin du tun gailua irekitzeak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/ebc9e59a3:/tun.c#l244
 #: ../openconnect-strings.txt:4930
@@ -9058,13 +9059,13 @@ msgstr ""
 #: ../openconnect-strings.txt:4965
 #, c-format
 msgid "socketpair failed: %s\n"
-msgstr "'socketpair'-ek huts egin du: %s\n"
+msgstr "socketpair-ek huts egin du: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0f484d6c7:/tun.c#l669
 #: ../openconnect-strings.txt:4968
 #, c-format
 msgid "fork failed: %s\n"
-msgstr "huts egin du sardetzean: %s\n"
+msgstr "sardetzeak huts egin du: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/be40969ca:/tun.c#l475
 #: ../openconnect-strings.txt:4971
@@ -9079,13 +9080,13 @@ msgstr "execl"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/9186ea2ae:/tun.c#l580
 #: ../openconnect-strings.txt:4977
 msgid "(script)"
-msgstr "(script-a)"
+msgstr "(scripta)"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/87070617c:/tun.c#l436
 #: ../openconnect-strings.txt:4980
 #, c-format
 msgid "Failed to write incoming packet: %s\n"
-msgstr "Huts egin du sarrerako paketea idaztean: %s\n"
+msgstr "Huts egin du sarrerako paketea idazteak: %s\n"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/c6ef11969:/vhost.c#l77
 #: ../openconnect-strings.txt:4983
@@ -9462,7 +9463,7 @@ msgstr "Huts egin du Yubikeyren sarbide esklusiboa eskuratzeak: %s\n"
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/46b6bb885:/yubikey.c#l622
 #: ../openconnect-strings.txt:5180
 msgid "calculate command"
-msgstr ""
+msgstr "calculate komandoa"
 
 #. https://git.infradead.org/users/dwmw2/openconnect.git/blob/0a24290ce:/yubikey.c#l488
 #: ../openconnect-strings.txt:5183
