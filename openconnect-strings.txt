@@ -2315,6 +2315,10 @@ _("Error reading HTTP response body\n");
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/eef00ae2f:/http.c#l260
 _("Error fetching chunk header\n");
 
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/539265bb1:/http.c#l439
+_(""
+"Error in chunked decoding. Expected hexadecimal chunk length, got: '%s'\n");
+
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/875f0a65a:/http.c#l563
 _("HTTP chunk length is negative (%ld)\n");
 
@@ -2949,7 +2953,7 @@ _("established");
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/b156b581e:/main.c#l1421
 _("Configured as %s%s%s, with SSL%s%s %s and %s%s%s %s\n");
 
-// https://git.infradead.org/users/dwmw2/openconnect.git/blob/b056e27c9:/main.c#l1487
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/5ab279fb0:/main.c#l1592
 _("Session authentication will expire at %s\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/7d8747806:/main.c#l1610
@@ -3922,8 +3926,8 @@ _("HKDF key derivation failed\n");
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/60c54dafb:/openssl.c#l2392
 _("SSO token decryption failed\n");
 
-// https://git.infradead.org/users/dwmw2/openconnect.git/blob/222178086:/openssl.c#l2448
-_("SSL Finished message too large (%zd bytes)\n");
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/958a59aed:/openssl.c#l2525
+_("SSL Finished message too large (%zu bytes)\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/222178086:/openssl.c#l2458
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/222178086:/openssl.c#l2495
@@ -4180,6 +4184,12 @@ _("ESP only: %d\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/35cce8ea8:/pulse.c#l503
 _("Received internal gateway IPv6 address %s\n");
+
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/486cfb839:/pulse.c#l506
+_("Received proxy auto-config (PAC) payload of size %d\n");
+
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/486cfb839:/pulse.c#l511
+_("Received proxy auto-config (PAC) URL: %.*s\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/7bbbc9cd0:/pulse.c#l515
 _("Pulse ESP tunnel allowed to carry 6in4 or 4in6 traffic: %d\n");
@@ -4439,11 +4449,15 @@ _("Invalid ESP config packet:\n");
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/35e03f856:/pulse.c#l1767
 _("Invalid ESP setup\n");
 
-// https://git.infradead.org/users/dwmw2/openconnect.git/blob/eea59ff04:/pulse.c#l1763
-_("Bad IF-T/TLS packet when expecting configuration:\n");
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/453079329:/pulse.c#l2677
+_("Short IF-T/TLS packet when expecting configuration:\n");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2615
 _("Unexpected IF-T/TLS packet when expecting configuration: wrong vendor\n");
+
+// https://git.infradead.org/users/dwmw2/openconnect.git/blob/453079329:/pulse.c#l2694
+_(""
+"Unreasonably large IF-T/TLS packet (%u > 1 MiB) when expecting configuration");
 
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2639
 // https://git.infradead.org/users/dwmw2/openconnect.git/blob/3d6e371b6:/pulse.c#l2644
