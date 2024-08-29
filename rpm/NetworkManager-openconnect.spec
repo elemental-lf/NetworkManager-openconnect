@@ -11,16 +11,22 @@
 %bcond_without gtk4
 %endif
 
+%if 0%{?fedora} < 37 && 0%{?rhel} < 10
+%bcond_with webkit41
+%else
+%bcond_without webkit41
+%endif
+
 %global nm_version          1.2.0
 %global gtk3_version        3.4.0
 %global openconnect_version 9.01
 
 Summary:   NetworkManager VPN plugin for openconnect
 Name:      NetworkManager-openconnect
-Version:   1.2.9
+Version:   1.2.10
 %define build_timestamp %{lua: print(os.date("%Y%m%d"))}
 Release:   %{build_timestamp}%{?dist}
-License:   GPLv2+ and LGPLv2
+License:   GPL-2.0-or-later AND LGPL-2.1-only
 URL:       http://www.gnome.org/projects/NetworkManager/
 Source:    https://github.com/elemental-lf/NetworkManager-openconnect/archive/main.tar.gz#/NetworkManager-openconnect-main.tar.gz
 
@@ -35,7 +41,6 @@ BuildRequires: intltool gettext libtool
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(openconnect) >= %{openconnect_version}
 BuildRequires: pkgconfig(gcr-3) >= 3.4
-BuildRequires: webkit2gtk3-devel
 %if %{with libnm_glib}
 BuildRequires: pkgconfig(libnm-util) >= %{nm_version}
 BuildRequires: pkgconfig(libnm-glib) >= %{nm_version}
@@ -44,6 +49,11 @@ BuildRequires: pkgconfig(libnm-glib-vpn) >= %{nm_version}
 %if %with gtk4
 BuildRequires: pkgconfig(gtk4) >= 4.0
 BuildRequires: pkgconfig(libnma-gtk4) >= 1.8.33
+%endif
+%if %with webkit41
+BuildRequires: pkgconfig(webkit2gtk-4.1)
+%else
+BuildRequires: pkgconfig(webkit2gtk-4.0)
 %endif
 
 Requires: NetworkManager   >= %{nm_version}
@@ -94,8 +104,6 @@ make install DESTDIR=%{buildroot}
 
 rm -f %{buildroot}%{_libdir}/NetworkManager/lib*.la
 
-#mv %{buildroot}%{_sysconfdir}/dbus-1 %{buildroot}%{_datadir}/
-
 %find_lang %{name}
 
 %pre
@@ -145,6 +153,27 @@ fi
 
 
 %changelog
+* Mon Jan 22 2024 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.10-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
+* Fri Jan 19 2024 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.10-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
+* Fri Nov 03 2023 Íñigo Huguet <ihuguet@redhat.com> - 1.2.10-3
+- Migrated to SPDX license
+
+* Wed Jul 19 2023 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.10-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
+
+* Wed May 17 2023 David Woodhouse <dwmw2@infradead.org> - 1.2.10-1
+- Update to 1.2.10 release
+
+* Wed Jan 18 2023 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.8-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_38_Mass_Rebuild
+
+* Wed Jul 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.8-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
+
 * Mon Jul  4 2022 Nikos Mavrogiannopoulos <n.mavrogiannopoulos@gmail.com> - 1.2.8-2
 - Recompile with latest openconnect
 
